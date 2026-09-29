@@ -175,6 +175,8 @@
 .tc-person__remit { margin: .6rem 0 1rem; color: var(--muted); font-size: .95rem; }
 .tc-person__tag { margin-top: auto; font-size: .72rem; background: var(--cream); color: var(--muted); border: 1px dashed var(--line); }
 
+.tc-photo { width: 140px; height: 140px; border-radius: 38px; object-fit: cover; object-position: center 20%; background: var(--mist); box-shadow: 0 14px 30px -14px rgba(15, 90, 43, .6); border: 3px solid var(--white); outline: 1px solid var(--line); }
+
 .tc-avatar {
   position: relative; width: 120px; height: 120px; border-radius: 34px; overflow: hidden; display: grid; place-items: center;
   box-shadow: 0 14px 30px -14px rgba(15, 90, 43, .6);
