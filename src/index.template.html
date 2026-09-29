@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lokalola — Locally manage for greater energy</title>
-<meta name="description" content="Lokalola is an integrated, community-based organic waste processing system that converts local organic waste into renewable energy and useful products, helping communities process their waste independently.">
+<meta name="description" content="Waste is energy in the wrong place. Lokalola is an integrated, community-based organic waste processing system that converts local organic waste into renewable energy and useful products, helping communities process their waste independently.">
 <meta name="theme-color" content="#08170f">
+<script>/* set motion classes before first paint (main.js repeats this) */(function(r){var m=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;r.className=r.className.replace("no-js","js")+(m||!("IntersectionObserver" in window)?" reduce":" motion");})(document.documentElement);</script>
 <meta property="og:title" content="Lokalola — Locally manage for greater energy">
-<meta property="og:description" content="Integrated organic waste processing for community independence.">
+<meta property="og:description" content="Waste is energy in the wrong place. Lokalola turns a village's organic waste into heat, fertiliser and data, right where it is born.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="assets/img/site-isometric.webp">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" as="image" href="assets/img/unit-3d.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,14 +23,17 @@
 <link rel="stylesheet" href="css/impact-calc.css">
 <link rel="stylesheet" href="css/business-roadmap.css">
 <link rel="stylesheet" href="css/pilot-team.css">
+<link rel="stylesheet" href="css/story.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- @include sections/00-header.html -->
 <main id="main">
 <!-- @include sections/01-hero.html -->
+<!-- @include sections/01b-story.html -->
 <!-- @include sections/02-problem.html -->
 <!-- @include sections/03-solution.html -->
+<!-- @include sections/03b-different.html -->
 <!-- @include sections/04-how-it-works.html -->
 <!-- @include sections/05-impact.html -->
 <!-- @include sections/06-calculator.html -->
@@ -42,5 +49,6 @@
 <script src="js/impact-calc.js"></script>
 <script src="js/business-roadmap.js"></script>
 <script src="js/pilot-team.js"></script>
+<script src="js/story.js"></script>
 </body>
 </html>

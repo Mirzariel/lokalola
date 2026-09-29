@@ -1,13 +1,14 @@
-<section id="top" class="section section--dark hp-hero" aria-labelledby="hp-hero-title">
+<section id="top" class="section section--dark hp-hero" aria-labelledby="hp-hero-title" data-hero>
   <!-- decorative background layers -->
   <div class="hp-hero__bg" aria-hidden="true">
     <div class="hp-hero__glow hp-hero__glow--a"></div>
     <div class="hp-hero__glow hp-hero__glow--b"></div>
+    <div class="hp-hero__cursor"></div>
     <img class="hp-hero__mark" src="assets/img/logo-mark.webp" alt="" width="640" height="640" decoding="async">
     <svg class="hp-hero__curves" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
-      <path d="M-40 640 C 220 520, 420 780, 700 640 S 1200 470, 1500 610" stroke="url(#hpCurveA)" stroke-width="1.4"/>
-      <path d="M-40 700 C 260 600, 480 840, 760 700 S 1200 560, 1500 680" stroke="url(#hpCurveA)" stroke-width="1" opacity=".7"/>
-      <path d="M-40 760 C 300 680, 520 900, 820 760 S 1220 650, 1500 750" stroke="url(#hpCurveA)" stroke-width=".8" opacity=".5"/>
+      <path class="hp-flow" d="M-40 640 C 220 520, 420 780, 700 640 S 1200 470, 1500 610" stroke="url(#hpCurveA)" stroke-width="1.4"/>
+      <path class="hp-flow hp-flow--2" d="M-40 700 C 260 600, 480 840, 760 700 S 1200 560, 1500 680" stroke="url(#hpCurveA)" stroke-width="1" opacity=".7"/>
+      <path class="hp-flow hp-flow--3" d="M-40 760 C 300 680, 520 900, 820 760 S 1220 650, 1500 750" stroke="url(#hpCurveA)" stroke-width=".8" opacity=".5"/>
       <path d="M1500 120 C 1240 200, 1180 40, 900 110 S 560 260, 300 120" stroke="url(#hpCurveB)" stroke-width="1" opacity=".6"/>
       <defs>
         <linearGradient id="hpCurveA" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#a7f03a" stop-opacity="0"/><stop offset=".5" stop-color="#a7f03a" stop-opacity=".55"/><stop offset="1" stop-color="#3fae4f" stop-opacity="0"/></linearGradient>
@@ -25,20 +26,19 @@
           <span data-id="Pertamuda · seed and scale · Universitas Gadjah Mada">Pertamuda · seed and scale · Universitas Gadjah Mada</span>
         </p>
 
-        <h1 id="hp-hero-title" class="hp-hero__title">
-          <span data-id="Kelola lokal,<br>untuk <span class=&quot;hl&quot;>energi lebih besar.</span>">Locally manage<br>for <span class="hl">greater energy.</span></span>
-        </h1>
+        <h1 id="hp-hero-title" class="hp-hero__title split" data-id="Sampah adalah energi<br> yang <span class=&quot;hl&quot;>salah tempat.</span>">Waste is energy<br> in the <span class="hl">wrong place.</span></h1>
 
-        <p class="hp-hero__mission" data-id="Pengolahan sampah organik terpadu untuk kemandirian komunitas.">Integrated organic waste processing for community independence.</p>
-        <p class="hp-hero__lead lead" data-id="Lokalola adalah sistem pengolahan sampah organik terpadu berbasis komunitas yang mengubah sampah organik lokal menjadi energi terbarukan dan produk bermanfaat, sehingga komunitas dapat mengolah sampahnya secara mandiri.">Lokalola is an integrated, community-based organic waste processing system that converts local organic waste into renewable energy and useful products, helping communities process their waste independently.</p>
+        <p class="hp-hero__lead" data-id="Lokalola mengembalikannya ke tempat yang benar: satu unit terpadu yang mengubah sampah organik menjadi <strong>panas, pupuk, dan data</strong>, tepat di tempat sampah itu lahir.">Lokalola puts it back in the right one: one integrated unit that turns organic waste into <strong>heat, fertiliser and data</strong>, right where the waste is born.</p>
 
         <div class="hp-hero__cta">
-          <a class="btn btn--primary" href="#how">
-            <span data-id="Lihat cara kerjanya">See how it works</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          <a class="btn btn--primary" href="#solution">
+            <span data-id="Lihat yang kami jual">See what we sell</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--ghost" href="#contact" data-id="Jalin kemitraan">Partner with us</a>
+          <a class="btn btn--ghost" href="#contact" data-id="Jadi mitra kami">Partner with us</a>
         </div>
+
+        <p class="hp-hero__tagline"><span class="hp-hero__tagline-line" aria-hidden="true"></span><span data-id="Kelola lokal, energi lebih besar.">Locally manage for greater energy.</span></p>
       </div>
 
       <div class="hp-stage">
@@ -52,39 +52,54 @@
           <img class="hp-unit__img" src="assets/img/unit-3d.png" width="1519" height="970" alt="Isometric 3D model of a Lokalola 50 kg unit: three blue biodigester tanks, a gas bag, an orange pyrolysis retort, a purple IoT panel and a green fertiliser tank" data-id-attr="alt|Model 3D isometrik unit Lokalola 50 kg: tiga tangki biodigester biru, kantong gas, retort pirolisis oranye, panel IoT ungu, dan tangki pupuk hijau" fetchpriority="high">
 
           <div class="hp-pin hp-pin--gas hp-pin--up hp-pin--l">
-            <span class="hp-chipx"><b data-id="Biogas">Biogas</b><span>3.5–4.7 m³/<span data-id="hari">day</span></span></span>
+            <span class="hp-chipx"><b>Biogas</b><span>3.5–4.7&nbsp;m³/<span data-id="hari">day</span></span></span>
           </div>
           <div class="hp-pin hp-pin--iot hp-pin--down hp-pin--r">
             <span class="hp-chipx"><b>IoT</b><span>1 START <span data-id="tombol">button</span></span></span>
           </div>
           <div class="hp-pin hp-pin--pyro hp-pin--down hp-pin--r">
-            <span class="hp-chipx"><b data-id="Pirolisis">Pyrolysis</b><span>300–400 °C</span></span>
+            <span class="hp-chipx"><b data-id="Pirolisis">Pyrolysis</b><span>300–400&nbsp;°C</span></span>
           </div>
           <div class="hp-pin hp-pin--fert hp-pin--down hp-pin--l">
-            <span class="hp-chipx"><b data-id="Pupuk">Fertiliser</b><span>17 kg/<span data-id="hari">day</span></span></span>
+            <span class="hp-chipx"><b data-id="Pupuk">Fertiliser</b><span>17&nbsp;kg/<span data-id="hari">day</span></span></span>
           </div>
         </div>
-        <p class="hp-stage__caption" data-id="Unit 50 kg/hari · perkiraan desain, akan divalidasi di pilot">50 kg/day unit · design estimates, to be validated in the pilot</p>
+        <p class="hp-stage__caption" data-id="Unit 50 kg/hari · estimasi desain, akan divalidasi saat pilot">50 kg/day unit · design estimates, to be validated in the pilot</p>
       </div>
     </div>
-
-    <ul class="hp-stats">
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="11.5" data-decimals="1" data-suffix=" t">0</span></span>
-        <span class="hp-stat__label" data-id="CO₂e dihindari per paket / tahun">CO₂e avoided per package / year</span>
-      </li>
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="150" data-prefix="~">0</span></span>
-        <span class="hp-stat__label" data-id="rumah tangga terlayani per unit">households served per unit</span>
-      </li>
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="200">0</span></span>
-        <span class="hp-stat__label" data-id="tabung LPG tergantikan per tahun">LPG cylinders replaced per year</span>
-      </li>
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="50" data-suffix=" kg">0</span></span>
-        <span class="hp-stat__label" data-id="sampah diolah per hari">waste processed per day</span>
-      </li>
-    </ul>
   </div>
+
+  <!-- Design-spec telemetry: real design values, not live readings -->
+  <div class="hp-tele" aria-label="Design specification of the 50 kg package" data-id-attr="aria-label|Spesifikasi desain paket 50 kg">
+    <span class="hp-tele__tag"><span class="hp-tele__led" aria-hidden="true"></span><span data-id="Spesifikasi desain">Design spec</span></span>
+    <div class="hp-tele__track">
+      <ul class="hp-tele__list">
+        <li><b data-id="Digester">Digester</b> 3 × 2,000&nbsp;L · 4&nbsp;m³</li>
+        <li><b data-id="Retensi">Retention</b> 52&nbsp;<span data-id="hari">days</span></li>
+        <li><b>Biogas</b> 3.5–4.7&nbsp;m³/<span data-id="hari">day</span></li>
+        <li><b data-id="Panas">Heat</b> 76–101&nbsp;MJ/<span data-id="hari">day</span></li>
+        <li><b data-id="Retort">Retort</b> 300–400&nbsp;°C</li>
+        <li><b data-id="Pasteurisasi">Pasteurise</b> 70&nbsp;°C</li>
+        <li><b data-id="Pupuk">Fertiliser</b> 17&nbsp;kg + 60&nbsp;L/<span data-id="hari">day</span></li>
+        <li><b data-id="Otak">Brain</b> ESP32-S3 · MQTT/4G</li>
+        <li><b>CO₂e</b> 11.5&nbsp;t/<span data-id="tahun">year</span></li>
+      </ul>
+      <ul class="hp-tele__list" aria-hidden="true">
+        <li><b data-id="Digester">Digester</b> 3 × 2,000&nbsp;L · 4&nbsp;m³</li>
+        <li><b data-id="Retensi">Retention</b> 52&nbsp;<span data-id="hari">days</span></li>
+        <li><b>Biogas</b> 3.5–4.7&nbsp;m³/<span data-id="hari">day</span></li>
+        <li><b data-id="Panas">Heat</b> 76–101&nbsp;MJ/<span data-id="hari">day</span></li>
+        <li><b data-id="Retort">Retort</b> 300–400&nbsp;°C</li>
+        <li><b data-id="Pasteurisasi">Pasteurise</b> 70&nbsp;°C</li>
+        <li><b data-id="Pupuk">Fertiliser</b> 17&nbsp;kg + 60&nbsp;L/<span data-id="hari">day</span></li>
+        <li><b data-id="Otak">Brain</b> ESP32-S3 · MQTT/4G</li>
+        <li><b>CO₂e</b> 11.5&nbsp;t/<span data-id="tahun">year</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="hp-cue" href="#story">
+    <span data-id="Gulir untuk ceritanya">Scroll for the story</span>
+    <span class="hp-cue__line" aria-hidden="true"></span>
+  </a>
 </section>

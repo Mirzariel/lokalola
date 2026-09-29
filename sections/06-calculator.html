@@ -9,30 +9,30 @@
 
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow" data-id="Estimator">Estimator</p>
-      <h2 id="calc-title" data-id="What could Lokalola do for your <span class=&quot;hl&quot;>district</span>?">What could Lokalola do for your <span class="hl">district</span>?</h2>
-      <p class="lead" data-id="Tell us how many households you serve. See how many 50 kg packages that takes, and what they could process, produce and avoid.">Tell us how many households you serve. See how many 50 kg packages that takes, and what they could process, produce and avoid.</p>
+      <p class="eyebrow" data-id="Perkiraan">Estimator</p>
+      <h2 id="calc-title" data-id="Apa yang bisa Lokalola lakukan untuk <span class=&quot;hl&quot;>wilayah</span> Anda?">What could Lokalola do for your <span class="hl">district</span>?</h2>
+      <p class="lead" data-id="Masukkan jumlah rumah tangga yang Anda layani. Lihat berapa paket 50 kg yang dibutuhkan, serta berapa banyak yang bisa diolah, dihasilkan, dan dihindari.">Tell us how many households you serve. See how many 50 kg packages that takes, and what they could process, produce and avoid.</p>
     </div>
 
     <div class="ic-calc">
 
       <!-- Inputs -->
       <div class="ic-panel card">
-        <label class="ic-label" for="ic-hh-num" data-id="Households in your area">Households in your area</label>
+        <label class="ic-label" for="ic-hh-num" data-id="Rumah tangga di wilayah Anda">Households in your area</label>
         <div class="ic-numrow">
           <input class="ic-numinput" id="ic-hh-num" type="number" inputmode="numeric" min="50" max="20000" step="10" value="600" autocomplete="off">
-          <span class="ic-numunit" data-id="households">households</span>
+          <span class="ic-numunit" data-id="rumah tangga">households</span>
         </div>
 
         <div class="ic-rangewrap">
           <input class="ic-range" id="ic-hh-range" type="range" min="0" max="1000" step="5" value="415" aria-label="Households, slider from 50 to 20,000" data-ic-label-id="Jumlah rumah tangga, penggeser dari 50 sampai 20.000">
-          <p class="ic-range-scale" aria-hidden="true"><span>50</span><span>20,000</span></p>
+          <p class="ic-range-scale" aria-hidden="true"><span>50</span><span data-id="20.000">20,000</span></p>
         </div>
-        <p class="note" data-id="The slider is scaled so small villages are as easy to pick as whole districts. You can also type any number from 50 to 20,000.">The slider is scaled so small villages are as easy to pick as whole districts. You can also type any number from 50 to 20,000.</p>
+        <p class="note" data-id="Penggeser diskalakan agar desa kecil semudah satu kecamatan penuh untuk dipilih. Anda juga bisa mengetik angka apa pun dari 50 sampai 20.000.">The slider is scaled so small villages are as easy to pick as whole districts. You can also type any number from 50 to 20,000.</p>
 
-        <p class="ic-label ic-label--sm" id="ic-presets-label" data-id="Or start from a preset">Or start from a preset</p>
+        <p class="ic-label ic-label--sm" id="ic-presets-label" data-id="Atau mulai dari preset">Or start from a preset</p>
         <div class="ic-presets" role="group" aria-labelledby="ic-presets-label">
-          <button type="button" class="ic-preset" data-ic-preset="300" aria-pressed="false" data-id="Village · 300">Village · 300</button>
+          <button type="button" class="ic-preset" data-ic-preset="300" aria-pressed="false" data-id="Desa · 300">Village · 300</button>
           <button type="button" class="ic-preset" data-ic-preset="1200" aria-pressed="false" data-id="Kelurahan · 1.200">Urban village · 1,200</button>
           <button type="button" class="ic-preset" data-ic-preset="8000" aria-pressed="false" data-id="Kecamatan · 8.000">District · 8,000</button>
         </div>
@@ -51,73 +51,73 @@
 
         <div class="ic-grid">
           <div class="ic-tile" style="--ic-c: var(--c-fert)">
-            <p class="ic-tile-label" data-id="Packages needed">Packages needed</p>
+            <p class="ic-tile-label" data-id="Paket yang dibutuhkan">Packages needed</p>
             <p class="ic-tile-val"><span class="ic-out" data-out="pk">4</span></p>
-            <p class="ic-tile-sub" data-id="each serves about 150 households">each serves about 150 households</p>
+            <p class="ic-tile-sub" data-id="masing-masing melayani sekitar 150 rumah tangga">each serves about 150 households</p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-dry)">
-            <p class="ic-tile-label" data-id="Waste processed">Waste processed</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="wasteDay">200</span> <span class="ic-unit" data-id="kg / day">kg / day</span></p>
-            <p class="ic-tile-sub"><span class="ic-out" data-out="wasteYear">73</span> <span data-id="tons / year">tons / year</span></p>
+            <p class="ic-tile-label" data-id="Sampah terolah">Waste processed</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="wasteDay">200</span> <span class="ic-unit" data-id="kg / hari">kg / day</span></p>
+            <p class="ic-tile-sub"><span class="ic-out" data-out="wasteYear">73</span> <span data-id="ton / tahun">tons / year</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-gas)">
-            <p class="ic-tile-label" data-id="Biogas produced">Biogas produced</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="gas">14–18.8</span> <span class="ic-unit">m³ / <span data-id="day">day</span></span></p>
-            <p class="ic-tile-sub"><span class="ic-out" data-out="heat">304–404</span> <span data-id="MJ of heat / day">MJ of heat / day</span></p>
+            <p class="ic-tile-label" data-id="Biogas dihasilkan">Biogas produced</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="gas">14–18.8</span> <span class="ic-unit">m³ / <span data-id="hari">day</span></span></p>
+            <p class="ic-tile-sub"><span class="ic-out" data-out="heat">304–404</span> <span data-id="MJ panas / hari">MJ of heat / day</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-fert)">
-            <p class="ic-tile-label" data-id="Fertiliser produced">Fertiliser produced</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="fertS">68</span> <span class="ic-unit" data-id="kg solid / day">kg solid / day</span></p>
-            <p class="ic-tile-sub"><span class="ic-out" data-out="fertL">240</span> <span data-id="L liquid / day">L liquid / day</span></p>
+            <p class="ic-tile-label" data-id="Pupuk dihasilkan">Fertiliser produced</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="fertS">68</span> <span class="ic-unit" data-id="kg padat / hari">kg solid / day</span></p>
+            <p class="ic-tile-sub"><span class="ic-out" data-out="fertL">240</span> <span data-id="L cair / hari">L liquid / day</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-pyro)">
-            <p class="ic-tile-label" data-id="LPG replaced">LPG replaced</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="lpg">800</span> <span class="ic-unit" data-id="cylinders / year">cylinders / year</span></p>
-            <p class="ic-tile-sub" data-id="3 kg cylinders of fossil heat fuel">3 kg cylinders of fossil heat fuel</p>
+            <p class="ic-tile-label" data-id="LPG tergantikan">LPG replaced</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="lpg">800</span> <span class="ic-unit" data-id="tabung / tahun">cylinders / year</span></p>
+            <p class="ic-tile-sub" data-id="tabung LPG 3 kg, bahan bakar panas fosil">3 kg cylinders of fossil heat fuel</p>
           </div>
 
           <div class="ic-tile ic-tile--hero" style="--ic-c: var(--lime)">
-            <p class="ic-tile-label" data-id="CO₂e avoided">CO₂e avoided</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="co2">46</span> <span class="ic-unit" data-id="t / year">t / year</span></p>
-            <p class="ic-tile-sub" data-id="landfill methane, biochar storage and LPG">landfill methane, biochar storage and LPG</p>
+            <p class="ic-tile-label" data-id="CO₂e dihindari">CO₂e avoided</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="co2">46</span> <span class="ic-unit" data-id="t / tahun">t / year</span></p>
+            <p class="ic-tile-sub" data-id="metana TPA, penyimpanan di biochar, dan LPG">landfill methane, biochar storage and LPG</p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--ink)">
-            <p class="ic-tile-label" data-id="Indicative capex">Indicative capex</p>
+            <p class="ic-tile-label" data-id="Perkiraan capex">Indicative capex</p>
             <p class="ic-tile-val"><span class="ic-unit" data-id="Rp">IDR</span> <span class="ic-out" data-out="capex">340</span> <span class="ic-unit" data-id="juta">M</span></p>
-            <p class="ic-tile-sub"><span data-id="Service Basic:">Service Basic:</span> <span class="ic-out" data-out="service">2.0–4.0</span> <span data-id="IDR M / month">IDR M / month</span></p>
+            <p class="ic-tile-sub"><span data-id="Service Basic:">Service Basic:</span> <span class="ic-out" data-out="service">2.0–4.0</span> <span data-id="juta IDR / bulan">IDR M / month</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--forest)">
-            <p class="ic-tile-label" data-id="Net owner benefit">Net owner benefit</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="benefit">8.0–10.6</span> <span class="ic-unit" data-id="IDR M / month">IDR M / month</span></p>
-            <p class="ic-tile-sub" data-id="after electricity and full service">after electricity and full service</p>
+            <p class="ic-tile-label" data-id="Manfaat bersih bagi pemilik">Net owner benefit</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="benefit">8.0–10.6</span> <span class="ic-unit" data-id="juta IDR / bulan">IDR M / month</span></p>
+            <p class="ic-tile-sub" data-id="setelah biaya listrik dan layanan penuh">after electricity and full service</p>
           </div>
         </div>
 
         <p class="ic-flag">
           <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 9v5M10 6.200v.1"/></svg>
-          <span data-id="Indicative estimate based on design assumptions, to be validated in the pilot.">Indicative estimate based on design assumptions, to be validated in the pilot.</span>
+          <span data-id="Estimasi indikatif berdasarkan asumsi desain, yang akan divalidasi dalam pilot.">Indicative estimate based on design assumptions, to be validated in the pilot.</span>
         </p>
       </div>
     </div>
 
     <details class="ic-assume">
-      <summary><span data-id="Assumptions behind these numbers">Assumptions behind these numbers</span><svg class="ic-chev" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></summary>
+      <summary><span data-id="Asumsi di balik angka-angka ini">Assumptions behind these numbers</span><svg class="ic-chev" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></summary>
       <ul class="ic-assume-list">
-        <li data-id="<strong>Coverage:</strong> one 50 kg package serves about 150 households, so packages = households ÷ 150, rounded up. Each unit needs roughly 8 × 5 m of land.">
+        <li data-id="<strong>Cakupan:</strong> satu paket 50 kg melayani sekitar 150 rumah tangga, jadi jumlah paket = rumah tangga ÷ 150, dibulatkan ke atas. Setiap unit membutuhkan lahan sekitar 8 × 5 m.">
           <strong>Coverage:</strong> one 50 kg package serves about 150 households, so packages = households ÷ 150, rounded up. Each unit needs roughly 8 × 5 m of land.</li>
-        <li data-id="<strong>Per package, per day:</strong> 50 kg of waste (35 kg food + 15 kg dry), 3.5–4.7 m³ of biogas, 76–101 MJ of heat, and about 17 kg solid + 60 L liquid fertiliser.">
+        <li data-id="<strong>Per paket, per hari:</strong> 50 kg sampah (35 kg sisa makanan + 15 kg kering), 3,5–4,7 m³ biogas, 76–101 MJ panas, dan sekitar 17 kg pupuk padat + 60 L pupuk cair.">
           <strong>Per package, per day:</strong> 50 kg of waste (35 kg food + 15 kg dry), 3.5–4.7 m³ of biogas, 76–101 MJ of heat, and about 17 kg solid + 60 L liquid fertiliser.</li>
-        <li data-id="<strong>Per package, per year:</strong> about 200 LPG cylinders (3 kg) replaced and 11.5 t CO₂e avoided or stored.">
+        <li data-id="<strong>Per paket, per tahun:</strong> sekitar 200 tabung LPG 3 kg tergantikan dan 11,5 t CO₂e dihindari atau tersimpan.">
           <strong>Per package, per year:</strong> about 200 LPG cylinders (3 kg) replaced and 11.5 t CO₂e avoided or stored.</li>
-        <li data-id="<strong>Money:</strong> unit price IDR 85 M. Service Basic IDR 0.5–1 M per month per unit. Owner benefit of +IDR 2.0–2.65 M per month net per unit: hauling cost avoided, fertiliser sales and LPG replaced, minus electricity and full service.">
+        <li data-id="<strong>Keuangan:</strong> harga unit IDR 85 jt. Service Basic IDR 0,5–1 jt per bulan per unit. Manfaat bersih pemilik +IDR 2,0–2,65 jt per bulan per unit: biaya angkut sampah yang terhindar, penjualan pupuk, dan LPG yang tergantikan, dikurangi listrik dan layanan penuh.">
           <strong>Money:</strong> unit price IDR 85 M. Service Basic IDR 0.5–1 M per month per unit. Owner benefit of +IDR 2.0–2.65 M per month net per unit: hauling cost avoided, fertiliser sales and LPG replaced, minus electricity and full service.</li>
-        <li data-id="<strong>Scaling:</strong> every result scales in a straight line with the number of packages. Ranges come from the design range of the source figure. This is an estimate, not a forecast or an offer.">
+        <li data-id="<strong>Skala:</strong> semua hasil naik secara linier mengikuti jumlah paket. Rentang berasal dari rentang desain pada angka sumbernya. Ini estimasi, bukan prakiraan atau penawaran.">
           <strong>Scaling:</strong> every result scales in a straight line with the number of packages. Ranges come from the design range of the source figure. This is an estimate, not a forecast or an offer.</li>
       </ul>
     </details>

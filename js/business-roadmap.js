@@ -110,6 +110,8 @@
     var canHover = window.matchMedia && matchMedia('(hover: hover) and (min-width: 900px)').matches;
 
     function set(o) { open = o; panel.classList.toggle('is-open', o); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+    // the vision ends on this panel ("…to rocket fuel"), so it starts open; the button can still close it
+    pinned = true; set(true);
     on(btn, 'click', function () {
       if (open && pinned) { pinned = false; set(false); } else { pinned = true; set(true); }
     });
@@ -316,18 +318,30 @@
     });
 
     // Animate in on reveal
+    // Replays on every entry: plays when comfortably in view, snaps back (silently) once fully out.
     function reveal() {
       if (revealed) return;
       revealed = true;
       var svg = host.firstChild;
-      if (svg) requestAnimationFrame(function () { requestAnimationFrame(function () { svg.classList.add('bm-on'); }); });
+      if (!svg) return;
+      svg.classList.remove('bm-static');
+      void svg.getBoundingClientRect();
+      requestAnimationFrame(function () { requestAnimationFrame(function () { if (revealed) svg.classList.add('bm-on'); }); });
+    }
+    function unreveal() {
+      if (!revealed) return;
+      revealed = false;
+      var svg = host.firstChild;
+      if (svg) { svg.classList.add('bm-static'); svg.classList.remove('bm-on'); }
     }
     render(false);
     if ('IntersectionObserver' in window && !reduce) {
-      var io = new IntersectionObserver(function (en) {
-        if (en[0].isIntersecting) { reveal(); io.disconnect(); }
-      }, { threshold: 0.3 });
-      io.observe(wrap);
+      new IntersectionObserver(function (en) {
+        en.forEach(function (e) { if (e.isIntersecting) reveal(); });
+      }, { threshold: 0.3 }).observe(wrap);
+      new IntersectionObserver(function (en) {
+        en.forEach(function (e) { if (!e.isIntersecting) unreveal(); });
+      }, { threshold: 0 }).observe(wrap);
     } else { revealed = true; render(false); }
 
     // Responsive: re-render when width changes

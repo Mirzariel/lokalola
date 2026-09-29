@@ -182,7 +182,20 @@
 /* ==========================================================================
    08b — Roadmap
    ========================================================================== */
-.bm-roadmap .section-head { max-width: 860px; }
+.bm-roadmap { overflow: hidden; isolation: isolate; }
+.bm-roadmap .section-head { max-width: 900px; }
+.bm-vision-title { font-size: clamp(2.6rem, 7vw, 5.6rem); line-height: .98; letter-spacing: -.04em; }
+.bm-vision-note { margin-top: -.25rem; font-style: italic; }
+
+/* The ascent: a small flame climbs the edge of the section as you scroll through it (--p from main.js) */
+.bm-ascent { display: none; position: absolute; z-index: -1; right: max(var(--gutter), calc((100vw - var(--maxw)) / 2 - 2rem)); top: 10%; bottom: 10%; width: 2px; background: linear-gradient(180deg, rgba(167, 240, 58, .0), rgba(255, 255, 255, .08) 20%, rgba(255, 255, 255, .08)); }
+.bm-ascent__trail { position: absolute; left: 0; right: 0; bottom: 0; height: calc(var(--p, 0) * 100%); background: linear-gradient(0deg, rgba(232, 112, 42, 0), var(--c-pyro) 55%, var(--c-gas) 85%, var(--lime)); }
+.bm-ascent__dot { position: absolute; left: 50%; bottom: calc(var(--p, 0) * 100%); width: 10px; height: 10px; margin: 0 0 -5px -5px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 4px rgba(167, 240, 58, .15), 0 0 18px 4px rgba(167, 240, 58, .55); }
+@media (min-width: 1100px) { .motion .bm-ascent { display: block; } }
+
+/* Rocket fuel: the tag the whole story climbs towards */
+.bm-prod-tags li.bm-prod-tag--hero { position: relative; border-color: var(--lime); background: rgba(167, 240, 58, .16); color: #fff; font-weight: 600; box-shadow: 0 0 0 0 rgba(167, 240, 58, .45); animation: bm-hero-ping 2.8s ease-out infinite; }
+@keyframes bm-hero-ping { 0% { box-shadow: 0 0 0 0 rgba(167, 240, 58, .45); } 70%, 100% { box-shadow: 0 0 0 10px rgba(167, 240, 58, 0); } }
 
 .bm-tl { --bm-gap: 1.5rem; position: relative; display: block; padding-left: 76px; }
 .bm-tl::before { content: none; }

@@ -42,7 +42,7 @@
     var items = [].slice.call(wrap.querySelectorAll('.sh-step'));
     if (!list || !items.length) return;
     var DUR = 5000, cur = 0, timer = null;
-    var inView = false, hovered = false, focused = false;
+    var inView = false, hovered = false, focused = false, touched = false;
     list.style.setProperty('--sh-dur', (DUR / 1000) + 's');
 
     function select(i) {
@@ -67,7 +67,7 @@
     }
 
     items.forEach(function (li, i) {
-      li.querySelector('.sh-step__btn').addEventListener('click', function () { select(i); });
+      li.querySelector('.sh-step__btn').addEventListener('click', function () { touched = true; select(i); });
     });
     list.addEventListener('mouseenter', function () { hovered = true; stop(); });
     list.addEventListener('mouseleave', function () { hovered = false; restart(); });
@@ -75,10 +75,23 @@
     list.addEventListener('focusout', function () { focused = false; restart(); });
     doc.addEventListener('visibilitychange', restart);
 
+    // Plays while on screen, pauses when it leaves, and (unless the visitor picked a step
+    // themselves) rewinds to step 1 once fully out so it replays from the start on re-entry.
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { inView = en.isIntersecting; restart(); });
-      }, { threshold: .45 }).observe(list);
+        entries.forEach(function (en) {
+          // 45% of the list, or half the viewport when the list is taller than the screen
+          var now = en.isIntersecting && (en.intersectionRatio >= .45 || en.intersectionRect.height >= window.innerHeight * .5);
+          if (now !== inView) { inView = now; restart(); }
+        });
+      }, { threshold: [0, .1, .2, .3, .4, .45, .5, .6, .7, .8, .9, 1] }).observe(list);
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) return;
+          inView = false; stop();
+          if (!touched && cur !== 0) select(0);
+        });
+      }, { threshold: 0 }).observe(list);
     }
   }
 

@@ -31,14 +31,17 @@
       if (pinned && !e.target.closest('[data-tc-funding]')) { pinned = null; show(null); }
     });
 
-    // Legend bars animate on reveal
-    var draw = function () { wrap.classList.add('is-drawn'); };
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { draw(); io.disconnect(); } });
-      }, { threshold: .25 });
-      io.observe(wrap);
-    } else { draw(); }
+    // Legend bars replay on every entry: they draw when comfortably in view and
+    // reset only once the block is completely off screen (so nothing flickers at the edge).
+    var reduce = window.Lokalola ? window.Lokalola.reduce : (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if ('IntersectionObserver' in window && !reduce) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) wrap.classList.add('is-drawn'); });
+      }, { threshold: .25 }).observe(wrap);
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (!en.isIntersecting) wrap.classList.remove('is-drawn'); });
+      }, { threshold: 0 }).observe(wrap);
+    } else { wrap.classList.add('is-drawn'); }
   }
 
   /* ---------- Audience buttons <-> role select ---------- */

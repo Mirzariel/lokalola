@@ -1,27 +1,28 @@
 <header data-header class="hp-header">
+  <span class="hp-progress" aria-hidden="true"></span>
   <div class="hp-header__bar">
-    <a class="hp-header__brand" href="#top" aria-label="Lokalola — back to top">
+    <a class="hp-header__brand" href="#top" aria-label="Lokalola — back to top" data-id-attr="aria-label|Lokalola — kembali ke atas">
       <img src="assets/img/logo-wordmark-white.webp" alt="Lokalola" width="150" height="52">
     </a>
 
-    <nav class="hp-nav" id="hp-nav-menu" data-nav-menu aria-label="Main navigation">
+    <nav class="hp-nav" id="hp-nav-menu" data-nav-menu aria-label="Main navigation" data-id-attr="aria-label|Navigasi utama">
       <ul class="hp-nav__list">
-        <li><a class="hp-nav__link" data-nav-link href="#problem" data-id="Masalah">Problem</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#solution" data-id="Solusi">Solution</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="story problem" href="#story" data-id="Cerita">Story</a></li>
+        <li><a class="hp-nav__link" data-nav-link href="#solution" data-id="Produk">Product</a></li>
+        <li><a class="hp-nav__link" data-nav-link href="#different" data-id="Pembeda">Why us</a></li>
         <li><a class="hp-nav__link" data-nav-link href="#how" data-id="Cara kerja">How it works</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#impact" data-id="Dampak">Impact</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#business" data-id="Bisnis">Business</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#roadmap" data-id="Peta jalan">Roadmap</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#team" data-id="Tim">Team</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="impact calculator" href="#impact" data-id="Dampak">Impact</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="business market roadmap" href="#roadmap" data-id="Visi">Vision</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="pilot team contact" href="#team" data-id="Tim">Team</a></li>
       </ul>
-      <a class="btn btn--primary hp-nav__cta" href="#contact" data-id="Jalin kemitraan">Partner with us</a>
+      <a class="btn btn--primary hp-nav__cta" href="#contact" data-id="Jadi mitra kami">Partner with us</a>
     </nav>
 
     <div class="hp-header__actions">
       <button type="button" class="hp-lang" data-lang-toggle aria-pressed="false" aria-label="Switch language: English / Bahasa Indonesia">
         <span class="hp-lang__opt is-active" data-lang-opt="en">EN</span><span class="hp-lang__opt" data-lang-opt="id">ID</span>
       </button>
-      <a class="btn btn--primary hp-header__cta" href="#contact" data-id="Jalin kemitraan">Partner with us</a>
+      <a class="btn btn--primary hp-header__cta" href="#contact" data-id="Jadi mitra kami">Partner with us</a>
       <button type="button" class="hp-burger" data-nav-toggle aria-expanded="false" aria-controls="hp-nav-menu" aria-label="Menu">
         <span class="hp-burger__box" aria-hidden="true"><span></span><span></span><span></span></span>
       </button>

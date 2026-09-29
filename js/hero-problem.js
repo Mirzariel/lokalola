@@ -11,16 +11,21 @@
 
   function fill() { clearTimeout(timer); slot.classList.add('is-filled'); }
 
+  function empty() { clearTimeout(timer); slot.classList.remove('is-filled'); }
+
   // Auto-fill once the chain is on screen (after a beat so the empty state registers first).
+  // Replays: it empties again only when the slot is completely out of view.
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
+    new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
-        io.disconnect();
+        clearTimeout(timer);
         if (reduce) fill(); else timer = setTimeout(fill, 1500);
       });
-    }, { threshold: 0.6 });
-    io.observe(slot);
+    }, { threshold: 0.6 }).observe(slot);
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (!en.isIntersecting && !reduce) empty(); });
+    }, { threshold: 0 }).observe(slot);
   } else {
     fill();
   }

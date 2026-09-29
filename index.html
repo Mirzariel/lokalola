@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lokalola — Locally manage for greater energy</title>
-<meta name="description" content="Lokalola is an integrated, community-based organic waste processing system that converts local organic waste into renewable energy and useful products, helping communities process their waste independently.">
+<meta name="description" content="Waste is energy in the wrong place. Lokalola is an integrated, community-based organic waste processing system that converts local organic waste into renewable energy and useful products, helping communities process their waste independently.">
 <meta name="theme-color" content="#08170f">
+<script>/* set motion classes before first paint (main.js repeats this) */(function(r){var m=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;r.className=r.className.replace("no-js","js")+(m||!("IntersectionObserver" in window)?" reduce":" motion");})(document.documentElement);</script>
 <meta property="og:title" content="Lokalola — Locally manage for greater energy">
-<meta property="og:description" content="Integrated organic waste processing for community independence.">
+<meta property="og:description" content="Waste is energy in the wrong place. Lokalola turns a village's organic waste into heat, fertiliser and data, right where it is born.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="assets/img/site-isometric.webp">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" as="image" href="assets/img/unit-3d.png" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,34 +23,36 @@
 <link rel="stylesheet" href="css/impact-calc.css">
 <link rel="stylesheet" href="css/business-roadmap.css">
 <link rel="stylesheet" href="css/pilot-team.css">
+<link rel="stylesheet" href="css/story.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <!-- ▼ sections/00-header.html -->
 <header data-header class="hp-header">
+  <span class="hp-progress" aria-hidden="true"></span>
   <div class="hp-header__bar">
-    <a class="hp-header__brand" href="#top" aria-label="Lokalola — back to top">
+    <a class="hp-header__brand" href="#top" aria-label="Lokalola — back to top" data-id-attr="aria-label|Lokalola — kembali ke atas">
       <img src="assets/img/logo-wordmark-white.webp" alt="Lokalola" width="150" height="52">
     </a>
 
-    <nav class="hp-nav" id="hp-nav-menu" data-nav-menu aria-label="Main navigation">
+    <nav class="hp-nav" id="hp-nav-menu" data-nav-menu aria-label="Main navigation" data-id-attr="aria-label|Navigasi utama">
       <ul class="hp-nav__list">
-        <li><a class="hp-nav__link" data-nav-link href="#problem" data-id="Masalah">Problem</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#solution" data-id="Solusi">Solution</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="story problem" href="#story" data-id="Cerita">Story</a></li>
+        <li><a class="hp-nav__link" data-nav-link href="#solution" data-id="Produk">Product</a></li>
+        <li><a class="hp-nav__link" data-nav-link href="#different" data-id="Pembeda">Why us</a></li>
         <li><a class="hp-nav__link" data-nav-link href="#how" data-id="Cara kerja">How it works</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#impact" data-id="Dampak">Impact</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#business" data-id="Bisnis">Business</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#roadmap" data-id="Peta jalan">Roadmap</a></li>
-        <li><a class="hp-nav__link" data-nav-link href="#team" data-id="Tim">Team</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="impact calculator" href="#impact" data-id="Dampak">Impact</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="business market roadmap" href="#roadmap" data-id="Visi">Vision</a></li>
+        <li><a class="hp-nav__link" data-nav-link data-nav-for="pilot team contact" href="#team" data-id="Tim">Team</a></li>
       </ul>
-      <a class="btn btn--primary hp-nav__cta" href="#contact" data-id="Jalin kemitraan">Partner with us</a>
+      <a class="btn btn--primary hp-nav__cta" href="#contact" data-id="Jadi mitra kami">Partner with us</a>
     </nav>
 
     <div class="hp-header__actions">
       <button type="button" class="hp-lang" data-lang-toggle aria-pressed="false" aria-label="Switch language: English / Bahasa Indonesia">
         <span class="hp-lang__opt is-active" data-lang-opt="en">EN</span><span class="hp-lang__opt" data-lang-opt="id">ID</span>
       </button>
-      <a class="btn btn--primary hp-header__cta" href="#contact" data-id="Jalin kemitraan">Partner with us</a>
+      <a class="btn btn--primary hp-header__cta" href="#contact" data-id="Jadi mitra kami">Partner with us</a>
       <button type="button" class="hp-burger" data-nav-toggle aria-expanded="false" aria-controls="hp-nav-menu" aria-label="Menu">
         <span class="hp-burger__box" aria-hidden="true"><span></span><span></span><span></span></span>
       </button>
@@ -56,16 +62,17 @@
 <!-- ▲ sections/00-header.html -->
 <main id="main">
 <!-- ▼ sections/01-hero.html -->
-<section id="top" class="section section--dark hp-hero" aria-labelledby="hp-hero-title">
+<section id="top" class="section section--dark hp-hero" aria-labelledby="hp-hero-title" data-hero>
   <!-- decorative background layers -->
   <div class="hp-hero__bg" aria-hidden="true">
     <div class="hp-hero__glow hp-hero__glow--a"></div>
     <div class="hp-hero__glow hp-hero__glow--b"></div>
+    <div class="hp-hero__cursor"></div>
     <img class="hp-hero__mark" src="assets/img/logo-mark.webp" alt="" width="640" height="640" decoding="async">
     <svg class="hp-hero__curves" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
-      <path d="M-40 640 C 220 520, 420 780, 700 640 S 1200 470, 1500 610" stroke="url(#hpCurveA)" stroke-width="1.4"/>
-      <path d="M-40 700 C 260 600, 480 840, 760 700 S 1200 560, 1500 680" stroke="url(#hpCurveA)" stroke-width="1" opacity=".7"/>
-      <path d="M-40 760 C 300 680, 520 900, 820 760 S 1220 650, 1500 750" stroke="url(#hpCurveA)" stroke-width=".8" opacity=".5"/>
+      <path class="hp-flow" d="M-40 640 C 220 520, 420 780, 700 640 S 1200 470, 1500 610" stroke="url(#hpCurveA)" stroke-width="1.4"/>
+      <path class="hp-flow hp-flow--2" d="M-40 700 C 260 600, 480 840, 760 700 S 1200 560, 1500 680" stroke="url(#hpCurveA)" stroke-width="1" opacity=".7"/>
+      <path class="hp-flow hp-flow--3" d="M-40 760 C 300 680, 520 900, 820 760 S 1220 650, 1500 750" stroke="url(#hpCurveA)" stroke-width=".8" opacity=".5"/>
       <path d="M1500 120 C 1240 200, 1180 40, 900 110 S 560 260, 300 120" stroke="url(#hpCurveB)" stroke-width="1" opacity=".6"/>
       <defs>
         <linearGradient id="hpCurveA" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#a7f03a" stop-opacity="0"/><stop offset=".5" stop-color="#a7f03a" stop-opacity=".55"/><stop offset="1" stop-color="#3fae4f" stop-opacity="0"/></linearGradient>
@@ -83,20 +90,19 @@
           <span data-id="Pertamuda · seed and scale · Universitas Gadjah Mada">Pertamuda · seed and scale · Universitas Gadjah Mada</span>
         </p>
 
-        <h1 id="hp-hero-title" class="hp-hero__title">
-          <span data-id="Kelola lokal,<br>untuk <span class=&quot;hl&quot;>energi lebih besar.</span>">Locally manage<br>for <span class="hl">greater energy.</span></span>
-        </h1>
+        <h1 id="hp-hero-title" class="hp-hero__title split" data-id="Sampah adalah energi<br> yang <span class=&quot;hl&quot;>salah tempat.</span>">Waste is energy<br> in the <span class="hl">wrong place.</span></h1>
 
-        <p class="hp-hero__mission" data-id="Pengolahan sampah organik terpadu untuk kemandirian komunitas.">Integrated organic waste processing for community independence.</p>
-        <p class="hp-hero__lead lead" data-id="Lokalola adalah sistem pengolahan sampah organik terpadu berbasis komunitas yang mengubah sampah organik lokal menjadi energi terbarukan dan produk bermanfaat, sehingga komunitas dapat mengolah sampahnya secara mandiri.">Lokalola is an integrated, community-based organic waste processing system that converts local organic waste into renewable energy and useful products, helping communities process their waste independently.</p>
+        <p class="hp-hero__lead" data-id="Lokalola mengembalikannya ke tempat yang benar: satu unit terpadu yang mengubah sampah organik menjadi <strong>panas, pupuk, dan data</strong>, tepat di tempat sampah itu lahir.">Lokalola puts it back in the right one: one integrated unit that turns organic waste into <strong>heat, fertiliser and data</strong>, right where the waste is born.</p>
 
         <div class="hp-hero__cta">
-          <a class="btn btn--primary" href="#how">
-            <span data-id="Lihat cara kerjanya">See how it works</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          <a class="btn btn--primary" href="#solution">
+            <span data-id="Lihat yang kami jual">See what we sell</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--ghost" href="#contact" data-id="Jalin kemitraan">Partner with us</a>
+          <a class="btn btn--ghost" href="#contact" data-id="Jadi mitra kami">Partner with us</a>
         </div>
+
+        <p class="hp-hero__tagline"><span class="hp-hero__tagline-line" aria-hidden="true"></span><span data-id="Kelola lokal, energi lebih besar.">Locally manage for greater energy.</span></p>
       </div>
 
       <div class="hp-stage">
@@ -110,43 +116,112 @@
           <img class="hp-unit__img" src="assets/img/unit-3d.png" width="1519" height="970" alt="Isometric 3D model of a Lokalola 50 kg unit: three blue biodigester tanks, a gas bag, an orange pyrolysis retort, a purple IoT panel and a green fertiliser tank" data-id-attr="alt|Model 3D isometrik unit Lokalola 50 kg: tiga tangki biodigester biru, kantong gas, retort pirolisis oranye, panel IoT ungu, dan tangki pupuk hijau" fetchpriority="high">
 
           <div class="hp-pin hp-pin--gas hp-pin--up hp-pin--l">
-            <span class="hp-chipx"><b data-id="Biogas">Biogas</b><span>3.5–4.7 m³/<span data-id="hari">day</span></span></span>
+            <span class="hp-chipx"><b>Biogas</b><span>3.5–4.7&nbsp;m³/<span data-id="hari">day</span></span></span>
           </div>
           <div class="hp-pin hp-pin--iot hp-pin--down hp-pin--r">
             <span class="hp-chipx"><b>IoT</b><span>1 START <span data-id="tombol">button</span></span></span>
           </div>
           <div class="hp-pin hp-pin--pyro hp-pin--down hp-pin--r">
-            <span class="hp-chipx"><b data-id="Pirolisis">Pyrolysis</b><span>300–400 °C</span></span>
+            <span class="hp-chipx"><b data-id="Pirolisis">Pyrolysis</b><span>300–400&nbsp;°C</span></span>
           </div>
           <div class="hp-pin hp-pin--fert hp-pin--down hp-pin--l">
-            <span class="hp-chipx"><b data-id="Pupuk">Fertiliser</b><span>17 kg/<span data-id="hari">day</span></span></span>
+            <span class="hp-chipx"><b data-id="Pupuk">Fertiliser</b><span>17&nbsp;kg/<span data-id="hari">day</span></span></span>
           </div>
         </div>
-        <p class="hp-stage__caption" data-id="Unit 50 kg/hari · perkiraan desain, akan divalidasi di pilot">50 kg/day unit · design estimates, to be validated in the pilot</p>
+        <p class="hp-stage__caption" data-id="Unit 50 kg/hari · estimasi desain, akan divalidasi saat pilot">50 kg/day unit · design estimates, to be validated in the pilot</p>
       </div>
     </div>
-
-    <ul class="hp-stats">
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="11.5" data-decimals="1" data-suffix=" t">0</span></span>
-        <span class="hp-stat__label" data-id="CO₂e dihindari per paket / tahun">CO₂e avoided per package / year</span>
-      </li>
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="150" data-prefix="~">0</span></span>
-        <span class="hp-stat__label" data-id="rumah tangga terlayani per unit">households served per unit</span>
-      </li>
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="200">0</span></span>
-        <span class="hp-stat__label" data-id="tabung LPG tergantikan per tahun">LPG cylinders replaced per year</span>
-      </li>
-      <li class="hp-stat">
-        <span class="hp-stat__value"><span class="num" data-count-to="50" data-suffix=" kg">0</span></span>
-        <span class="hp-stat__label" data-id="sampah diolah per hari">waste processed per day</span>
-      </li>
-    </ul>
   </div>
+
+  <!-- Design-spec telemetry: real design values, not live readings -->
+  <div class="hp-tele" aria-label="Design specification of the 50 kg package" data-id-attr="aria-label|Spesifikasi desain paket 50 kg">
+    <span class="hp-tele__tag"><span class="hp-tele__led" aria-hidden="true"></span><span data-id="Spesifikasi desain">Design spec</span></span>
+    <div class="hp-tele__track">
+      <ul class="hp-tele__list">
+        <li><b data-id="Digester">Digester</b> 3 × 2,000&nbsp;L · 4&nbsp;m³</li>
+        <li><b data-id="Retensi">Retention</b> 52&nbsp;<span data-id="hari">days</span></li>
+        <li><b>Biogas</b> 3.5–4.7&nbsp;m³/<span data-id="hari">day</span></li>
+        <li><b data-id="Panas">Heat</b> 76–101&nbsp;MJ/<span data-id="hari">day</span></li>
+        <li><b data-id="Retort">Retort</b> 300–400&nbsp;°C</li>
+        <li><b data-id="Pasteurisasi">Pasteurise</b> 70&nbsp;°C</li>
+        <li><b data-id="Pupuk">Fertiliser</b> 17&nbsp;kg + 60&nbsp;L/<span data-id="hari">day</span></li>
+        <li><b data-id="Otak">Brain</b> ESP32-S3 · MQTT/4G</li>
+        <li><b>CO₂e</b> 11.5&nbsp;t/<span data-id="tahun">year</span></li>
+      </ul>
+      <ul class="hp-tele__list" aria-hidden="true">
+        <li><b data-id="Digester">Digester</b> 3 × 2,000&nbsp;L · 4&nbsp;m³</li>
+        <li><b data-id="Retensi">Retention</b> 52&nbsp;<span data-id="hari">days</span></li>
+        <li><b>Biogas</b> 3.5–4.7&nbsp;m³/<span data-id="hari">day</span></li>
+        <li><b data-id="Panas">Heat</b> 76–101&nbsp;MJ/<span data-id="hari">day</span></li>
+        <li><b data-id="Retort">Retort</b> 300–400&nbsp;°C</li>
+        <li><b data-id="Pasteurisasi">Pasteurise</b> 70&nbsp;°C</li>
+        <li><b data-id="Pupuk">Fertiliser</b> 17&nbsp;kg + 60&nbsp;L/<span data-id="hari">day</span></li>
+        <li><b data-id="Otak">Brain</b> ESP32-S3 · MQTT/4G</li>
+        <li><b>CO₂e</b> 11.5&nbsp;t/<span data-id="tahun">year</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="hp-cue" href="#story">
+    <span data-id="Gulir untuk ceritanya">Scroll for the story</span>
+    <span class="hp-cue__line" aria-hidden="true"></span>
+  </a>
 </section>
 <!-- ▲ sections/01-hero.html -->
+<!-- ▼ sections/01b-story.html -->
+<section id="story" class="section section--dark st-story" aria-labelledby="st-story-title" data-scrub="pin" data-st-story>
+  <h2 id="st-story-title" class="sr-only" data-id="Cerita di balik Lokalola">The story behind Lokalola</h2>
+  <div class="st-story__sticky">
+    <canvas class="st-story__canvas" aria-hidden="true"></canvas>
+    <div class="st-story__vignette" aria-hidden="true"></div>
+
+    <div class="container st-story__stage">
+      <ol class="st-frames">
+        <li class="st-frame" style="--c: var(--c-dry)">
+          <p class="st-frame__kicker"><span class="st-frame__no">01</span> <span data-id="Yogyakarta, setiap hari">Yogyakarta, every day</span></p>
+          <p class="st-frame__big"><span class="num" data-st-count="282">282</span> <span class="st-frame__unit" data-id="ton">tons</span></p>
+          <p class="st-frame__text" data-id="sampah terkumpul setiap hari. Sekitar 40% di antaranya organik: sisa makanan, daun, sisa pasar.">of waste are collected every day. Roughly 40% of it is organic: food scraps, leaves, market leftovers.</p>
+        </li>
+        <li class="st-frame" style="--c: var(--c-pyro)">
+          <p class="st-frame__kicker"><span class="st-frame__no">02</span> <span data-id="Yang benar-benar diolah">What actually gets processed</span></p>
+          <p class="st-frame__big"><span data-id="Hanya">Only</span> <span class="num" data-st-count="73">73</span> <span class="st-frame__unit" data-id="ton">tons</span></p>
+          <p class="st-frame__text" data-id="Kapasitasnya ada, 148 ton per hari, tapi pasokan dan permintaan tidak pernah bertemu.">The capacity exists, 148 tons a day, but supply and demand never meet.</p>
+        </li>
+        <li class="st-frame" style="--c: #9aa39c">
+          <p class="st-frame__kicker"><span class="st-frame__no">03</span> <span data-id="Sisanya">The rest</span></p>
+          <p class="st-frame__big st-frame__big--words" data-id="Tidak punya tempat tujuan.">Has nowhere to go.</p>
+          <p class="st-frame__text" data-id="TPS kini menolak sampah organik. Sampah menumpuk, berbau, menyebarkan penyakit. Lalu dibakar.">Transfer stations now refuse organic waste. It piles up, it smells, it spreads disease. Then it gets burned.</p>
+        </li>
+        <li class="st-frame" style="--c: var(--c-gas)">
+          <p class="st-frame__kicker"><span class="st-frame__no">04</span> <span data-id="Padahal di dalamnya">Yet inside it</span></p>
+          <p class="st-frame__big"><span class="st-frame__approx">≈</span><span class="num" data-st-count="13.3" data-decimals="1">13.3</span> <span class="st-frame__unit">MWh</span></p>
+          <p class="st-frame__text" data-id="energi per hari, terkunci di sisa makanan Yogyakarta saja. Itu bukan sampah. Itu <strong>energi yang salah tempat.</strong>">of energy a day, locked in Yogyakarta's food waste alone. It isn't rubbish. It's <strong>energy in the wrong place.</strong></p>
+        </li>
+        <li class="st-frame st-frame--last" style="--c: var(--lime)">
+          <p class="st-frame__kicker"><span class="st-frame__no">05</span> <span data-id="Jadi kami membangun">So we built</span></p>
+          <p class="st-frame__big st-frame__big--words" data-id="Mesin yang membebaskannya.">A machine that sets it free.</p>
+          <p class="st-frame__text" data-id="Tepat di tempat sampah itu lahir: satu unit per kecamatan atau kelurahan, dijalankan warga, dengan satu tombol START.">Right where the waste is born: one unit per district or village, run by the community, with one START button.</p>
+          <a class="st-frame__link" href="#solution"><span data-id="Lihat yang kami jual">See what we sell</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </li>
+      </ol>
+
+      <img class="st-story__unit" src="assets/img/unit-3d.png" width="1519" height="970" loading="lazy" decoding="async" alt="">
+    </div>
+
+    <div class="st-rail" aria-hidden="true">
+      <span class="st-rail__bar"><i></i></span>
+      <ol class="st-rail__ticks">
+        <li data-id="Terkumpul">Collected</li>
+        <li data-id="Diolah">Processed</li>
+        <li data-id="Ditolak">Refused</li>
+        <li data-id="Energi">Energy</li>
+        <li>Lokalola</li>
+      </ol>
+    </div>
+    <p class="st-story__src note" data-id="Sumber: Policy Brief MAP UGM, 2021">Source: Policy Brief MAP UGM, 2021</p>
+  </div>
+</section>
+<!-- ▲ sections/01b-story.html -->
 <!-- ▼ sections/02-problem.html -->
 <section id="problem" class="section section--cream hp-problem" aria-labelledby="hp-problem-title">
   <div class="container">
@@ -155,7 +230,7 @@
     <div class="section-head hp-problem__head">
       <p class="eyebrow" data-id="Masalahnya">The problem</p>
       <h2 id="hp-problem-title" data-id="Sampah ada, kapasitas ada — tetapi <span class=&quot;hl&quot;>rantainya terputus.</span>">Waste exists, capacity exists&nbsp;— but <span class="hl">the chain is broken.</span></h2>
-      <p class="lead" data-id="Pemerintah daerah kini menolak sampah organik di TPS. Sampah menumpuk, berbau, menyebarkan penyakit, lalu warga membakarnya. Sedikit yang tahu bahwa sampah organik bisa menjadi bahan bakar.">Local governments now refuse organic waste at transfer stations (TPS). It piles up, smells, spreads disease, and residents burn it. Few people know that organic waste can be fuel.</p>
+      <p class="lead" data-id="Perbesar dari Yogyakarta, pola yang sama berulang di seluruh Indonesia: sampah melimpah di hulu, permintaan nyata di hilir, dan kosong di tengah. Sedikit yang tahu bahwa sampah organik bisa menjadi bahan bakar.">Zoom out from Yogyakarta and the same pattern repeats across Indonesia: plenty of waste upstream, real demand downstream, and nothing in the middle. Few people know that organic waste can be fuel.</p>
     </div>
 
     <!-- (a) Headline stats -->
@@ -313,65 +388,73 @@
 </section>
 <!-- ▲ sections/02-problem.html -->
 <!-- ▼ sections/03-solution.html -->
-<section id="solution" class="section sh-solution" aria-labelledby="sh-solution-title">
+<section id="solution" class="section sh-solution st-product" aria-labelledby="sh-solution-title">
   <div class="container">
 
-    <div class="section-head reveal">
-      <span class="eyebrow" data-id="The solution">The solution</span>
-      <h2 id="sh-solution-title" data-id="Meet <span class=&quot;hl&quot;>Lokalola</span>">Meet <span class="hl">Lokalola</span></h2>
+    <div class="section-head st-product__head">
+      <span class="eyebrow reveal" data-id="Yang kami jual">What we sell</span>
+      <h2 id="sh-solution-title" class="split" data-id="Satu paket. <span class=&quot;hl&quot;>Sistem energi milik desa sendiri.</span>">One package. <span class="hl">A village's own energy system.</span></h2>
+      <p class="lead reveal" style="--d:.2s" data-id="Kami tidak menjual energi, dan tidak menjual janji. Kami menjual <strong>paket Lokalola 50 kg</strong>: fasilitas terpadu yang lengkap, dimiliki dan dijalankan warga, beserta layanan yang menjaganya tetap berjalan.">We don't sell energy, and we don't sell promises. We sell the <strong>Lokalola 50&nbsp;kg package</strong>: a complete, integrated facility a community owns and runs, plus the service that keeps it running.</p>
     </div>
 
-    <p class="sh-mission reveal" data-id="Lokalola adalah sistem pengolahan sampah organik <span class=&quot;hl&quot;>terpadu berbasis komunitas</span> yang mengubah sampah organik lokal menjadi <span class=&quot;hl&quot;>energi terbarukan</span> dan produk bermanfaat, sehingga masyarakat dapat mengolah sampahnya secara mandiri.">Lokalola is an <span class="hl">integrated, community-based</span> organic waste processing system that converts local organic waste into <span class="hl">renewable energy</span> and useful products, helping communities process their waste independently.</p>
-
-    <div class="sh-intro">
-      <div class="sh-intro__copy reveal">
-        <p class="lead" data-id="Singkatnya: satu paket fasilitas terpadu untuk 50 kg sampah organik per hari, yang bisa dijalankan warga sekitar cukup dengan satu tombol <strong>START</strong>.">In short: one integrated facility package for 50&nbsp;kg of organic waste a day, that a community can run with a single <strong>START</strong> button.</p>
-
-        <ul class="sh-pillars">
-          <li class="sh-pillar" style="--pc: var(--c-bio)">
-            <span class="sh-pillar__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="3"/><circle cx="17.5" cy="17.5" r="3"/><path d="M9.7 10.6l5-2.6M9.7 13.4l5 2.6"/></svg>
-            </span>
-            <div>
-              <h3 class="sh-pillar__title" data-id="Terpadu">Integrated</h3>
-              <p class="sh-pillar__text" data-id="Biodigester, pirolisis, dan pembuatan pupuk dalam satu sistem, bukan tiga proyek terpisah.">Biodigester, pyrolysis and fertiliser-making in one system, not three separate projects.</p>
-            </div>
-          </li>
-          <li class="sh-pillar" style="--pc: var(--c-fert)">
-            <span class="sh-pillar__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8"/><path d="M6.4 6.6a8 8 0 1 0 11.2 0"/></svg>
-            </span>
-            <div>
-              <h3 class="sh-pillar__title" data-id="Sederhana">Simple</h3>
-              <p class="sh-pillar__text" data-id="Satu tombol START. Suhu, waktu, dan keselamatan berjalan otomatis; data IoT terkirim sendiri.">One START button. Temperature, timer and safety are automatic, and IoT sends the data by itself.</p>
-            </div>
-          </li>
-          <li class="sh-pillar" style="--pc: var(--c-pyro)">
-            <span class="sh-pillar__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-2.9 8-7 10-4.1-2-7-5.6-7-10V6z"/><path d="M8.8 12l2.3 2.3 4.2-4.6"/></svg>
-            </span>
-            <div>
-              <h3 class="sh-pillar__title" data-id="Didampingi">Supported</h3>
-              <p class="sh-pillar__text" data-id="Teknologi, dukungan operasional, pemantauan, perawatan, dan peningkatan di masa depan dari Lokalola.">Technology, operational support, monitoring, maintenance and future upgrades from Lokalola.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <figure class="sh-hero reveal" style="--d:.1s">
-        <div class="sh-hero__panel">
-          <img src="assets/img/unit-3d.png" width="1519" height="970" loading="lazy"
-               alt="Isometric 3D illustration of the Lokalola 50 kg package: three blue biodigester tanks, a gold biogas bag, a purple IoT panel, an orange pyrolysis retort, a green fertiliser tank and a dry-waste dryer."
-               data-id-attr="alt|Ilustrasi 3D isometrik paket Lokalola 50 kg: tiga tangki biodigester biru, kantong biogas emas, panel IoT ungu, retort pirolisis oranye, tangki pupuk hijau, dan pengering sampah kering.">
-          <ul class="sh-hero__stats">
-            <li><span class="num"><span data-count-to="50" data-suffix=" kg">0</span></span><span data-id="sampah per hari">waste per day</span></li>
-            <li><span class="num"><span data-count-to="150" data-prefix="≈ ">0</span></span><span data-id="rumah tangga per paket">households per package</span></li>
-            <li><span class="num">8 × 5 m</span><span data-id="lahan yang dibutuhkan">land footprint</span></li>
-          </ul>
-        </div>
+    <!-- Spec sheet -->
+    <div class="st-spec">
+      <figure class="st-spec__fig reveal">
+        <span class="st-spec__label" aria-hidden="true"><span>Lokalola</span> <b>50&nbsp;kg</b></span>
+        <span class="st-spec__corner st-spec__corner--tl" aria-hidden="true"></span><span class="st-spec__corner st-spec__corner--tr" aria-hidden="true"></span>
+        <span class="st-spec__corner st-spec__corner--bl" aria-hidden="true"></span><span class="st-spec__corner st-spec__corner--br" aria-hidden="true"></span>
+        <img src="assets/img/unit-3d.png" width="1519" height="970" loading="lazy" decoding="async"
+             alt="Isometric 3D illustration of the Lokalola 50 kg package: three blue biodigester tanks, a gold biogas bag, a purple IoT panel, an orange pyrolysis retort, a green fertiliser tank and a dry-waste dryer."
+             data-id-attr="alt|Ilustrasi 3D isometrik paket Lokalola 50 kg: tiga tangki biodigester biru, kantong biogas emas, panel IoT ungu, retort pirolisis oranye, tangki pupuk hijau, dan pengering sampah kering.">
         <figcaption class="note" data-id="Ilustrasi konsep paket Lokalola 50 kg. Angka adalah estimasi desain yang akan divalidasi dalam pilot.">Concept illustration of the Lokalola 50 kg package. Figures are design estimates to be validated in the pilot.</figcaption>
       </figure>
+
+      <dl class="st-spec__list">
+        <div class="st-spec__row reveal" style="--d:.05s"><dt data-id="Kapasitas">Capacity</dt><dd><span class="num" data-count-to="50">0</span> <span class="st-spec__u">kg/<span data-id="hari">day</span></span><span class="st-spec__sub" data-id="sampah organik">organic waste</span></dd></div>
+        <div class="st-spec__row reveal" style="--d:.1s"><dt data-id="Melayani">Serves</dt><dd><span class="num" data-count-to="150" data-prefix="≈ ">0</span> <span class="st-spec__sub" data-id="rumah tangga">households</span></dd></div>
+        <div class="st-spec__row reveal" style="--d:.15s"><dt data-id="Lahan">Footprint</dt><dd><span class="num">~8&nbsp;×&nbsp;5</span> <span class="st-spec__u">m</span></dd></div>
+        <div class="st-spec__row reveal" style="--d:.2s"><dt data-id="Operasi">Operation</dt><dd><span class="num">1</span> <span class="st-spec__sub" data-id="tombol START">START button</span></dd></div>
+        <div class="st-spec__row reveal" style="--d:.25s"><dt data-id="Keluaran">Outputs</dt><dd><span class="st-spec__words" data-id="Panas · pupuk · data">Heat · fertiliser · data</span></dd></div>
+        <div class="st-spec__row st-spec__row--price reveal" style="--d:.3s"><dt data-id="Harga unit">Unit price</dt><dd><span class="st-spec__u">IDR</span> <span class="num" data-count-to="85">0</span> <span class="st-spec__u">M</span><span class="st-spec__sub" data-id="+ Service Basic IDR 0,5–1 jt / bulan">+ Service Basic IDR 0.5–1 M / month</span></dd></div>
+      </dl>
     </div>
+
+    <!-- What's in the package -->
+    <div class="st-pkg">
+      <h3 class="st-pkg__title reveal" data-id="Isi paketnya">What's in the package</h3>
+      <ol class="st-pkg__list">
+        <li class="st-pkg__item reveal" style="--pc: var(--c-bio)">
+          <span class="st-pkg__no" aria-hidden="true">01</span>
+          <span class="st-pkg__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="7" height="11" rx="2"/><rect x="14" y="5" width="7" height="15" rx="2"/><path d="M10 14h4M6.5 9V6a2 2 0 0 1 2-2h3"/></svg></span>
+          <h4 data-id="Unit terpadu">The integrated unit</h4>
+          <p data-id="Biodigester, penyimpan gas, retort pirolisis, dan jalur pupuk dalam satu sistem, dengan otak IoT di dalamnya. Bukan tiga proyek terpisah.">Biodigester, gas storage, pyrolysis retort and fertiliser line in one system, with an IoT brain inside. Not three separate projects.</p>
+          <span class="st-pkg__tag" data-id="Penjualan unit · IDR 85 jt">Unit sale · IDR 85 M</span>
+        </li>
+        <li class="st-pkg__item reveal" style="--pc: var(--c-dry); --d:.08s">
+          <span class="st-pkg__no" aria-hidden="true">02</span>
+          <span class="st-pkg__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
+          <h4 data-id="Pemasangan &amp; pendampingan">Set-up &amp; hands-on support</h4>
+          <p data-id="Kami memasang unit di lokasi Anda dan terus mendampingi operator setelah pembelian.">We set the unit up on your site and stay hands-on with your operators after the sale.</p>
+          <span class="st-pkg__tag" data-id="Termasuk">Included</span>
+        </li>
+        <li class="st-pkg__item reveal" style="--pc: var(--c-iot); --d:.16s">
+          <span class="st-pkg__no" aria-hidden="true">03</span>
+          <span class="st-pkg__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg></span>
+          <h4 data-id="Langganan servis">Service subscription</h4>
+          <p data-id="Pemantauan IoT jarak jauh, kunjungan setiap 3 bulan, serta suku cadang &amp; perbaikan 20% untuk pelanggan.">Remote IoT monitoring, a visit every 3 months, and spare parts &amp; repairs at 20% for subscribers.</p>
+          <span class="st-pkg__tag" data-id="Service Basic · IDR 0,5–1 jt / bulan">Service Basic · IDR 0.5–1 M / month</span>
+        </li>
+        <li class="st-pkg__item reveal" style="--pc: var(--c-fert); --d:.24s">
+          <span class="st-pkg__no" aria-hidden="true">04</span>
+          <span class="st-pkg__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/><path d="M5 21h14"/></svg></span>
+          <h4 data-id="Peningkatan berkelanjutan">Future upgrades</h4>
+          <p data-id="Setiap unit melaporkan datanya. Pelajaran dari semua unit kembali sebagai peningkatan, sehingga fasilitas Anda terus menjadi lebih baik.">Every unit reports its data. What we learn across units flows back as upgrades, so your facility keeps getting better.</p>
+          <span class="st-pkg__tag" data-id="Terus berkembang">Keeps improving</span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="sh-mission st-product__mission reveal" data-id="Lokalola adalah sistem pengolahan sampah organik <span class=&quot;hl&quot;>terpadu berbasis komunitas</span> yang mengubah sampah organik lokal menjadi <span class=&quot;hl&quot;>energi terbarukan</span> dan produk bermanfaat, sehingga masyarakat dapat mengolah sampahnya secara mandiri.">Lokalola is an <span class="hl">integrated, community-based</span> organic waste processing system that converts local organic waste into <span class="hl">renewable energy</span> and useful products, helping communities process their waste independently.</p>
 
     <!-- Waste protocol -->
     <div class="sh-block">
@@ -481,6 +564,70 @@
   </div>
 </section>
 <!-- ▲ sections/03-solution.html -->
+<!-- ▼ sections/03b-different.html -->
+<section id="different" class="section section--dark st-diff" aria-labelledby="st-diff-title">
+  <div class="st-diff__glow" aria-hidden="true"></div>
+  <div class="container">
+
+    <div class="section-head st-diff__head">
+      <span class="eyebrow reveal" data-id="Apa bedanya">Why it's different</span>
+      <h2 id="st-diff-title" class="split" data-id="Bukan sekadar <span class=&quot;hl&quot;>tempat olah sampah.</span>">Not another <span class="hl">waste facility.</span></h2>
+      <p class="lead reveal" style="--d:.2s" data-id="Fasilitas pada umumnya membuat sampah menghilang ke tempat lain. Lokalola membuatnya berguna, tepat di tempatnya.">A typical facility makes waste disappear somewhere else. Lokalola makes it useful, right where it is.</p>
+    </div>
+
+    <div class="st-diff__table" role="table" aria-labelledby="st-diff-title">
+      <div class="st-diff__row st-diff__row--head" role="row">
+        <span class="st-diff__k" role="columnheader"><span class="sr-only" data-id="Aspek">Aspect</span></span>
+        <span class="st-diff__old" role="columnheader" data-id="Fasilitas pada umumnya">Typical facility</span>
+        <span class="st-diff__new" role="columnheader"><img src="assets/img/logo-mark.webp" width="22" height="22" alt="" loading="lazy">Lokalola</span>
+      </div>
+
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Lokasi">Where it sits</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Jauh dari rumah; sampah diangkut keluar kota.">Far from home; waste is trucked out of town.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Di kecamatan atau kelurahan tempat sampah itu lahir, di lahan ~8&nbsp;×&nbsp;5&nbsp;m.">In the district or village where the waste is born, on ~8&nbsp;×&nbsp;5&nbsp;m.</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Yang masuk">What goes in</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Sampah campur, dan sampah organik sering ditolak.">Mixed waste, and organics are often turned away.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Dipilah di rumah: sisa makanan ke biodigester, daun dan ranting ke pirolisis.">Sorted at home: food waste to the biodigester, leaves and twigs to pyrolysis.</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Yang keluar">What comes out</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Paling banter kompos, sering kali tidak ada sama sekali.">Compost at best, often nothing at all.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Panas, pupuk, dan biochar, setiap hari.">Heat, fertiliser and biochar, every day.</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Energi">Energy</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Terlepas ke udara sebagai metana atau asap.">Released into the air as methane or smoke.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Ditangkap sebagai biogas, disimpan, dan dipakai di tempat: ≈&nbsp;200 tabung LPG setahun.">Captured as biogas, stored and used on site: ≈&nbsp;200 LPG cylinders a year.</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Pengoperasian">Operation</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Kerja manual yang butuh tenaga terlatih.">Manual work that needs skilled staff.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Satu tombol START. Suhu, waktu, dan keselamatan berjalan otomatis.">One START button. Temperature, timer and safety are automatic.</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Bukti">Proof</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Tidak ada yang diukur.">Nothing is measured.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Setiap angka dicatat IoT: suhu, pH, aliran gas.">Every number logged by IoT: temperature, pH, gas flow.</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Bagi pemilik">For the owner</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Biaya rutin, dimulai dari ongkos angkut.">A running cost, starting with hauling.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="≈&nbsp;+IDR 2,0–2,65 jt bersih per bulan (estimasi desain).">≈&nbsp;+IDR 2.0–2.65 M net per month (design estimate).</span></span>
+      </div>
+      <div class="st-diff__row reveal" role="row">
+        <span class="st-diff__k" role="rowheader" data-id="Setelah dibeli">After the sale</span>
+        <span class="st-diff__old" role="cell"><span class="st-diff__txt" data-id="Anda sendirian.">You're on your own.</span></span>
+        <span class="st-diff__new" role="cell"><span class="st-diff__txt" data-id="Pemantauan, kunjungan tiap 3 bulan, suku cadang, dan peningkatan.">Monitoring, a visit every 3 months, spare parts and upgrades.</span></span>
+      </div>
+    </div>
+
+    <p class="note st-diff__foot reveal" data-id="&ldquo;Fasilitas pada umumnya&rdquo; menggambarkan pengaturan konvensional yang umum; tiap fasilitas bisa berbeda. Angka Lokalola adalah estimasi desain yang akan divalidasi dalam pilot.">&ldquo;Typical facility&rdquo; describes common conventional set-ups; individual facilities vary. Lokalola figures are design estimates to be validated in the pilot.</p>
+  </div>
+</section>
+<!-- ▲ sections/03b-different.html -->
 <!-- ▼ sections/04-how-it-works.html -->
 <section id="how" class="section section--mist sh-how" aria-labelledby="sh-how-title">
   <div class="container">
@@ -685,23 +832,23 @@
   <div class="container">
 
     <div class="section-head">
-      <p class="eyebrow" data-id="Energy &amp; carbon impact">Energy &amp; carbon impact</p>
-      <h2 id="impact-title" data-id="From waste to stored biogas to <span class=&quot;hl&quot;>measurable heat</span>">From waste to stored biogas to <span class="hl">measurable heat</span></h2>
-      <p class="lead" data-id="Lokalola does not sell energy as its main product. But every package carries a complete energy chain: a source, a store and a measured use that replaces a fossil heat source, LPG.">Lokalola does not sell energy as its main product. But every package carries a complete energy chain: a source, a store and a measured use that replaces a fossil heat source, LPG.</p>
+      <p class="eyebrow" data-id="Dampak energi &amp; karbon">Energy &amp; carbon impact</p>
+      <h2 id="impact-title" data-id="Dari sampah, ke biogas tersimpan, hingga <span class=&quot;hl&quot;>panas terukur</span>">From waste to stored biogas to <span class="hl">measurable heat</span></h2>
+      <p class="lead" data-id="Lokalola tidak menjual energi sebagai produk utama. Namun setiap paket membawa rantai energi yang lengkap: sumber, penyimpanan, dan pemakaian terukur yang menggantikan sumber panas fosil, yaitu LPG.">Lokalola does not sell energy as its main product. But every package carries a complete energy chain: a source, a store and a measured use that replaces a fossil heat source, LPG.</p>
     </div>
 
     <!-- (a) Energy chain per 50 kg package -->
     <div class="ic-block">
-      <h3 class="ic-block-title" data-id="Energy chain per 50 kg package">Energy chain per 50 kg package</h3>
+      <h3 class="ic-block-title" data-id="Rantai energi per paket 50 kg">Energy chain per 50 kg package</h3>
       <ol class="ic-chain reveal">
         <li class="ic-stage" style="--ic-c: var(--c-bio)">
           <span class="ic-stage-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20v18a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4V20"/><path d="M10 20c0-4 6-6 14-6s14 2 14 6"/><path d="M16 31c2.5-2.6 5 2.6 8 0s5.500 2.600 8 0"/><path d="M24 3v9m-4-3.500 4 4 4-4"/></svg>
           </span>
           <div class="ic-stage-text">
-            <span class="ic-stage-step" data-id="1 · Source">1 · Source</span>
-            <h4 class="ic-stage-title" data-id="Food waste, digested">Food waste, digested</h4>
-            <p data-id="35 kg of food waste a day is digested without oxygen in the biodigester.">35 kg of food waste a day is digested without oxygen in the biodigester.</p>
+            <span class="ic-stage-step" data-id="1 · Sumber">1 · Source</span>
+            <h4 class="ic-stage-title" data-id="Sisa makanan, dicerna">Food waste, digested</h4>
+            <p data-id="35 kg sisa makanan per hari dicerna tanpa oksigen di dalam biodigester.">35 kg of food waste a day is digested without oxygen in the biodigester.</p>
           </div>
         </li>
         <li class="ic-stage" style="--ic-c: var(--c-gas)">
@@ -709,9 +856,9 @@
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 25c0-7 7-11 18-11s18 4 18 11-7 11-18 11S6 32 6 25z"/><path d="M24 14V8m-3 0h6"/><circle cx="18" cy="25" r="2"/><circle cx="26" cy="22" r="1.500"/><circle cx="31" cy="28" r="2"/><path d="M17 42h14"/></svg>
           </span>
           <div class="ic-stage-text">
-            <span class="ic-stage-step" data-id="2 · Storage">2 · Storage</span>
-            <h4 class="ic-stage-title" data-id="Biogas, 2.5 m³ in a bag">Biogas, 2.5 m³ in a bag</h4>
-            <p data-id="Biogas is cleaned by an H₂S scrubber, then stored in a gas bag: about 2.5 m³ on hand.">Biogas is cleaned by an H₂S scrubber, then stored in a gas bag: about 2.5 m³ on hand.</p>
+            <span class="ic-stage-step" data-id="2 · Penyimpanan">2 · Storage</span>
+            <h4 class="ic-stage-title" data-id="Biogas, 2,5 m³ dalam kantong">Biogas, 2.5 m³ in a bag</h4>
+            <p data-id="Biogas dibersihkan scrubber H₂S, lalu disimpan di kantong gas: sekitar 2,5 m³ siap pakai.">Biogas is cleaned by an H₂S scrubber, then stored in a gas bag: about 2.5 m³ on hand.</p>
           </div>
         </li>
         <li class="ic-stage" style="--ic-c: var(--c-iot)">
@@ -719,9 +866,9 @@
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 33a17 17 0 1 1 34 0"/><path d="M24 33l7-11"/><circle cx="24" cy="33" r="2.200"/><path d="M11.500 22.500l2.400 1.600M24 12v3M36.500 22.500l-2.400 1.600"/><path d="M12 42h24"/></svg>
           </span>
           <div class="ic-stage-text">
-            <span class="ic-stage-step" data-id="3 · Measure">3 · Measure</span>
-            <h4 class="ic-stage-title" data-id="Every number logged">Every number logged</h4>
-            <p data-id="A biogas flow meter and 4 thermocouples feed automatic IoT logging, so the energy is measured, not assumed.">A biogas flow meter and 4 thermocouples feed automatic IoT logging, so the energy is measured, not assumed.</p>
+            <span class="ic-stage-step" data-id="3 · Ukur">3 · Measure</span>
+            <h4 class="ic-stage-title" data-id="Setiap angka tercatat">Every number logged</h4>
+            <p data-id="Flow meter biogas dan 4 termokopel mengalirkan data ke pencatatan IoT otomatis, sehingga energinya terukur, bukan sekadar diasumsikan.">A biogas flow meter and 4 thermocouples feed automatic IoT logging, so the energy is measured, not assumed.</p>
           </div>
         </li>
         <li class="ic-stage" style="--ic-c: var(--c-pyro)">
@@ -729,9 +876,9 @@
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c2 8 12 12 12 24a12 12 0 0 1-24 0c0-6 3-9 6-12 0 4 2 6 4 6 0-6-2-11 2-18z"/><path d="M24 44a5.500 5.500 0 0 1-5.500-5.500c0-3.500 3.500-5.500 5.500-9 2 3.500 5.500 5.500 5.500 9A5.500 5.500 0 0 1 24 44z"/></svg>
           </span>
           <div class="ic-stage-text">
-            <span class="ic-stage-step" data-id="4 · Use">4 · Use</span>
-            <h4 class="ic-stage-title" data-id="Heat that replaces LPG">Heat that replaces LPG</h4>
-            <p data-id="Heat for pyrolysis at 300–400 °C. Waste heat pasteurises the fertiliser and dries the feedstock.">Heat for pyrolysis at 300–400 °C. Waste heat pasteurises the fertiliser and dries the feedstock.</p>
+            <span class="ic-stage-step" data-id="4 · Pemakaian">4 · Use</span>
+            <h4 class="ic-stage-title" data-id="Panas pengganti LPG">Heat that replaces LPG</h4>
+            <p data-id="Panas untuk pirolisis pada 300–400 °C. Sisa panasnya memasteurisasi pupuk dan mengeringkan bahan baku.">Heat for pyrolysis at 300–400 °C. Waste heat pasteurises the fertiliser and dries the feedstock.</p>
           </div>
         </li>
       </ol>
@@ -739,12 +886,12 @@
 
     <!-- (b) Carbon impact -->
     <div class="ic-block">
-      <h3 class="ic-block-title" data-id="Carbon impact per package, per year">Carbon impact per package, per year</h3>
+      <h3 class="ic-block-title" data-id="Dampak karbon per paket, per tahun">Carbon impact per package, per year</h3>
       <div class="ic-carbon">
         <div class="ic-total reveal">
-          <p class="ic-total-label" data-id="One 50 kg package avoids or stores">One 50 kg package avoids or stores</p>
-          <p class="ic-total-figure"><span class="num ic-total-num" data-count-to="11.5" data-decimals="1">0</span><span class="ic-total-unit" data-id="t CO₂e / year">t CO₂e / year</span></p>
-          <p class="note" data-id="Three parts add up: 7.0 + 2.7 + 1.8. Open each bar to see how we calculated it.">Three parts add up: 7.0 + 2.7 + 1.8. Open each bar to see how we calculated it.</p>
+          <p class="ic-total-label" data-id="Satu paket 50 kg menghindari atau menyimpan">One 50 kg package avoids or stores</p>
+          <p class="ic-total-figure"><span class="num ic-total-num" data-count-to="11.5" data-decimals="1">0</span><span class="ic-total-unit" data-id="t CO₂e / tahun">t CO₂e / year</span></p>
+          <p class="note" data-id="Tiga bagian dijumlahkan: 7,0 + 2,7 + 1,8. Buka tiap bagian untuk melihat cara menghitungnya.">Three parts add up: 7.0 + 2.7 + 1.8. Open each bar to see how we calculated it.</p>
         </div>
 
         <div class="ic-bars reveal" style="--d:.1s">
@@ -753,48 +900,48 @@
             <span class="ic-seg ic-seg--2" style="--w:23.48%"></span>
             <span class="ic-seg ic-seg--3" style="--w:15.65%"></span>
           </div>
-          <p class="ic-stack-scale" aria-hidden="true"><span>0</span><span>11.5 t CO₂e</span></p>
+          <p class="ic-stack-scale" aria-hidden="true"><span>0</span><span data-id="11,5 t CO₂e">11.5 t CO₂e</span></p>
 
           <div class="ic-parts">
             <details class="ic-part ic-part--1">
               <summary>
                 <span class="ic-part-dot" aria-hidden="true"></span>
-                <span class="ic-part-name" data-id="Landfill methane avoided">Landfill methane avoided</span>
-                <span class="ic-part-val"><strong>7.0</strong> <span data-id="t CO₂e">t CO₂e</span></span>
-                <span class="ic-part-how"><span data-id="How we calculated it">How we calculated it</span><svg class="ic-chev" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></span>
+                <span class="ic-part-name" data-id="Metana TPA yang dihindari">Landfill methane avoided</span>
+                <span class="ic-part-val"><strong data-id="7,0">7.0</strong> <span data-id="t CO₂e">t CO₂e</span></span>
+                <span class="ic-part-how"><span data-id="Cara menghitungnya">How we calculated it</span><svg class="ic-chev" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></span>
                 <span class="ic-part-track" aria-hidden="true"><i style="--w:100%"></i></span>
               </summary>
               <div class="ic-part-body">
-                <p data-id="One package digests about 35 kg of food waste a day, roughly 12.8 tonnes a year. Left in a landfill, that waste would rot without oxygen and release methane. Using the US EPA WARM v16 factor of 0.50 t CO₂e per short ton, avoiding it is worth about 7.0 t CO₂e a year.">One package digests about 35 kg of food waste a day, roughly 12.8 tonnes a year. Left in a landfill, that waste would rot without oxygen and release methane. Using the US EPA WARM v16 factor of 0.50 t CO₂e per short ton, avoiding it is worth about 7.0 t CO₂e a year.</p>
-                <p class="ic-formula" data-id="12.8 t food waste × 0.50 t CO₂e per short ton (EPA WARM v16)">12.8 t food waste × 0.50 t CO₂e per short ton (EPA WARM v16)</p>
+                <p data-id="Satu paket mencerna sekitar 35 kg sisa makanan per hari, kira-kira 12,8 ton per tahun. Jika dibuang ke TPA, sampah itu membusuk tanpa oksigen dan melepaskan metana. Dengan faktor US EPA WARM v16 sebesar 0,50 t CO₂e per short ton, emisi yang dihindari setara sekitar 7,0 t CO₂e per tahun.">One package digests about 35 kg of food waste a day, roughly 12.8 tonnes a year. Left in a landfill, that waste would rot without oxygen and release methane. Using the US EPA WARM v16 factor of 0.50 t CO₂e per short ton, avoiding it is worth about 7.0 t CO₂e a year.</p>
+                <p class="ic-formula" data-id="12,8 t sisa makanan × 0,50 t CO₂e per short ton (EPA WARM v16)">12.8 t food waste × 0.50 t CO₂e per short ton (EPA WARM v16)</p>
               </div>
             </details>
 
             <details class="ic-part ic-part--2">
               <summary>
                 <span class="ic-part-dot" aria-hidden="true"></span>
-                <span class="ic-part-name" data-id="Stored in biochar">Stored in biochar</span>
-                <span class="ic-part-val"><strong>2.7</strong> <span data-id="t CO₂e">t CO₂e</span></span>
-                <span class="ic-part-how"><span data-id="How we calculated it">How we calculated it</span><svg class="ic-chev" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></span>
+                <span class="ic-part-name" data-id="Tersimpan di biochar">Stored in biochar</span>
+                <span class="ic-part-val"><strong data-id="2,7">2.7</strong> <span data-id="t CO₂e">t CO₂e</span></span>
+                <span class="ic-part-how"><span data-id="Cara menghitungnya">How we calculated it</span><svg class="ic-chev" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></span>
                 <span class="ic-part-track" aria-hidden="true"><i style="--w:38.57%"></i></span>
               </summary>
               <div class="ic-part-body">
-                <p data-id="Dry leaves and twigs are heated in the pyrolysis retort and become about 1.8 t of biochar a year. Biochar is about 65% carbon, 3.67 converts carbon to CO₂, and only about 65% of it stays stable in soil for the long term (IPCC 2019 permanence factor). The result is calculated from unrounded inputs.">Dry leaves and twigs are heated in the pyrolysis retort and become about 1.8 t of biochar a year. Biochar is about 65% carbon, 3.67 converts carbon to CO₂, and only about 65% of it stays stable in soil for the long term (IPCC 2019 permanence factor). The result is calculated from unrounded inputs.</p>
-                <p class="ic-formula" data-id="1.8 t biochar × 65% C × 3.67 × 65% stable (IPCC 2019)">1.8 t biochar × 65% C × 3.67 × 65% stable (IPCC 2019)</p>
+                <p data-id="Daun dan ranting kering dipanaskan di retort pirolisis dan menjadi sekitar 1,8 t biochar per tahun. Biochar mengandung sekitar 65% karbon, 3,67 adalah faktor konversi karbon ke CO₂, dan hanya sekitar 65% yang tetap stabil di tanah dalam jangka panjang (faktor permanensi IPCC 2019). Hasilnya dihitung dari input yang belum dibulatkan.">Dry leaves and twigs are heated in the pyrolysis retort and become about 1.8 t of biochar a year. Biochar is about 65% carbon, 3.67 converts carbon to CO₂, and only about 65% of it stays stable in soil for the long term (IPCC 2019 permanence factor). The result is calculated from unrounded inputs.</p>
+                <p class="ic-formula" data-id="1,8 t biochar × 65% C × 3,67 × 65% stabil (IPCC 2019)">1.8 t biochar × 65% C × 3.67 × 65% stable (IPCC 2019)</p>
               </div>
             </details>
 
             <details class="ic-part ic-part--3">
               <summary>
                 <span class="ic-part-dot" aria-hidden="true"></span>
-                <span class="ic-part-name" data-id="LPG replaced">LPG replaced</span>
-                <span class="ic-part-val"><strong>1.8</strong> <span data-id="t CO₂e">t CO₂e</span></span>
-                <span class="ic-part-how"><span data-id="How we calculated it">How we calculated it</span><svg class="ic-chev" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></span>
+                <span class="ic-part-name" data-id="LPG tergantikan">LPG replaced</span>
+                <span class="ic-part-val"><strong data-id="1,8">1.8</strong> <span data-id="t CO₂e">t CO₂e</span></span>
+                <span class="ic-part-how"><span data-id="Cara menghitungnya">How we calculated it</span><svg class="ic-chev" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></span>
                 <span class="ic-part-track" aria-hidden="true"><i style="--w:25.71%"></i></span>
               </summary>
               <div class="ic-part-body">
-                <p data-id="The biogas gives about 76 MJ of heat a day. LPG holds about 46 MJ per kg, so that is roughly 1.65 kg of LPG a day that no longer has to be burned. Each kg of LPG releases 2.98 kg of CO₂.">The biogas gives about 76 MJ of heat a day. LPG holds about 46 MJ per kg, so that is roughly 1.65 kg of LPG a day that no longer has to be burned. Each kg of LPG releases 2.98 kg of CO₂.</p>
-                <p class="ic-formula" data-id="76 MJ/day ÷ 46 MJ/kg × 2.98 kg CO₂/kg × 365 days">76 MJ/day ÷ 46 MJ/kg × 2.98 kg CO₂/kg × 365 days</p>
+                <p data-id="Biogas menghasilkan sekitar 76 MJ panas per hari. LPG mengandung sekitar 46 MJ per kg, jadi sekitar 1,65 kg LPG per hari tidak perlu dibakar lagi. Setiap kg LPG melepaskan 2,98 kg CO₂.">The biogas gives about 76 MJ of heat a day. LPG holds about 46 MJ per kg, so that is roughly 1.65 kg of LPG a day that no longer has to be burned. Each kg of LPG releases 2.98 kg of CO₂.</p>
+                <p class="ic-formula" data-id="76 MJ/hari ÷ 46 MJ/kg × 2,98 kg CO₂/kg × 365 hari">76 MJ/day ÷ 46 MJ/kg × 2.98 kg CO₂/kg × 365 days</p>
               </div>
             </details>
           </div>
@@ -804,29 +951,29 @@
       <!-- Energy calc table -->
       <div class="ic-tablewrap reveal">
         <table class="ic-table">
-          <caption class="sr-only" data-id="Energy calculation for one 50 kg package">Energy calculation for one 50 kg package</caption>
+          <caption class="sr-only" data-id="Perhitungan energi untuk satu paket 50 kg">Energy calculation for one 50 kg package</caption>
           <thead>
             <tr>
-              <th scope="col" data-id="Quantity">Quantity</th>
-              <th scope="col" data-id="Result">Result</th>
-              <th scope="col" data-id="How we get there">How we get there</th>
+              <th scope="col" data-id="Besaran">Quantity</th>
+              <th scope="col" data-id="Hasil">Result</th>
+              <th scope="col" data-id="Cara mendapatkannya">How we get there</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row" data-id="Biogas produced">Biogas produced</th>
-              <td><strong class="ic-tv">3.5–4.7 m³</strong> <span data-id="per day">per day</span></td>
-              <td data-id="35 kg food waste ≈ 7.0 kg volatile solids (VS) per day × 0.5–0.67 m³ biogas per kg VS">35 kg food waste ≈ 7.0 kg volatile solids (VS) per day × 0.5–0.67 m³ biogas per kg VS</td>
+              <th scope="row" data-id="Biogas dihasilkan">Biogas produced</th>
+              <td><strong class="ic-tv" data-id="3,5–4,7 m³">3.5–4.7 m³</strong> <span data-id="per hari">per day</span></td>
+              <td data-id="35 kg sisa makanan ≈ 7,0 kg padatan volatil (VS) per hari × 0,5–0,67 m³ biogas per kg VS">35 kg food waste ≈ 7.0 kg volatile solids (VS) per day × 0.5–0.67 m³ biogas per kg VS</td>
             </tr>
             <tr>
-              <th scope="row" data-id="Heat available">Heat available</th>
-              <td><strong class="ic-tv">76–101 MJ</strong> <span data-id="per day">per day</span></td>
-              <td data-id="Biogas is ~60% methane (CH₄) × 35.8 MJ per m³ of CH₄">Biogas is ~60% methane (CH₄) × 35.8 MJ per m³ of CH₄</td>
+              <th scope="row" data-id="Panas tersedia">Heat available</th>
+              <td><strong class="ic-tv">76–101 MJ</strong> <span data-id="per hari">per day</span></td>
+              <td data-id="Biogas ~60% metana (CH₄) × 35,8 MJ per m³ CH₄">Biogas is ~60% methane (CH₄) × 35.8 MJ per m³ of CH₄</td>
             </tr>
             <tr>
-              <th scope="row" data-id="LPG replaced">LPG replaced</th>
-              <td><strong class="ic-tv">≈ 200</strong> <span data-id="3 kg cylinders per year">3 kg cylinders per year</span></td>
-              <td data-id="76 MJ × 365 ÷ 46 MJ/kg ≈ 600 kg LPG a year ÷ 3 kg per cylinder">76 MJ × 365 ÷ 46 MJ/kg ≈ 600 kg LPG a year ÷ 3 kg per cylinder</td>
+              <th scope="row" data-id="LPG tergantikan">LPG replaced</th>
+              <td><strong class="ic-tv">≈ 200</strong> <span data-id="tabung LPG 3 kg per tahun">3 kg cylinders per year</span></td>
+              <td data-id="76 MJ × 365 ÷ 46 MJ/kg ≈ 600 kg LPG per tahun ÷ 3 kg per tabung">76 MJ × 365 ÷ 46 MJ/kg ≈ 600 kg LPG a year ÷ 3 kg per cylinder</td>
             </tr>
           </tbody>
         </table>
@@ -835,13 +982,13 @@
 
     <!-- (c) Aligned with -->
     <div class="ic-block ic-align">
-      <h3 class="ic-block-title" data-id="Aligned with">Aligned with</h3>
+      <h3 class="ic-block-title" data-id="Selaras dengan">Aligned with</h3>
       <ul class="ic-tags">
-        <li data-id="SBTi 1.5 °C">SBTi 1.5 °C</li>
-        <li data-id="Indonesia NDC1 −29%">Indonesia NDC1 −29%</li>
-        <li data-id="Indonesia NDC2 −41%">Indonesia NDC2 −41%</li>
-        <li data-id="Paris Agreement 1.5 / 2 °C">Paris Agreement 1.5 / 2 °C</li>
-        <li data-id="Reduces Scope 1 &amp; 2 emissions">Reduces Scope 1 &amp; 2 emissions</li>
+        <li data-id="SBTi 1,5 °C">SBTi 1.5 °C</li>
+        <li data-id="NDC1 Indonesia −29%">Indonesia NDC1 −29%</li>
+        <li data-id="NDC2 Indonesia −41%">Indonesia NDC2 −41%</li>
+        <li data-id="Perjanjian Paris 1,5 / 2 °C">Paris Agreement 1.5 / 2 °C</li>
+        <li data-id="Menurunkan emisi Scope 1 &amp; 2">Reduces Scope 1 &amp; 2 emissions</li>
       </ul>
       <ul class="ic-sdgs">
         <li class="ic-sdg" style="--ic-c: var(--c-gas)"><span class="ic-sdg-n">7</span><span class="ic-sdg-t" data-id="Energi Bersih dan Terjangkau">Affordable &amp; Clean Energy</span></li>
@@ -851,7 +998,7 @@
         <li class="ic-sdg" style="--ic-c: var(--c-fert)"><span class="ic-sdg-n">13</span><span class="ic-sdg-t" data-id="Penanganan Perubahan Iklim">Climate Action</span></li>
         <li class="ic-sdg" style="--ic-c: var(--c-dry)"><span class="ic-sdg-n">17</span><span class="ic-sdg-t" data-id="Kemitraan untuk Mencapai Tujuan">Partnerships for the Goals</span></li>
       </ul>
-      <p class="note ic-foot" data-id="Figures are design estimates to be validated in the pilot.">Figures are design estimates to be validated in the pilot.</p>
+      <p class="note ic-foot" data-id="Angka-angka ini adalah estimasi desain yang akan divalidasi dalam pilot.">Figures are design estimates to be validated in the pilot.</p>
     </div>
 
   </div>
@@ -869,30 +1016,30 @@
 
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow" data-id="Estimator">Estimator</p>
-      <h2 id="calc-title" data-id="What could Lokalola do for your <span class=&quot;hl&quot;>district</span>?">What could Lokalola do for your <span class="hl">district</span>?</h2>
-      <p class="lead" data-id="Tell us how many households you serve. See how many 50 kg packages that takes, and what they could process, produce and avoid.">Tell us how many households you serve. See how many 50 kg packages that takes, and what they could process, produce and avoid.</p>
+      <p class="eyebrow" data-id="Perkiraan">Estimator</p>
+      <h2 id="calc-title" data-id="Apa yang bisa Lokalola lakukan untuk <span class=&quot;hl&quot;>wilayah</span> Anda?">What could Lokalola do for your <span class="hl">district</span>?</h2>
+      <p class="lead" data-id="Masukkan jumlah rumah tangga yang Anda layani. Lihat berapa paket 50 kg yang dibutuhkan, serta berapa banyak yang bisa diolah, dihasilkan, dan dihindari.">Tell us how many households you serve. See how many 50 kg packages that takes, and what they could process, produce and avoid.</p>
     </div>
 
     <div class="ic-calc">
 
       <!-- Inputs -->
       <div class="ic-panel card">
-        <label class="ic-label" for="ic-hh-num" data-id="Households in your area">Households in your area</label>
+        <label class="ic-label" for="ic-hh-num" data-id="Rumah tangga di wilayah Anda">Households in your area</label>
         <div class="ic-numrow">
           <input class="ic-numinput" id="ic-hh-num" type="number" inputmode="numeric" min="50" max="20000" step="10" value="600" autocomplete="off">
-          <span class="ic-numunit" data-id="households">households</span>
+          <span class="ic-numunit" data-id="rumah tangga">households</span>
         </div>
 
         <div class="ic-rangewrap">
           <input class="ic-range" id="ic-hh-range" type="range" min="0" max="1000" step="5" value="415" aria-label="Households, slider from 50 to 20,000" data-ic-label-id="Jumlah rumah tangga, penggeser dari 50 sampai 20.000">
-          <p class="ic-range-scale" aria-hidden="true"><span>50</span><span>20,000</span></p>
+          <p class="ic-range-scale" aria-hidden="true"><span>50</span><span data-id="20.000">20,000</span></p>
         </div>
-        <p class="note" data-id="The slider is scaled so small villages are as easy to pick as whole districts. You can also type any number from 50 to 20,000.">The slider is scaled so small villages are as easy to pick as whole districts. You can also type any number from 50 to 20,000.</p>
+        <p class="note" data-id="Penggeser diskalakan agar desa kecil semudah satu kecamatan penuh untuk dipilih. Anda juga bisa mengetik angka apa pun dari 50 sampai 20.000.">The slider is scaled so small villages are as easy to pick as whole districts. You can also type any number from 50 to 20,000.</p>
 
-        <p class="ic-label ic-label--sm" id="ic-presets-label" data-id="Or start from a preset">Or start from a preset</p>
+        <p class="ic-label ic-label--sm" id="ic-presets-label" data-id="Atau mulai dari preset">Or start from a preset</p>
         <div class="ic-presets" role="group" aria-labelledby="ic-presets-label">
-          <button type="button" class="ic-preset" data-ic-preset="300" aria-pressed="false" data-id="Village · 300">Village · 300</button>
+          <button type="button" class="ic-preset" data-ic-preset="300" aria-pressed="false" data-id="Desa · 300">Village · 300</button>
           <button type="button" class="ic-preset" data-ic-preset="1200" aria-pressed="false" data-id="Kelurahan · 1.200">Urban village · 1,200</button>
           <button type="button" class="ic-preset" data-ic-preset="8000" aria-pressed="false" data-id="Kecamatan · 8.000">District · 8,000</button>
         </div>
@@ -911,73 +1058,73 @@
 
         <div class="ic-grid">
           <div class="ic-tile" style="--ic-c: var(--c-fert)">
-            <p class="ic-tile-label" data-id="Packages needed">Packages needed</p>
+            <p class="ic-tile-label" data-id="Paket yang dibutuhkan">Packages needed</p>
             <p class="ic-tile-val"><span class="ic-out" data-out="pk">4</span></p>
-            <p class="ic-tile-sub" data-id="each serves about 150 households">each serves about 150 households</p>
+            <p class="ic-tile-sub" data-id="masing-masing melayani sekitar 150 rumah tangga">each serves about 150 households</p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-dry)">
-            <p class="ic-tile-label" data-id="Waste processed">Waste processed</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="wasteDay">200</span> <span class="ic-unit" data-id="kg / day">kg / day</span></p>
-            <p class="ic-tile-sub"><span class="ic-out" data-out="wasteYear">73</span> <span data-id="tons / year">tons / year</span></p>
+            <p class="ic-tile-label" data-id="Sampah terolah">Waste processed</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="wasteDay">200</span> <span class="ic-unit" data-id="kg / hari">kg / day</span></p>
+            <p class="ic-tile-sub"><span class="ic-out" data-out="wasteYear">73</span> <span data-id="ton / tahun">tons / year</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-gas)">
-            <p class="ic-tile-label" data-id="Biogas produced">Biogas produced</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="gas">14–18.8</span> <span class="ic-unit">m³ / <span data-id="day">day</span></span></p>
-            <p class="ic-tile-sub"><span class="ic-out" data-out="heat">304–404</span> <span data-id="MJ of heat / day">MJ of heat / day</span></p>
+            <p class="ic-tile-label" data-id="Biogas dihasilkan">Biogas produced</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="gas">14–18.8</span> <span class="ic-unit">m³ / <span data-id="hari">day</span></span></p>
+            <p class="ic-tile-sub"><span class="ic-out" data-out="heat">304–404</span> <span data-id="MJ panas / hari">MJ of heat / day</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-fert)">
-            <p class="ic-tile-label" data-id="Fertiliser produced">Fertiliser produced</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="fertS">68</span> <span class="ic-unit" data-id="kg solid / day">kg solid / day</span></p>
-            <p class="ic-tile-sub"><span class="ic-out" data-out="fertL">240</span> <span data-id="L liquid / day">L liquid / day</span></p>
+            <p class="ic-tile-label" data-id="Pupuk dihasilkan">Fertiliser produced</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="fertS">68</span> <span class="ic-unit" data-id="kg padat / hari">kg solid / day</span></p>
+            <p class="ic-tile-sub"><span class="ic-out" data-out="fertL">240</span> <span data-id="L cair / hari">L liquid / day</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--c-pyro)">
-            <p class="ic-tile-label" data-id="LPG replaced">LPG replaced</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="lpg">800</span> <span class="ic-unit" data-id="cylinders / year">cylinders / year</span></p>
-            <p class="ic-tile-sub" data-id="3 kg cylinders of fossil heat fuel">3 kg cylinders of fossil heat fuel</p>
+            <p class="ic-tile-label" data-id="LPG tergantikan">LPG replaced</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="lpg">800</span> <span class="ic-unit" data-id="tabung / tahun">cylinders / year</span></p>
+            <p class="ic-tile-sub" data-id="tabung LPG 3 kg, bahan bakar panas fosil">3 kg cylinders of fossil heat fuel</p>
           </div>
 
           <div class="ic-tile ic-tile--hero" style="--ic-c: var(--lime)">
-            <p class="ic-tile-label" data-id="CO₂e avoided">CO₂e avoided</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="co2">46</span> <span class="ic-unit" data-id="t / year">t / year</span></p>
-            <p class="ic-tile-sub" data-id="landfill methane, biochar storage and LPG">landfill methane, biochar storage and LPG</p>
+            <p class="ic-tile-label" data-id="CO₂e dihindari">CO₂e avoided</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="co2">46</span> <span class="ic-unit" data-id="t / tahun">t / year</span></p>
+            <p class="ic-tile-sub" data-id="metana TPA, penyimpanan di biochar, dan LPG">landfill methane, biochar storage and LPG</p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--ink)">
-            <p class="ic-tile-label" data-id="Indicative capex">Indicative capex</p>
+            <p class="ic-tile-label" data-id="Perkiraan capex">Indicative capex</p>
             <p class="ic-tile-val"><span class="ic-unit" data-id="Rp">IDR</span> <span class="ic-out" data-out="capex">340</span> <span class="ic-unit" data-id="juta">M</span></p>
-            <p class="ic-tile-sub"><span data-id="Service Basic:">Service Basic:</span> <span class="ic-out" data-out="service">2.0–4.0</span> <span data-id="IDR M / month">IDR M / month</span></p>
+            <p class="ic-tile-sub"><span data-id="Service Basic:">Service Basic:</span> <span class="ic-out" data-out="service">2.0–4.0</span> <span data-id="juta IDR / bulan">IDR M / month</span></p>
           </div>
 
           <div class="ic-tile" style="--ic-c: var(--forest)">
-            <p class="ic-tile-label" data-id="Net owner benefit">Net owner benefit</p>
-            <p class="ic-tile-val"><span class="ic-out" data-out="benefit">8.0–10.6</span> <span class="ic-unit" data-id="IDR M / month">IDR M / month</span></p>
-            <p class="ic-tile-sub" data-id="after electricity and full service">after electricity and full service</p>
+            <p class="ic-tile-label" data-id="Manfaat bersih bagi pemilik">Net owner benefit</p>
+            <p class="ic-tile-val"><span class="ic-out" data-out="benefit">8.0–10.6</span> <span class="ic-unit" data-id="juta IDR / bulan">IDR M / month</span></p>
+            <p class="ic-tile-sub" data-id="setelah biaya listrik dan layanan penuh">after electricity and full service</p>
           </div>
         </div>
 
         <p class="ic-flag">
           <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 9v5M10 6.200v.1"/></svg>
-          <span data-id="Indicative estimate based on design assumptions, to be validated in the pilot.">Indicative estimate based on design assumptions, to be validated in the pilot.</span>
+          <span data-id="Estimasi indikatif berdasarkan asumsi desain, yang akan divalidasi dalam pilot.">Indicative estimate based on design assumptions, to be validated in the pilot.</span>
         </p>
       </div>
     </div>
 
     <details class="ic-assume">
-      <summary><span data-id="Assumptions behind these numbers">Assumptions behind these numbers</span><svg class="ic-chev" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></summary>
+      <summary><span data-id="Asumsi di balik angka-angka ini">Assumptions behind these numbers</span><svg class="ic-chev" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></summary>
       <ul class="ic-assume-list">
-        <li data-id="<strong>Coverage:</strong> one 50 kg package serves about 150 households, so packages = households ÷ 150, rounded up. Each unit needs roughly 8 × 5 m of land.">
+        <li data-id="<strong>Cakupan:</strong> satu paket 50 kg melayani sekitar 150 rumah tangga, jadi jumlah paket = rumah tangga ÷ 150, dibulatkan ke atas. Setiap unit membutuhkan lahan sekitar 8 × 5 m.">
           <strong>Coverage:</strong> one 50 kg package serves about 150 households, so packages = households ÷ 150, rounded up. Each unit needs roughly 8 × 5 m of land.</li>
-        <li data-id="<strong>Per package, per day:</strong> 50 kg of waste (35 kg food + 15 kg dry), 3.5–4.7 m³ of biogas, 76–101 MJ of heat, and about 17 kg solid + 60 L liquid fertiliser.">
+        <li data-id="<strong>Per paket, per hari:</strong> 50 kg sampah (35 kg sisa makanan + 15 kg kering), 3,5–4,7 m³ biogas, 76–101 MJ panas, dan sekitar 17 kg pupuk padat + 60 L pupuk cair.">
           <strong>Per package, per day:</strong> 50 kg of waste (35 kg food + 15 kg dry), 3.5–4.7 m³ of biogas, 76–101 MJ of heat, and about 17 kg solid + 60 L liquid fertiliser.</li>
-        <li data-id="<strong>Per package, per year:</strong> about 200 LPG cylinders (3 kg) replaced and 11.5 t CO₂e avoided or stored.">
+        <li data-id="<strong>Per paket, per tahun:</strong> sekitar 200 tabung LPG 3 kg tergantikan dan 11,5 t CO₂e dihindari atau tersimpan.">
           <strong>Per package, per year:</strong> about 200 LPG cylinders (3 kg) replaced and 11.5 t CO₂e avoided or stored.</li>
-        <li data-id="<strong>Money:</strong> unit price IDR 85 M. Service Basic IDR 0.5–1 M per month per unit. Owner benefit of +IDR 2.0–2.65 M per month net per unit: hauling cost avoided, fertiliser sales and LPG replaced, minus electricity and full service.">
+        <li data-id="<strong>Keuangan:</strong> harga unit IDR 85 jt. Service Basic IDR 0,5–1 jt per bulan per unit. Manfaat bersih pemilik +IDR 2,0–2,65 jt per bulan per unit: biaya angkut sampah yang terhindar, penjualan pupuk, dan LPG yang tergantikan, dikurangi listrik dan layanan penuh.">
           <strong>Money:</strong> unit price IDR 85 M. Service Basic IDR 0.5–1 M per month per unit. Owner benefit of +IDR 2.0–2.65 M per month net per unit: hauling cost avoided, fertiliser sales and LPG replaced, minus electricity and full service.</li>
-        <li data-id="<strong>Scaling:</strong> every result scales in a straight line with the number of packages. Ranges come from the design range of the source figure. This is an estimate, not a forecast or an offer.">
+        <li data-id="<strong>Skala:</strong> semua hasil naik secara linier mengikuti jumlah paket. Rentang berasal dari rentang desain pada angka sumbernya. Ini estimasi, bukan prakiraan atau penawaran.">
           <strong>Scaling:</strong> every result scales in a straight line with the number of packages. Ranges come from the design range of the source figure. This is an estimate, not a forecast or an offer.</li>
       </ul>
     </details>
@@ -989,7 +1136,7 @@
   <div class="container">
 
     <header class="section-head reveal">
-      <span class="eyebrow" data-id="Business model">Business model</span>
+      <span class="eyebrow" data-id="Model bisnis">Business model</span>
       <h2 id="bm-biz-title" data-id="Kami menjual unitnya, lalu <span class=&quot;hl&quot;>merawat dan meningkatkannya</span>.">We sell the unit, then <span class="hl">maintain and upgrade</span> it.</h2>
       <p class="lead" data-id="Dua sumber pendapatan sejak Tahun 1: penjualan unit sekali beli, dan langganan layanan yang menjaga setiap fasilitas tetap berjalan dan terus ditingkatkan.">Two revenue streams from Year 1: a unit sale, and a service subscription that keeps every facility running and improving.</p>
     </header>
@@ -1222,12 +1369,15 @@
   </div>
 </section>
 
-<section id="roadmap" class="section section--dark bm-roadmap" aria-labelledby="bm-road-title">
+<section id="roadmap" class="section section--dark bm-roadmap" aria-labelledby="bm-road-title" data-scrub>
+  <div class="bm-ascent" aria-hidden="true"><span class="bm-ascent__trail"></span><span class="bm-ascent__dot"></span></div>
   <div class="container">
 
-    <header class="section-head reveal">
-      <span class="eyebrow" data-id="Peta jalan">Roadmap</span>
-      <h2 id="bm-road-title" data-id="Fasilitas yang kami bangun hari ini adalah <span class=&quot;hl&quot;>fondasi rantai pasok masa depan</span>.">The facilities we build today are the <span class="hl">foundation of tomorrow's supply chain</span>.</h2>
+    <header class="section-head">
+      <span class="eyebrow reveal" data-id="Visi · peta jalan">Vision · roadmap</span>
+      <h2 id="bm-road-title" class="bm-vision-title split" data-id="Dari sisa dapur <span class=&quot;hl&quot;>hingga bahan bakar roket.</span>">From kitchen waste <span class="hl">to rocket fuel.</span></h2>
+      <p class="lead reveal" style="--d:.25s" data-id="Fasilitas yang kami bangun hari ini adalah fondasi rantai pasok masa depan. Tahun demi tahun, biogas yang sama naik tangga nilai.">The facilities we build today are the foundation of tomorrow's supply chain. Year by year, the same biogas climbs the value ladder.</p>
+      <p class="note bm-vision-note reveal" style="--d:.35s" data-id="Ambisi sepuluh tahun, bukan janji: setiap langkah harus dibuktikan oleh langkah sebelumnya.">A ten-year ambition, not a promise: each step has to be earned by the one before it.</p>
     </header>
 
     <div class="bm-rm" data-bm-rm>
@@ -1263,7 +1413,7 @@
             <h3 data-id="Produk turunan">Derived products</h3>
             <p data-id="Rantai pasok waste-to-energy dari hulu ke hilir, dengan biogas ditingkatkan menjadi produk energi bernilai tinggi.">An end-to-end waste-to-energy supply chain, upgrading biogas into higher-value energy products.</p>
             <button type="button" class="bm-more" aria-expanded="false" aria-controls="bm-derived" data-bm-more>
-              <span data-id="Lihat produk turunan">See derived products</span>
+              <span data-id="Produk turunan">Derived products</span>
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </button>
           </div>
@@ -1284,7 +1434,7 @@
                     <li>CNG</li>
                     <li>Bio-LNG</li>
                     <li data-id="Panas industri">Industrial heat</li>
-                    <li data-id="Bahan bakar roket">Rocket fuel</li>
+                    <li class="bm-prod-tag--hero" data-id="Bahan bakar roket">Rocket fuel</li>
                     <li>Bio-CO<sub>2</sub></li>
                   </ul>
                 </div>
@@ -1654,7 +1804,8 @@
   <div class="container tc-contact__grid">
     <div class="tc-contact__copy reveal">
       <span class="eyebrow" data-id="Mari bicara">Get in touch</span>
-      <h2 id="contact-title" data-id="Mari <span class=&quot;hl&quot;>tutup siklusnya</span> di kecamatan Anda.">Let's <span class="hl">close the loop</span> in your district.</h2>
+      <h2 id="contact-title" data-id="Unit pertama dimulai di satu kecamatan. <span class=&quot;hl&quot;>Kecamatan Anda?</span>">The first unit starts in one district. <span class="hl">Yours?</span></h2>
+      <p class="tc-contact__kicker" data-id="Mari tutup siklusnya bersama.">Let's close the loop together.</p>
       <p class="lead" data-id="Kami mencari tiga mitra untuk pilot pertama Lokalola: satu kecamatan atau kelurahan mitra, laboratorium uji, dan mentor energi dan karbon.">We are looking for three partners for Lokalola's first pilot: a partner district or village, a testing lab, and energy &amp; carbon mentors.</p>
 
       <p class="tc-aud__label" id="tc-aud-label" data-id="Saya adalah…">I am…</p>
@@ -1664,7 +1815,7 @@
         <button type="button" class="tc-aud__btn" data-role="farmer" aria-pressed="false" data-id="Petani / hotel / restoran / investor">Farmer / hotel / restaurant / investor</button>
       </div>
 
-      <p class="tc-contact__tag"><span class="tc-contact__tagline" data-id="Kelola secara lokal untuk energi yang lebih besar.">Locally manage for greater energy.</span></p>
+      <p class="tc-contact__tag"><span class="tc-contact__tagline" data-id="Kelola lokal, energi lebih besar.">Locally manage for greater energy.</span></p>
     </div>
 
     <div class="card tc-form-card reveal" style="--d:.12s">
@@ -1725,7 +1876,8 @@
         <a href="#top" class="tc-footer__logo">
           <img src="assets/img/logo-wordmark-white.webp" width="1855" height="646" loading="lazy" alt="Lokalola">
         </a>
-        <p class="tc-footer__tagline" data-id="Kelola secara lokal untuk energi yang lebih besar.">Locally manage for greater energy.</p>
+        <p class="tc-footer__dream" data-id="Sampah adalah energi yang salah tempat.">Waste is energy in the wrong place.</p>
+        <p class="tc-footer__tagline" data-id="Kelola lokal, energi lebih besar.">Locally manage for greater energy.</p>
         <p class="tc-footer__mission" data-id="Pengolahan sampah organik terpadu untuk kemandirian masyarakat.">Integrated organic waste processing for community independence.</p>
       </div>
 
@@ -1777,5 +1929,6 @@
 <script src="js/impact-calc.js"></script>
 <script src="js/business-roadmap.js"></script>
 <script src="js/pilot-team.js"></script>
+<script src="js/story.js"></script>
 </body>
 </html>

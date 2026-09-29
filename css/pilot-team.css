@@ -125,6 +125,7 @@
 .tc-legend__bar { grid-area: bar; height: 6px; border-radius: 6px; background: rgba(11, 42, 26, .07); overflow: hidden; }
 .tc-legend__bar i { display: block; height: 100%; width: 0; border-radius: 6px; transition: width 1.1s var(--ease) .3s; }
 .tc-funding.is-drawn .tc-legend__bar i { width: var(--w); }
+.tc-funding:not(.is-drawn) .tc-legend__bar i { transition-duration: .3s; transition-delay: 0s; }   /* reset quietly, off screen */
 .tc-legend li:nth-child(1) .tc-legend__bar i { background: var(--c-bio); }
 .tc-legend li:nth-child(2) .tc-legend__bar i { background: var(--c-gas); }
 .tc-legend li:nth-child(3) .tc-legend__bar i { background: var(--c-fert); }

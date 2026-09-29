@@ -135,15 +135,41 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .note { font-size: .82rem; color: var(--muted); }
 .section--dark .note { color: var(--muted-dk); }
 
-/* ---------- Scroll reveal (main.js toggles .is-in) ---------- */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0s); }
+/* ---------- Scroll reveal (main.js toggles .is-in on every entry, removes it once fully out) ---------- */
+.reveal { --ry: 28px; opacity: 0; transform: translate3d(0, var(--ry), 0); transition: opacity .8s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
+.reveal[data-from="above"] { --ry: -28px; }          /* scrolling back up: it drops into place */
 .reveal.is-in { opacity: 1; transform: none; }
+.reveal:not(.is-in) { transition-delay: 0s; transition-duration: .35s; }  /* leave quietly, off screen */
 .no-js .reveal { opacity: 1; transform: none; }
 
-/* Language toggle: text is swapped by main.js via [data-id]; nothing to style. */
+/* ---------- Split headlines: words rise out of their own line box ---------- */
+.split .w { display: inline-block; overflow: hidden; vertical-align: top; padding: .06em .02em .12em; margin: -.06em -.02em -.12em; }
+.split .wi { display: inline-block; }
+.js .split .wi {
+  transform: translate3d(0, 105%, 0) rotate(3deg); opacity: 0; transform-origin: 0 100%;
+  transition: transform 1s var(--ease), opacity .7s var(--ease);
+  transition-delay: calc(var(--d, 0s) + var(--i, 0) * 45ms);
+}
+.js .split:not(.is-split) { opacity: 0; }   /* never flash the whole line before its words are wrapped */
+.js .split[data-from="above"] .wi { transform: translate3d(0, -105%, 0) rotate(-3deg); }
+.js .split.is-in .wi { transform: none; opacity: 1; }
+.js .split:not(.is-in) .wi { transition-delay: 0s; transition-duration: .3s; }
+
+/* Language swap: show the new text in place, never replay */
+.is-swapping *, .is-swapping *::before, .is-swapping *::after { transition: none !important; }
+
+/* Loops rest while their section is off screen (main.js sets .is-offscreen; running is the default) */
+.js main > section.is-offscreen *, .js main > section.is-offscreen *::before, .js main > section.is-offscreen *::after { animation-play-state: paused !important; }
+
+/* Typographic care */
+h1, h2, h3, h4, .lead { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.nowrap { white-space: nowrap; }
+.section--dark ::selection { background: var(--lime); color: var(--night); }
+.section--dark :focus-visible { outline-color: var(--lime); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  .reveal { opacity: 1; transform: none; }
+  .reveal, .js .split .wi { opacity: 1; transform: none; }
 }

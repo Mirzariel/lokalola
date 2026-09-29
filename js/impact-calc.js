@@ -224,19 +224,43 @@
   update(DEFAULT_HH, 'init');
   started = true;
 
-  // Tween the numbers up once, the first time the results scroll into view.
+  // Visual entrance only, replayed on every entry: the numbers tween up from 0 to the CURRENT
+  // results and the tiles / pictogram animate in. Inputs and computed results are never touched;
+  // the display only drops back to 0 once the block is completely out of view.
   var grid = root.querySelector('.ic-grid');
-  if (grid && 'IntersectionObserver' in window && !reduce) {
-    keys.forEach(function (k) { var o = outs[k]; o.cur = o.to.map(function () { return 0; }); });
-    drawAll();
-    var io = new IntersectionObserver(function (entries) {
-      if (entries.some(function (e) { return e.isIntersecting; })) {
-        io.disconnect();
+  var vis = root.querySelector('.ic-vis');
+  function watch(el, onIn, onOut, threshold) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) onIn(); });
+    }, { threshold: threshold }).observe(el);
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (!e.isIntersecting) onOut(); });
+    }, { threshold: 0 }).observe(el);
+  }
+  if ('IntersectionObserver' in window && !reduce) {
+    if (grid) {
+      var gridIn = false;
+      keys.forEach(function (k) { var o = outs[k]; o.cur = o.to.map(function () { return 0; }); });
+      drawAll();
+      watch(grid, function () {
+        grid.classList.add('is-in');
+        if (gridIn) return;
+        gridIn = true;
         keys.forEach(function (k) { outs[k].from = outs[k].to.map(function () { return 0; }); });
         t0 = performance.now();
         if (!raf) raf = requestAnimationFrame(step);
-      }
-    }, { threshold: .25 });
-    io.observe(grid);
+      }, function () {
+        grid.classList.remove('is-in');
+        if (!gridIn) return;
+        gridIn = false;
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        keys.forEach(function (k) { var o = outs[k]; o.cur = o.to.map(function () { return 0; }); });
+        drawAll();
+      }, .25);
+    }
+    if (vis) watch(vis, function () { vis.classList.add('is-in'); }, function () { vis.classList.remove('is-in'); }, .3);
+  } else {
+    if (grid) grid.classList.add('is-in');
+    if (vis) vis.classList.add('is-in');
   }
 })();
