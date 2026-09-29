@@ -1,0 +1,197 @@
+<section id="how" class="section section--mist sh-how" aria-labelledby="sh-how-title">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="eyebrow" data-id="Cara kerja">How it works</span>
+      <h2 id="sh-how-title" data-id="Dari sampah dapur ke <span class=&quot;hl&quot;>pupuk</span>, dengan panas di tengahnya.">From kitchen waste to <span class="hl">fertiliser</span>, with heat in the middle.</h2>
+      <p class="lead" data-id="Sampah adalah sumbernya, biogas adalah energi yang tersimpan, dan panas yang menggantikan LPG adalah pemakaian yang terukur. Jelajahi unitnya bagian demi bagian.">Waste is the source, biogas is the stored energy, and heat that replaces LPG is the measured use. Explore the unit part by part.</p>
+    </div>
+
+    <!-- (a) Interactive unit explorer -->
+    <div class="sh-ex" data-sh-explorer>
+      <div class="sh-ex__stage reveal">
+        <div class="sh-ex__img">
+          <img src="assets/img/unit-3d.png" width="1519" height="970" loading="lazy"
+               alt="Isometric 3D illustration of the Lokalola unit with numbered parts."
+               data-id-attr="alt|Ilustrasi 3D isometrik unit Lokalola dengan bagian-bagian bernomor.">
+          <div class="sh-ex__spots" role="tablist" aria-labelledby="sh-ex-hint">
+            <button type="button" class="sh-spot is-active" role="tab" id="sh-tab-1" aria-controls="sh-panel-1" aria-selected="true" style="--x:58%;--y:36%;--c:var(--c-bio);--on:#fff"><span aria-hidden="true">1</span><span class="sr-only" data-id="Biodigester">Biodigester</span></button>
+            <button type="button" class="sh-spot" role="tab" id="sh-tab-2" aria-controls="sh-panel-2" aria-selected="false" tabindex="-1" style="--x:24%;--y:45%;--c:var(--c-gas);--on:var(--ink)"><span aria-hidden="true">2</span><span class="sr-only" data-id="Penyimpanan biogas">Biogas store</span></button>
+            <button type="button" class="sh-spot" role="tab" id="sh-tab-3" aria-controls="sh-panel-3" aria-selected="false" tabindex="-1" style="--x:77%;--y:66%;--c:var(--c-dry);--on:var(--ink)"><span aria-hidden="true">3</span><span class="sr-only" data-id="Pengering dan lubang masuk sampah kering">Dryer and dry-waste inlet</span></button>
+            <button type="button" class="sh-spot" role="tab" id="sh-tab-4" aria-controls="sh-panel-4" aria-selected="false" tabindex="-1" style="--x:58.5%;--y:66%;--c:var(--c-pyro);--on:#fff"><span aria-hidden="true">4</span><span class="sr-only" data-id="Retort pirolisis">Pyrolysis retort</span></button>
+            <button type="button" class="sh-spot" role="tab" id="sh-tab-5" aria-controls="sh-panel-5" aria-selected="false" tabindex="-1" style="--x:66.7%;--y:80%;--c:var(--c-fert);--on:var(--ink)"><span aria-hidden="true">5</span><span class="sr-only" data-id="Tangki pupuk">Fertiliser tank</span></button>
+            <button type="button" class="sh-spot" role="tab" id="sh-tab-6" aria-controls="sh-panel-6" aria-selected="false" tabindex="-1" style="--x:43.2%;--y:51.5%;--c:var(--c-iot);--on:#fff"><span aria-hidden="true">6</span><span class="sr-only" data-id="Panel kontrol IoT">IoT control panel</span></button>
+          </div>
+        </div>
+        <p class="sh-ex__hint" id="sh-ex-hint" data-id="Pilih angka (atau gunakan tombol panah) untuk melihat setiap bagian.">Select a number (or use the arrow keys) to see each part.</p>
+      </div>
+
+      <div class="sh-ex__details reveal" style="--d:.1s" aria-live="polite">
+        <div class="sh-detail" role="tabpanel" id="sh-panel-1" aria-labelledby="sh-tab-1" style="--c:var(--c-bio)">
+          <span class="sh-detail__no" aria-hidden="true">1</span>
+          <h3 class="sh-detail__title" data-id="Biodigester">Biodigester</h3>
+          <p class="sh-detail__spec" data-id="3 tangki HDPE 2.000 L berseri · volume kerja 4 m³ · retensi 52 hari · anaerob">3 × 2,000 L HDPE tanks in series · 4&nbsp;m³ working volume · 52-day retention · anaerobic</p>
+          <p class="sh-detail__role" data-id="Sampah makanan basah (35 kg/hari) difermentasi tanpa oksigen dan melepaskan biogas. Digestat lalu dipasteurisasi pada 70 °C agar aman menjadi bahan pupuk.">Wet food waste (35&nbsp;kg/day) ferments without oxygen and releases biogas. The digestate is then pasteurised at 70&nbsp;°C so it is safe to use in fertiliser.</p>
+        </div>
+        <div class="sh-detail" role="tabpanel" id="sh-panel-2" aria-labelledby="sh-tab-2" style="--c:var(--c-gas)" hidden>
+          <span class="sh-detail__no" aria-hidden="true">2</span>
+          <h3 class="sh-detail__title" data-id="Penyimpanan biogas">Biogas store</h3>
+          <p class="sh-detail__spec" data-id="3,5–4,7 m³/hari · penggosok H₂S · kantong gas ±2,5 m³">3.5–4.7&nbsp;m³/day · H₂S scrubber · ~2.5&nbsp;m³ gas bag</p>
+          <p class="sh-detail__role" data-id="Biogas dibersihkan oleh penggosok H₂S, lalu disimpan di kantong gas. Inilah energi yang tersimpan: memanaskan retort pirolisis dan menghasilkan 76–101 MJ panas per hari, setara sekitar 200 tabung LPG 3 kg per tahun.">Biogas is cleaned by an H₂S scrubber, then stored in a gas bag. This is the stored energy: it heats the pyrolysis retort and delivers 76–101&nbsp;MJ of heat a day, about 200 LPG cylinders (3&nbsp;kg) a year.</p>
+        </div>
+        <div class="sh-detail" role="tabpanel" id="sh-panel-3" aria-labelledby="sh-tab-3" style="--c:var(--c-dry)" hidden>
+          <span class="sh-detail__no" aria-hidden="true">3</span>
+          <h3 class="sh-detail__title" data-id="Pengering &amp; lubang masuk sampah kering">Dryer &amp; dry-waste inlet</h3>
+          <p class="sh-detail__spec" data-id="15 kg/hari daun dan ranting">15&nbsp;kg/day of leaves and twigs</p>
+          <p class="sh-detail__role" data-id="Sampah kering dari tempat sampah cokelat dimasukkan di sini, dikeringkan, lalu diumpankan ke pirolisis. Plastik dan bahan non-organik tidak diterima.">Dry waste from the brown bin goes in here, is dried, then fed to pyrolysis. Plastics and other non-organics are rejected.</p>
+        </div>
+        <div class="sh-detail" role="tabpanel" id="sh-panel-4" aria-labelledby="sh-tab-4" style="--c:var(--c-pyro)" hidden>
+          <span class="sh-detail__no" aria-hidden="true">4</span>
+          <h3 class="sh-detail__title" data-id="Retort pirolisis">Pyrolysis retort</h3>
+          <p class="sh-detail__spec" data-id="1 retort ±110 L · 300–400 °C · dipanaskan biogas">1 retort (~110&nbsp;L) · 300–400&nbsp;°C · heated by biogas</p>
+          <p class="sh-detail__role" data-id="Sampah kering dipanaskan tanpa oksigen dengan panas dari biogas dan berubah menjadi biochar, karbon stabil yang nantinya diperkaya menjadi pupuk.">Dry waste is heated without oxygen using the heat from the biogas and turns into biochar, a stable carbon that is later enriched into fertiliser.</p>
+        </div>
+        <div class="sh-detail" role="tabpanel" id="sh-panel-5" aria-labelledby="sh-tab-5" style="--c:var(--c-fert)" hidden>
+          <span class="sh-detail__no" aria-hidden="true">5</span>
+          <h3 class="sh-detail__title" data-id="Tangki pupuk">Fertiliser tank</h3>
+          <p class="sh-detail__spec" data-id="±17 kg padat + ±60 L cair per hari">~17&nbsp;kg solid + ~60&nbsp;L liquid per day</p>
+          <p class="sh-detail__role" data-id="Biochar diperkaya dengan digestat yang sudah dipasteurisasi menjadi pupuk yang jelas dan siap dijual kepada petani sekitar.">Biochar is enriched with pasteurised digestate into a clear, ready-to-sell fertiliser for nearby farmers.</p>
+        </div>
+        <div class="sh-detail" role="tabpanel" id="sh-panel-6" aria-labelledby="sh-tab-6" style="--c:var(--c-iot)" hidden>
+          <span class="sh-detail__no" aria-hidden="true">6</span>
+          <h3 class="sh-detail__title" data-id="Panel kontrol IoT">IoT control panel</h3>
+          <p class="sh-detail__spec" data-id="ESP32-S3 · 4 termokopel tipe-K · pH · sensor aliran gas · MQTT/4G · log microSD">ESP32-S3 · 4 type-K thermocouples · pH · gas flow meter · MQTT/4G · microSD log</p>
+          <p class="sh-detail__role" data-id="Satu tombol START. Suhu, waktu, dan keselamatan otomatis, dan data terkirim ke server dengan sendirinya: dibuat pintar agar operator tetap mudah bekerja.">One START button. Temperature, timer and safety are automatic and data reaches the server by itself: smart on the inside, so the operator's job stays simple.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- (b) Energy chain -->
+    <div class="sh-chain-wrap">
+      <div class="section-head sh-block__head reveal">
+        <span class="eyebrow" data-id="Rantai energi">The energy chain</span>
+        <h3 class="sh-h3" data-id="Sumber, penyimpanan, pemakaian terukur: satu rantai utuh.">Source, storage, measured use: one complete chain.</h3>
+      </div>
+
+      <div class="sh-chain reveal">
+        <div class="sh-node sh-node--wet" style="--nc:var(--c-bio)">
+          <strong data-id="Sampah basah">Wet waste</strong>
+          <span data-id="sisa makanan, 35 kg/hari">food waste, 35 kg/day</span>
+          <span class="sh-link" style="--lc:var(--c-bio)"><i></i><b></b></span>
+        </div>
+        <div class="sh-node sh-node--bio sh-node--stage" style="--nc:var(--c-bio)">
+          <strong data-id="Biodigester">Biodigester</strong>
+          <span data-id="3 × 2.000 L, anaerob">3 × 2,000 L, anaerobic</span>
+          <span class="sh-link" style="--lc:var(--c-gas)"><i data-id="gas">gas</i><b></b></span>
+        </div>
+        <div class="sh-node sh-node--gas sh-node--stage" style="--nc:var(--c-gas)">
+          <strong data-id="Biogas">Biogas</strong>
+          <span data-id="3,5–4,7 m³/hari, dipakai di lokasi">3.5–4.7 m³/day, used on site</span>
+          <span class="sh-link" style="--lc:var(--c-pyro)"><i data-id="memanaskan">heats</i><b></b></span>
+        </div>
+        <div class="sh-node sh-node--dry" style="--nc:var(--c-dry)">
+          <strong data-id="Sampah kering">Dry waste</strong>
+          <span data-id="daun, ranting, 15 kg/hari">leaves, twigs, 15 kg/day</span>
+          <span class="sh-link sh-link--down" style="--lc:var(--c-dry)"><b></b></span>
+        </div>
+        <div class="sh-node sh-node--pyro sh-node--stage" style="--nc:var(--c-pyro)">
+          <strong data-id="Pirolisis">Pyrolysis</strong>
+          <span data-id="1 retort · 300–400 °C">1 retort · 300–400 °C</span>
+          <span class="sh-node__plus" data-id="+ sampah kering: daun, ranting, 15 kg/hari">+ dry waste: leaves, twigs, 15 kg/day</span>
+          <span class="sh-link" style="--lc:var(--c-pyro)"><i data-id="biochar">biochar</i><b></b></span>
+        </div>
+        <div class="sh-node sh-node--fert sh-node--stage" style="--nc:var(--c-fert)">
+          <strong data-id="Pupuk">Fertiliser</strong>
+          <span data-id="17 kg padat + 60 L cair">17 kg solid + 60 L liquid</span>
+          <span class="sh-link" style="--lc:var(--c-fert)"><i data-id="dijual">sold</i><b></b></span>
+        </div>
+        <div class="sh-node sh-node--farm" style="--nc:var(--c-fert)">
+          <strong data-id="Petani lokal">Local farmers</strong>
+          <span data-id="membeli pupuknya">buy the fertiliser</span>
+        </div>
+
+        <div class="sh-loop" aria-hidden="false">
+          <span class="sh-loop__label" data-id="digestat (dipasteurisasi 70 °C) kembali menjadi pupuk">digestate (pasteurised 70 °C) returns to fertiliser</span>
+          <b class="sh-loop__dot"></b>
+        </div>
+
+        <div class="sh-iot">
+          <span class="sh-iot__no" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg>
+          </span>
+          <span class="sh-iot__text"><strong data-id="Otak IoT">IoT brain</strong> <span data-id="suhu · waktu · keamanan gas · data otomatis ke server">temperature · timer · gas safety · automatic data to server</span></span>
+          <b class="sh-iot__dot"></b>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-step stepper -->
+    <div class="sh-steps-wrap" data-sh-steps>
+      <div class="section-head sh-block__head reveal">
+        <span class="eyebrow" data-id="Bagi warga">For residents</span>
+        <h3 class="sh-h3" data-id="Lima langkah memakai Lokalola: pilah, antar, tekan, tunggu, jual.">Five steps to use Lokalola: sort, drop off, press, wait, sell.</h3>
+      </div>
+
+      <ol class="sh-steps reveal">
+        <li class="sh-step is-active" style="--sc:var(--c-bio);--px:5.16%">
+          <button type="button" class="sh-step__btn" aria-current="step">
+            <span class="sh-step__pic"><span class="sr-only" data-id="Ilustrasi: warga memilah sisa makanan ke tempat sampah biru dan daun ke tempat sampah cokelat.">Illustration: a resident sorts food waste into a blue bin and leaves into a brown bin.</span></span>
+            <span class="sh-step__body">
+              <span class="sh-step__no" aria-hidden="true">1</span>
+              <strong class="sh-step__title" data-id="Pilah di rumah">Sort at home</strong>
+              <span class="sh-step__text" data-id="Sisa makanan ke tempat sampah biru; daun, ranting, dan cangkang ke tempat sampah cokelat.">Food waste goes in the blue bin; leaves, twigs and shells in the brown bin.</span>
+            </span>
+            <span class="sh-step__bar" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li class="sh-step" style="--sc:var(--c-dry);--px:27.9%">
+          <button type="button" class="sh-step__btn">
+            <span class="sh-step__pic"><span class="sr-only" data-id="Ilustrasi: warga menuang sampah ke unit di lingkungan.">Illustration: a resident pours waste into the neighbourhood unit.</span></span>
+            <span class="sh-step__body">
+              <span class="sh-step__no" aria-hidden="true">2</span>
+              <strong class="sh-step__title" data-id="Antar ke lokasi">Drop off at the site</strong>
+              <span class="sh-step__text" data-id="Warga membawa sampah ke unit di lingkungan. Satu paket melayani ±150 rumah tangga.">Residents bring waste to the neighbourhood unit. One package serves ~150 households.</span>
+            </span>
+            <span class="sh-step__bar" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li class="sh-step" style="--sc:var(--c-iot);--px:50.7%">
+          <button type="button" class="sh-step__btn">
+            <span class="sh-step__pic"><span class="sr-only" data-id="Ilustrasi: operator berdiri di panel kontrol unit.">Illustration: the operator stands at the control panel of the unit.</span></span>
+            <span class="sh-step__body">
+              <span class="sh-step__no" aria-hidden="true">3</span>
+              <strong class="sh-step__title" data-id="Tekan START">Press START</strong>
+              <span class="sh-step__text" data-id="Operator menekan satu tombol. Suhu, waktu, dan keselamatan otomatis; data terkirim sendiri.">The operator presses one button. Temperature, timer and safety are automatic; data is sent by itself.</span>
+            </span>
+            <span class="sh-step__bar" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li class="sh-step" style="--sc:var(--c-pyro);--px:73.4%">
+          <button type="button" class="sh-step__btn">
+            <span class="sh-step__pic"><span class="sr-only" data-id="Ilustrasi: unit bekerja dengan tangki, pipa, dan retortnya.">Illustration: the unit at work with its tanks, pipes and retort.</span></span>
+            <span class="sh-step__body">
+              <span class="sh-step__no" aria-hidden="true">4</span>
+              <strong class="sh-step__title" data-id="Unit bekerja">The unit works</strong>
+              <span class="sh-step__text" data-id="Biogas memanaskan pirolisis pada 300–400 °C; digestat dan biochar menjadi pupuk.">Biogas heats pyrolysis at 300–400 °C; digestate and biochar become fertiliser.</span>
+            </span>
+            <span class="sh-step__bar" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li class="sh-step" style="--sc:var(--c-fert);--px:96.2%">
+          <button type="button" class="sh-step__btn">
+            <span class="sh-step__pic"><span class="sr-only" data-id="Ilustrasi: petani memuat karung pupuk ke gerobak di samping ladang.">Illustration: a farmer loads bags of fertiliser onto a cart next to the fields.</span></span>
+            <span class="sh-step__body">
+              <span class="sh-step__no" aria-hidden="true">5</span>
+              <strong class="sh-step__title" data-id="Pupuk untuk petani">Fertiliser to farmers</strong>
+              <span class="sh-step__text" data-id="±17 kg pupuk padat + ±60 L cair per hari, dijual kepada petani sekitar.">~17 kg of solid + ~60 L of liquid fertiliser per day, sold to local farmers.</span>
+            </span>
+            <span class="sh-step__bar" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ol>
+
+      <p class="note sh-caption" data-id="Ilustrasi konsep paket Lokalola 50 kg. Angka adalah estimasi desain yang akan divalidasi dalam pilot.">Concept illustration of the Lokalola 50 kg package. Figures are design estimates to be validated in the pilot.</p>
+    </div>
+
+  </div>
+</section>
