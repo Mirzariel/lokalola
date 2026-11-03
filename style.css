@@ -190,7 +190,7 @@ section[data-tema],footer[data-tema]{background:var(--bg);color:var(--ink);posit
 .js:not(.reduce):not(.js-gagal) #hero .hero-blok{position:absolute;left:0;right:0;margin:0;z-index:1;letter-spacing:-.045em;line-height:1;-webkit-mask-image:linear-gradient(180deg,#000 52%,rgba(0,0,0,.34) 100%);mask-image:linear-gradient(180deg,#000 52%,rgba(0,0,0,.34) 100%)}
 .js:not(.reduce):not(.js-gagal) #hero .hero-tag-big{font-size:1rem}
 .js:not(.reduce):not(.js-gagal) #hero h1.hero-blok{font-size:2rem}
-.js:not(.reduce):not(.js-gagal) .hero-blok .bar{display:block;white-space:nowrap;will-change:transform,opacity,filter}
+.js:not(.reduce):not(.js-gagal) .hero-blok .bar{display:block;white-space:nowrap;will-change:transform,opacity}
 .js:not(.reduce):not(.js-gagal) .hero-blok .bar>span{display:inline-block}
 .js:not(.reduce):not(.js-gagal) .hero-blok .celah{margin-right:.55em}
 .js:not(.reduce):not(.js-gagal) .hero-mesin{position:absolute;margin:0;max-width:none;z-index:2;pointer-events:none}
@@ -1140,3 +1140,55 @@ main section:not(#hero) .lead{font-size:var(--fs-lead);line-height:1.45}
 .md-glow{background:radial-gradient(ellipse 72% 64% at 50% 50%,rgba(1,1,1,.94) 0,rgba(1,1,1,.86) 50%,rgba(1,1,1,0) 100%),radial-gradient(ellipse 90% 80% at 50% 110%,rgba(152,230,31,.22),rgba(152,230,31,0) 70%)}
 .md-leg,.md-ket,.md-sat{text-shadow:0 0 12px #010101,0 0 4px #010101}
 @media (max-width:767px){.md-glow{background:radial-gradient(ellipse 110% 50% at 50% 50%,rgba(1,1,1,.95) 0,rgba(1,1,1,.88) 60%,rgba(1,1,1,0) 100%),radial-gradient(ellipse 90% 80% at 50% 110%,rgba(152,230,31,.22),rgba(152,230,31,0) 70%)}}
+
+/* ============ PUTARAN TIGA: sertifikat, status, angka 750 ============ */
+.sr-g{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-8);align-items:center}
+.sr-teks .lead{margin-top:var(--s-5);max-width:52ch}
+.sr-poin{list-style:none;padding:0;margin-top:var(--s-6);display:grid;gap:var(--s-4)}
+.sr-poin li{border-top:1px solid var(--garis);padding-top:var(--s-3)}
+.sr-poin h3{font-size:var(--fs-body);font-weight:700}
+.sr-poin p{color:var(--ink-2);max-width:52ch}
+.sr-fig{position:relative;margin:0;display:grid}
+.sr-foto{border-radius:var(--r-3);overflow:hidden;aspect-ratio:4/3}
+.sr-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.sr-kertas{position:relative;margin:-18% 6% 0;background:#FCFBF6;color:#13301F;border-radius:var(--r-2);padding:var(--s-5);box-shadow:0 24px 60px rgba(19,48,31,.28),0 2px 6px rgba(19,48,31,.12);border-top:6px solid var(--hijau-logo)}
+.sr-atas{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3)}
+.sr-atas img{height:26px;width:auto}
+.sr-contoh{font:500 var(--fs-kecil)/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:#566A5C}
+.sr-jud{font-size:1.375rem;line-height:1.2;font-weight:600;margin-top:var(--s-4)}
+.sr-nama{font-size:var(--fs-kecil);color:#566A5C;margin-top:var(--s-1)}
+.sr-kertas dl{margin:var(--s-4) 0 0;display:grid;gap:var(--s-2)}
+.sr-kertas dl>div{display:flex;justify-content:space-between;gap:var(--s-4);border-top:1px solid #DDD9C7;padding-top:var(--s-2)}
+.sr-kertas dt{font-size:var(--fs-kecil);color:#566A5C}
+.sr-kertas dd{margin:0;font-weight:600;font-size:var(--fs-body);text-align:right}
+.sr-iot{display:flex;align-items:center;gap:8px;margin-top:var(--s-4);font-size:var(--fs-kecil);color:#1F6F08}
+.sr-iot i{width:8px;height:8px;border-radius:50%;background:var(--hijau-logo)}
+.sr-fig figcaption{margin-top:var(--s-4);font-size:var(--fs-kecil);color:var(--ink-3);max-width:62ch}
+@media (min-width:1024px){.sr-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-9)}}
+.st-ringkas .baris:last-child>span{color:var(--hijau-logo-muda)}
+.st-lead{margin-top:var(--s-5);max-width:62ch;color:var(--ink-2)}
+.rl{list-style:none;padding:0;margin:var(--s-8) 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-5)}
+.rl-k{display:grid;align-content:start;background:var(--bg-2);border:1px solid var(--garis);border-radius:var(--r-3);overflow:hidden}
+.rl-img{aspect-ratio:16/9;overflow:hidden;background:var(--bg-3)}
+.rl-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.72;transition:opacity .3s,transform .6s var(--e-lembut)}
+.rl-k:hover .rl-img img{opacity:1;transform:scale(1.03)}
+.rl-isi{padding:var(--s-5);display:grid;gap:var(--s-2)}
+.rl-tag{font:500 var(--fs-kecil)/1.4 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.rl-isi h3{font-size:var(--fs-h3);line-height:1.15}
+.rl-isi p{color:var(--ink-2)}
+.rl-kini .rl-img img,.rl-next .rl-img img{opacity:1}
+.rl-kini .rl-tag{color:var(--ink)}
+.rl-next{border-color:var(--hijau-logo-muda);box-shadow:0 0 0 1px var(--hijau-logo-muda),0 0 48px rgba(152,230,31,.16)}
+.rl-next .rl-tag{color:var(--hijau-logo-muda)}
+@media (min-width:768px){.rl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){.rl{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.md-kartu{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-4)}
+.md-k{position:relative;border-radius:var(--r-3);overflow:hidden;aspect-ratio:4/3;background:var(--bg-3);isolation:isolate}
+.md-k img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;transition:transform .8s var(--e-lembut)}
+.md-k:hover img{transform:scale(1.04)}
+.md-k::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(1,1,1,.05) 25%,rgba(1,1,1,.86) 100%)}
+.md-k-isi{position:absolute;left:0;right:0;bottom:0;padding:var(--s-5)}
+.md-k-n{font-size:var(--fs-display);line-height:1;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:#fff;white-space:nowrap}
+.md-k-isi p:last-child{margin-top:var(--s-2);color:#E7EDE6}
+@media (min-width:768px){.md-kartu{grid-template-columns:repeat(3,minmax(0,1fr))}.md-k{aspect-ratio:4/5}}
+.md-kartu+.mb-cat{margin-top:var(--s-4)}

@@ -104,7 +104,6 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
     modul("reveal", initReveal);
     modul("hero", initHero);
     modul("masalah", initMasalah);
-    modul("alur", initAlur);
     modul("tur", initTur);
     modul("mesin", initMesin);
     modul("operator", initOperator);
@@ -293,6 +292,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
     var ponsel = false, masukSudah = false;
     var jarak = function () { return Math.round(innerHeight * (innerWidth < 1024 ? 1.8 : 2.2)); };
     var bar = function (el) { return $$(".bar", el); };
+    var dalam = function (el) { return $$(".bar>span", el); };   // animasi masuk memegang span dalam, animasi gulir memegang .bar: tidak saling menimpa
     var dgn = function (o) { return o; };   // tanpa blur: filter pada teks besar membuat gulir tersendat
 
     // pecah baris dari atribut data (| = baris baru, [..] = frasa lime, ~ = spasi dengan celah lebar); teks utuh tetap dengan spasi tunggal antarbaris
@@ -356,7 +356,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
       var tl = gsap.timeline();
       if (tutup) tl.to(tutup, { opacity: 0, duration: .5, onComplete: function () { tutup.style.display = "none"; } }, 0);
       tl.to(wrap, { opacity: 1, duration: 1.1, ease: "power2.out" }, .1)
-        .to(bar(tagBig).reverse(), dgn({ opacity: 1, y: 0, duration: 1.5, stagger: .16, ease: "power3.out" }, "blur(0px)"), .7);
+        .to(dalam(tagBig).reverse(), { opacity: 1, y: 0, duration: 1.5, stagger: .16, ease: "power3.out" }, .7);
     }
 
     if (!REDUCE) {
@@ -373,7 +373,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         gsap.set(hb, dgn({ opacity: 0, y: naik }, "blur(10px)"));
         gsap.set(bw, { opacity: 0, y: 14 });
         gsap.set(heroB, { pointerEvents: "none" });   // tombol babak 3 belum terlihat: jangan bisa diklik tak sengaja
-        if (!masukSudah) gsap.set(tb, dgn({ opacity: 0, y: naik }, "blur(14px)"));
+        if (!masukSudah) gsap.set(dalam(tagBig), { opacity: 0, y: naik });
         var tl = gsap.timeline({
           defaults: { ease: "none" },
           scrollTrigger: { id: "hero-cerita", trigger: hero, start: "top top", end: function () { return "+=" + jarak(); }, pin: true, scrub: .8, anticipatePin: 1, invalidateOnRefresh: true, refreshPriority: 10 }
@@ -381,10 +381,10 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         if (hint) tl.to(hint, { opacity: 0, duration: .4 }, 0);
         // tagline: titik awal tetap (terlihat penuh), supaya tidak bergantung pada animasi masuk yang mungkin belum selesai saat refresh
         tl.fromTo(tb, dgn({ opacity: 1, y: 0 }, "blur(0px)"), dgn({ opacity: 0, y: naik, duration: 1.1, stagger: .1, ease: "power2.in", immediateRender: false }, "blur(12px)"), .3)
-          .to(hb.slice().reverse(), dgn({ opacity: 1, y: 0, duration: 1.3, stagger: .14, ease: "power3.out" }, "blur(0px)"), 1.4)
+          .fromTo(hb.slice().reverse(), { opacity: 0, y: naik }, { opacity: 1, y: 0, duration: 1.3, stagger: .14, ease: "power3.out", immediateRender: false }, 1.4)
           .fromTo(panggung, { scale: 1, y: function () { return G.geserAwal; } }, { scale: function () { return G.skala; }, y: function () { return G.y; }, duration: 1.2, ease: "power2.inOut" }, 3.2);
         if (lantai) tl.to(lantai, { opacity: 1, duration: .9 }, 3.4);
-        tl.to(bw, { opacity: 1, y: 0, duration: .8, stagger: .14, ease: "power2.out" }, 3.8)
+        tl.fromTo(bw, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .8, stagger: .14, ease: "power2.out", immediateRender: false }, 3.8)
           .set(heroB, { pointerEvents: "auto" }, 3.9)
           .to({}, { duration: 1 }, 5);
         var st = tl.scrollTrigger;
@@ -401,7 +401,8 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         clearTimeout(tUkuran);
         tUkuran = setTimeout(function () { if (innerWidth === lebarAwal) return; lebarAwal = innerWidth; ScrollTrigger.refresh(); }, 150);
       });
-      (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { tata(); masuk(); });
+      // font lambat tidak boleh menahan tulisan: paling lama tunggu 1,2 dtk
+      Promise.race([document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve(), new Promise(function (ok) { setTimeout(ok, 1200); })]).then(function () { tata(); masuk(); });
     }
 
     // video kemas: warna di atas, matte di bawah, digambar ke kanvas WebGL tembus pandang; gambar diam jadi cadangan

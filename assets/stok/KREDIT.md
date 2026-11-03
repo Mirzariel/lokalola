@@ -42,3 +42,9 @@ Lisensi lain yang dibaca (tidak dipakai untuk unduhan): Unsplash (https://unspla
 ## Dipindahkan (tidak dipakai situs)
 
 Foto tunas di tanah gelap (Sóc Năng Động, Pexels 37138708) dan video bibit semai (FRANK MERIÑO, Pexels 8459699) dipindahkan ke scratchpad\media	idak_dipakai\ pada 2026-10-31 dan tidak lagi bagian dari aset. Video truk sampah, foto tempurung kelapa, saluran udara, dan kantong sampah masih dirujuk di index.html/kredit.html sehingga dibiarkan di tempat.
+
+## Ditambahkan 2026-11-03 (lisensi Unsplash, dari daftar panduan pitch Zhaf)
+
+- `md-sisa.webp`: sisa alpukat dan lemon di talenan, Alicia Christin Gerald, https://unsplash.com/photos/FZH7hAOayp0
+- `md-tunas.webp`: tunas di tanah gelap, Pranav Gavali, https://unsplash.com/photos/4KnaYSLHnAI
+- `sertifikat-dapur.webp`: koki memotong sayuran di dapur restoran, https://unsplash.com/photos/y-XZf_TNRms
