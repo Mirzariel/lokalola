@@ -493,8 +493,9 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
     <span class="bab">11 / 13 · Dukung kami</span>
     <h2 id="h-pilot"><span class="baris"><span>Dukung kami</span></span><span class="baris"><span>menuju pilot pertama</span></span></h2>
     <p class="rv">Kami mencari hotel, restoran, dan kafe di Yogyakarta, serta pemasok daun dan ranting kering, yang bersedia bekerja sama sejak tahap paling awal. Kami akan menimbang sampah di 20 sampai 30 lokasi sebelum pilot. Ceritakan apa yang Anda buang, berapa banyak, dan di mana lokasi Anda.</p>
+    <p class="rv">Kami juga mencari investor dan mitra CSR. Investor dapat mendukung putaran pre-seed Rp380 juta yang membawa kami ke data pilot dan hub yang siap dibiayai. Mitra CSR dapat menyediakan lahan hub di koridor Sleman atau menjalankan program dampak bersama kami. <a class="tautan" href="#mitra">Lihat rincian untuk investor.</a></p>
     <p class="rv">Setelah Anda mendaftar, kami menghubungi Anda untuk berbincang. Belum ada jadwal dan belum ada penawaran.</p>
-    <p class="rv">Belum ada layanan atau imbalan yang bisa kami janjikan. Yang kami tawarkan baru percakapan terbuka tentang kecocokan sampah Anda.</p>
+    <p class="rv">Belum ada layanan atau imbalan yang bisa kami janjikan. Yang kami tawarkan baru percakapan terbuka tentang kecocokan sampah, pendanaan, atau program Anda.</p>
     <div class="pilot-panel" id="pilot-panel">
       <form id="form-pilot" class="form" novalidate autocomplete="on">
         <div class="f-ringkas" id="f-ringkas" role="alert" hidden></div>
@@ -503,6 +504,7 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
           <div class="f-jenis-o">
             <label><input type="radio" name="jenis" value="fnb" checked> Hotel, restoran, atau kafe</label>
             <label><input type="radio" name="jenis" value="agri"> Pemasok sampah kering</label>
+            <label><input type="radio" name="jenis" value="mitra"> Investor atau mitra CSR</label>
           </div>
         </fieldset>
         <div class="f-baris">
@@ -512,7 +514,7 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
         </div>
         <div class="f-baris">
           <label for="f-dapur">Nama bisnis</label>
-          <input id="f-dapur" name="dapur" type="text" autocomplete="organization" placeholder="Misalnya Restoran Contoh" data-fnb="Misalnya Restoran Contoh" data-agri="Misalnya Kampus Contoh" aria-required="true" required>
+          <input id="f-dapur" name="dapur" type="text" autocomplete="organization" placeholder="Misalnya Restoran Contoh" data-fnb="Misalnya Restoran Contoh" data-agri="Misalnya Kampus Contoh" data-mitra="Misalnya Perusahaan Contoh" aria-required="true" required>
           <p class="f-err" id="e-dapur"></p>
         </div>
         <div class="f-baris">
@@ -521,8 +523,8 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
           <p class="f-err" id="e-kota"></p>
         </div>
         <div class="f-baris">
-          <label for="f-porsi" id="l-porsi" data-fnb="Kg sisa makanan per&nbsp;hari" data-agri="Jenis sampah kering dan jumlahnya">Kg sisa makanan per&nbsp;hari</label>
-          <input id="f-porsi" name="porsi" type="text" autocomplete="off" maxlength="60" placeholder="Misalnya 40 kg" data-fnb="Misalnya 40 kg" data-agri="Misalnya daun kering, 200 kg per minggu" aria-describedby="b-porsi e-porsi">
+          <label for="f-porsi" id="l-porsi" data-fnb="Kg sisa makanan per&nbsp;hari" data-agri="Jenis sampah kering dan jumlahnya" data-mitra="Bentuk dukungan yang Anda minati">Kg sisa makanan per&nbsp;hari</label>
+          <input id="f-porsi" name="porsi" type="text" autocomplete="off" maxlength="60" placeholder="Misalnya 40 kg" data-fnb="Misalnya 40 kg" data-agri="Misalnya daun kering, 200 kg per minggu" data-mitra="Misalnya pendanaan, lahan, atau program" aria-describedby="b-porsi e-porsi">
           <p class="f-bantu" id="b-porsi">Kira-kira saja sudah cukup.</p>
           <p class="f-err" id="e-porsi"></p>
         </div>

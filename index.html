@@ -493,8 +493,9 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
     <span class="bab">11 / 13 · Support us</span>
     <h2 id="h-pilot"><span class="baris"><span>Support us</span></span><span class="baris"><span>on the way to the first pilot</span></span></h2>
     <p class="rv">We are looking for hotels, restaurants, and cafés in Yogyakarta, and for suppliers of dry leaves and branches, willing to work with us from the earliest stage. We will weigh waste at 20 to 30 sites before the pilot. Tell us what you throw away, how much, and where you are.</p>
+    <p class="rv">We are also looking for investors and CSR partners. Investors can back the Rp380 million pre-seed round that takes us to pilot data and a hub ready to finance. CSR partners can provide land for the hub in the Sleman corridor or run an impact program with us. <a class="tautan" href="#mitra">See the investor details.</a></p>
     <p class="rv">When you sign up, we contact you to talk. There is no schedule and no quote yet.</p>
-    <p class="rv">We have no service or reward to promise yet. What we can offer is an open conversation about whether your waste fits.</p>
+    <p class="rv">We have no service or reward to promise yet. What we can offer is an open conversation about whether your waste, funding, or program fits.</p>
     <div class="pilot-panel" id="pilot-panel">
       <form id="form-pilot" class="form" novalidate autocomplete="on">
         <div class="f-ringkas" id="f-ringkas" role="alert" hidden></div>
@@ -503,6 +504,7 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
           <div class="f-jenis-o">
             <label><input type="radio" name="jenis" value="fnb" checked> Hotel, restaurant, or café</label>
             <label><input type="radio" name="jenis" value="agri"> Dry-waste supplier</label>
+            <label><input type="radio" name="jenis" value="mitra"> Investor or CSR partner</label>
           </div>
         </fieldset>
         <div class="f-baris">
@@ -512,7 +514,7 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
         </div>
         <div class="f-baris">
           <label for="f-dapur">Business name</label>
-          <input id="f-dapur" name="dapur" type="text" autocomplete="organization" placeholder="For example: Example Restaurant" data-fnb="For example: Example Restaurant" data-agri="For example: Example Campus" aria-required="true" required>
+          <input id="f-dapur" name="dapur" type="text" autocomplete="organization" placeholder="For example: Example Restaurant" data-fnb="For example: Example Restaurant" data-agri="For example: Example Campus" data-mitra="For example: Example Company" aria-required="true" required>
           <p class="f-err" id="e-dapur"></p>
         </div>
         <div class="f-baris">
@@ -521,8 +523,8 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
           <p class="f-err" id="e-kota"></p>
         </div>
         <div class="f-baris">
-          <label for="f-porsi" id="l-porsi" data-fnb="Kg of food waste per&nbsp;day" data-agri="Type of dry waste and amount">Kg of food waste per&nbsp;day</label>
-          <input id="f-porsi" name="porsi" type="text" autocomplete="off" maxlength="60" placeholder="For example 40 kg" data-fnb="For example 40 kg" data-agri="For example dry leaves, 200 kg per week" aria-describedby="b-porsi e-porsi">
+          <label for="f-porsi" id="l-porsi" data-fnb="Kg of food waste per&nbsp;day" data-agri="Type of dry waste and amount" data-mitra="How you would like to support us">Kg of food waste per&nbsp;day</label>
+          <input id="f-porsi" name="porsi" type="text" autocomplete="off" maxlength="60" placeholder="For example 40 kg" data-fnb="For example 40 kg" data-agri="For example dry leaves, 200 kg per week" data-mitra="For example funding, land, or a program" aria-describedby="b-porsi e-porsi">
           <p class="f-bantu" id="b-porsi">A rough guess is enough.</p>
           <p class="f-err" id="e-porsi"></p>
         </div>
