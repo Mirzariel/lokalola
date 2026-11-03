@@ -1,6 +1,6 @@
 # Lokalola website
 
-**Waste is energy in the wrong place.** Static site for Lokalola, a design concept for a facility run by Lokalola that turns food waste and dry biomass into biogas and char. Not tested, no safety review, no certification. Numbers are targets.
+**Waste is energy in the wrong place.** Static site for Lokalola, a planned hub in Yogyakarta, owned and run by Lokalola, that processes organic waste from hotels and restaurants into biochar and fertilizer. Design stage, not yet tested. Numbers are targets and projections.
 
 English at `/`, Indonesian at `/id/`. Plain HTML, CSS, and JavaScript with no build step.
 

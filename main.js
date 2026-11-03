@@ -36,7 +36,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         retort: "Retort: tungku berupa tabung tertutup yang memanaskan serpih tanpa udara sampai jadi arang.",
         digestat: "Digestat: sisa cairan dan padatan dari digester. Mutunya sebagai pupuk belum diuji.",
         arang: "Arang: hasil pemanasan serpih tanpa udara, sering disebut biochar. Mutunya belum diuji.",
-        serpih: "Serpih kering: biomassa kering berukuran 20 mm atau lebih kecil (asumsi rancangan), dari agribisnis."
+        serpih: "Serpih kering: biomassa kering berukuran 20 mm atau lebih kecil (asumsi rancangan), dari pemasok sampah kering."
       }
     },
     en: {
@@ -67,7 +67,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         retort: "Retort: a kiln built as a closed tube that heats dry chips without air until they become char.",
         digestat: "Digestate: the liquid and solids left over from the digester. Its quality as fertilizer has not been tested.",
         arang: "Char (also called biochar): what is left when chips are heated without air. Its quality has not been tested.",
-        serpih: "Dry chips: dry biomass cut to 20 mm or smaller (design assumption), from agribusinesses."
+        serpih: "Dry chips: dry biomass cut to 20 mm or smaller (design assumption), from dry-waste suppliers."
       }
     }
   };

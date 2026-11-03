@@ -1084,3 +1084,24 @@ main section:not(#hero) .lead{font-size:var(--fs-lead);line-height:1.45}
 .f-jenis-o label:has(input:focus-visible){outline:2px solid var(--fokus);outline-offset:3px}
 @supports selector(:has(*)){.f-jenis-o input:focus-visible{outline:none}}
 #cara-kerja{border-top:1px solid var(--garis)}
+
+/* ============ PUTARAN ZHAF: jawaban keselamatan, roadmap, tim, dana ============ */
+.spek-tanya{margin-top:var(--s-8);border-top:1px solid var(--garis-kuat);padding-top:var(--s-4);display:grid;gap:var(--s-3);max-width:62ch;scroll-margin-top:calc(var(--nav-h) + 24px)}
+.spek-tanya h3{font-size:var(--fs-h3);line-height:1.15}
+.st-jalan{margin-top:var(--s-8)}
+.st-jalan>h3{font-size:var(--fs-h3);line-height:1.15}
+.jl{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-5);margin-top:var(--s-6);list-style:none;padding:0}
+.jl li{border-top:1px solid var(--garis-kuat);padding-top:var(--s-3);display:grid;gap:var(--s-2);align-content:start}
+.jl h4{font-size:var(--fs-body);font-weight:700}
+.jl p{color:var(--ink-2)}
+@media (min-width:1024px){.jl{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--talang)}}
+.st-jalan .mb-cat{margin-top:var(--s-5);max-width:62ch}
+.tim-g{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-7);margin-top:var(--s-8)}
+.tim-k{display:grid;gap:var(--s-2);align-content:start}
+.tim-k img{width:100%;max-width:280px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:var(--r-2);margin-bottom:var(--s-2)}
+.tim-k h3{font-size:var(--fs-h3);line-height:1.15}
+.tim-p{font-size:var(--fs-kecil);font-weight:700;color:var(--aksen-teks)}
+.tim-k p:last-child{color:var(--ink-2);max-width:42ch}
+@media (min-width:768px){.tim-g{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--talang)}}
+.mt-cari-l.dana{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-2);width:100%}
+@media (min-width:768px){.mt-cari-l.dana{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--talang)}}
