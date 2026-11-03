@@ -111,6 +111,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
     modul("denah", initDenah);
     modul("spek", initSpek);
     modul("status", initStatus);
+    modul("depan", initDepan);
     modul("form", initForm);
     modul("mitra", initMitra);
     modul("istilah", initIstilah);
@@ -292,7 +293,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
     var ponsel = false, masukSudah = false;
     var jarak = function () { return Math.round(innerHeight * (innerWidth < 1024 ? 1.8 : 2.2)); };
     var bar = function (el) { return $$(".bar", el); };
-    var dgn = function (o, f) { if (!ponsel) o.filter = f; return o; };   // blur hanya di desktop (berat di ponsel)
+    var dgn = function (o) { return o; };   // tanpa blur: filter pada teks besar membuat gulir tersendat
 
     // pecah baris dari atribut data (| = baris baru, [..] = frasa lime, ~ = spasi dengan celah lebar); teks utuh tetap dengan spasi tunggal antarbaris
     function isi(el) {
@@ -448,7 +449,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
     }
     function muat() {
       if (BERAT_MATI || ponselLambat || !video || mati || dimuat || !window.WebGLRenderingContext) return;
-      var m = innerWidth < 768 && video.dataset.srcM, w0 = m ? 800 : 1600;
+      var m = innerWidth < 768 && video.dataset.srcM, w0 = m ? 800 : 1280;
       kanvas = document.createElement("canvas"); kanvas.width = w0; kanvas.height = w0 * 9 / 16; kanvas.setAttribute("aria-hidden", "true");
       gl = kanvas.getContext("webgl", { alpha: true, premultipliedAlpha: true, antialias: false });
       if (!gl) { kanvas = null; return; }
@@ -462,6 +463,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
       gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
       var lp = gl.getAttribLocation(pr, "p"); gl.enableVertexAttribArray(lp); gl.vertexAttribPointer(lp, 2, gl.FLOAT, false, 0, 0);
       gl.uniform1f(gl.getUniformLocation(pr, "k"), 1);
+      gl.pixelStorei(gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, gl.NONE);
       gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
       [[gl.TEXTURE_MIN_FILTER, gl.LINEAR], [gl.TEXTURE_MAG_FILTER, gl.LINEAR], [gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE], [gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE]].forEach(function (x) { gl.texParameteri(gl.TEXTURE_2D, x[0], x[1]); });
       kanvas.addEventListener("webglcontextlost", function (e) { e.preventDefault(); balik(); });
@@ -485,7 +487,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
   function stokVideo(video, tombol, wadah) {
     var user = false, vis = false;
     function sink() { if (!video.dataset.siap) return; var mau = vis && !user && !document.hidden && !BERAT_MATI; if (mau && video.paused) video.play().catch(function () {}); if (!mau && !video.paused) video.pause(); }
-    function pasang() { if (video.dataset.siap) return; video.dataset.siap = "1"; video.src = video.dataset.src + (BERAT_MATI ? "#t=0.6" : ""); video.preload = BERAT_MATI ? "metadata" : "auto"; }
+    function pasang() { if (video.dataset.siap) return; video.dataset.siap = "1"; video.src = video.dataset.src + (BERAT_MATI ? "#t=0.6" : ""); video.preload = "metadata"; }
     video.addEventListener("error", function () {
       var cad = video.dataset.cadangan;
       if (cad && video.dataset.src !== cad && video.dataset.siap) { video.removeAttribute("poster"); video.dataset.src = cad; video.src = cad; if (vis && !user && !BERAT_MATI) video.play().catch(function () {}); }
@@ -665,7 +667,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
     }
     function pasang() {
       if (dipasang) return; dipasang = true;
-      v.preload = "auto";
+      v.preload = "metadata";
       v.src = kecil ? v.dataset.srcM : v.dataset.src;
     }
     function main() {
@@ -1135,6 +1137,67 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         }, 1.0);
       } });
     });
+  }
+
+  /* ------------ MASA DEPAN: 750 titik, satu titik = 1 kg per hari; digambar hanya saat gulir berubah ------------ */
+  function initDepan() {
+    var pin = $("#md-pin"), c = $("#md-kanvas"); if (!pin || !c) return;
+    var ctx = c.getContext("2d"), nEl = $("#md-n"), t1 = $("#md-t1"), t2 = $("#h-depan"), leg = $("#md-leg"), glow = $(".md-glow", pin);
+    var N = 750, AWAL = 50, titik = [], w = 0, h = 0, dpr = 1, nAkhir = -1;
+    var acak = function (i) { var x = Math.sin(i * 127.1 + 11.7) * 43758.5453; return x - Math.floor(x); };
+    function sprite(warna) {
+      var s = document.createElement("canvas"); s.width = s.height = 56;
+      var g = s.getContext("2d"), r = g.createRadialGradient(28, 28, 0, 28, 28, 28);
+      r.addColorStop(0, warna); r.addColorStop(.14, warna); r.addColorStop(.22, warna + "55"); r.addColorStop(1, warna + "00");
+      g.fillStyle = r; g.fillRect(0, 0, 56, 56); return s;
+    }
+    var spBasah = sprite("#98E61F"), spKering = sprite("#F3F1E7");
+    function susun() {
+      w = pin.clientWidth; h = pin.clientHeight; dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+      var kol = Math.max(10, Math.round(Math.sqrt(N * w / h))), bar = Math.ceil(N / kol), gx = w / kol, gy = h / bar;
+      titik = [];
+      for (var i = 0; i < N; i++) {
+        var x = (i % kol + .5) * gx, y = (Math.floor(i / kol) + .5) * gy, dx = (x - w / 2) / w, dy = (y - h / 2) / h;
+        titik.push({ x: x, y: y, d: Math.sqrt(dx * dx + dy * dy) + acak(i) * .1 });
+      }
+      titik.sort(function (a, b) { return a.d - b.d; });
+      // 15 dari 50 titik pertama dan 235 dari 700 sisanya kering: tepat 35 + 15 lalu 500 + 250
+      titik.forEach(function (t, k) { t.k = k < AWAL ? k % 10 < 3 : (k - AWAL) % 700 * 235 % 700 < 235; });
+      nAkhir = -1;
+    }
+    function gambar(n) {
+      if (n === nAkhir) return; nAkhir = n;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+      var i, t, a;
+      ctx.globalAlpha = 1; ctx.fillStyle = "rgba(191,235,208,.13)";
+      for (i = Math.floor(n); i < N; i++) { t = titik[i]; ctx.fillRect(t.x - 1, t.y - 1, 2, 2); }
+      for (i = 0; i < n && i < N; i++) {
+        t = titik[i]; a = Math.min(1, (n - i) / 24);
+        ctx.globalAlpha = a; ctx.drawImage(t.k ? spKering : spBasah, t.x - 14, t.y - 14, 28, 28);
+      }
+      ctx.globalAlpha = 1;
+    }
+    var mulus = function (a, b, x) { var u = Math.max(0, Math.min(1, (x - a) / (b - a))); return u * u * (3 - 2 * u); };
+    function tampil(p) {
+      var n = AWAL + (N - AWAL) * mulus(.14, .86, p);
+      gambar(Math.round(n));
+      nEl.textContent = Math.round(n);
+      var b = mulus(.5, .72, p);
+      t1.style.opacity = 1 - mulus(.1, .26, p);
+      t2.style.opacity = b; leg.style.opacity = b;
+      glow.style.opacity = .2 + .8 * mulus(.14, .86, p);
+    }
+    susun();
+    var statis = BERAT_MATI || !window.gsap || !window.ScrollTrigger;
+    var o = { p: statis ? 1 : 0 };
+    if (!statis) {
+      t1.hidden = false;
+      gsap.to(o, { p: 1, ease: "none", onUpdate: function () { tampil(o.p); }, scrollTrigger: { trigger: pin, start: "top top", end: "+=170%", pin: true, scrub: .5, anticipatePin: 1, invalidateOnRefresh: true } });
+    }
+    tampil(o.p);
+    var lebar = innerWidth, tU = 0;
+    window.addEventListener("resize", function () { clearTimeout(tU); tU = setTimeout(function () { if (innerWidth === lebar && Math.abs(h - pin.clientHeight) < 120) return; lebar = innerWidth; susun(); tampil(o.p); }, 180); });
   }
 
   /* ------------ FORM PILOT ------------ */
