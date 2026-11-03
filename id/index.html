@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="id" class="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lokalola: sisa makanan jadi biogas, serpih kering jadi arang</title>
+<meta name="description" content="Sampah adalah energi di tempat yang salah. Lokalola adalah konsep rancangan yang mengembalikannya: sisa makanan jadi biogas, biogasnya menyalakan tungku, serpih kering jadi arang. Belum diuji, belum dikaji keselamatannya, belum bersertifikat. Angka = target.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="alternate" hreflang="en" href="/">
+<link rel="alternate" hreflang="id" href="/id/">
+<link rel="alternate" hreflang="x-default" href="/">
+<meta property="og:title" content="Lokalola: sisa makanan jadi biogas, serpih kering jadi arang">
+<meta property="og:description" content="Konsep rancangan fasilitas yang dikelola Lokalola: sisa makanan dari bisnis makanan dan minuman serta biomassa kering dari agribisnis menjadi biogas dan arang. Belum diuji, belum dikaji keselamatannya, belum bersertifikat. Angka = target.">
+<meta property="og:image" content="../assets/hero/hero-poster.webp">
+<meta property="og:image:alt" content="Visualisasi rancangan Lokalola: modul gas, digester, stasiun umpan, dan retort. Render konsep, bukan foto.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="../assets/brand/ikon.png">
+<meta name="theme-color" content="#010101">
+<link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/brand/favicon-64.png">
+<link rel="preload" href="../assets/brand/fonts/geist/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="../assets/hero/mesin.webp" fetchpriority="high">
+<script>
+/* Keadaan awal animasi hanya dipasang bila JS hidup. Jaring pengaman: bila main.js tidak menandai siap dalam 15 dtk, semua isi ditampilkan. */
+(function(){var d=document.documentElement;d.classList.add("js");
+if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)d.classList.add("reduce");
+setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gagal")},15000)})();
+</script>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#isi">Lewati ke isi utama</a>
+
+<header class="nav" id="nav" data-tema="gelap">
+  <div class="nav-bg gelap"></div><div class="nav-bg terang"></div>
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="#hero" aria-label="Lokalola, ke awal halaman">
+      <img class="l-gelap" src="../assets/brand/logo-latar-gelap.png" width="600" height="213" alt="">
+      <img class="l-terang" src="../assets/brand/logo-latar-terang.png" width="600" height="192" alt="">
+    </a>
+    <nav aria-label="Utama" class="nav-links">
+      <a href="#model">Model</a><a href="#cara-kerja">Cara kerja</a><a href="#mesin">Mesin</a><a href="#keselamatan">Keselamatan</a><a href="#spesifikasi">Spesifikasi</a><a href="#status">Status</a><a href="#mitra">Investor &amp; mitra</a>
+    </nav>
+    <a class="btn aksi nav-aksi" id="nav-aksi" href="#pilot" aria-label="Gabung daftar tunggu" tabindex="-1" aria-hidden="true"><span class="na-p">Gabung daftar tunggu</span><span class="na-k" aria-hidden="true">Daftar tunggu</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="lang lang-d" role="group" aria-label="Bahasa"><a href="../" data-base="../" hreflang="en" lang="en">EN</a><span aria-hidden="true">|</span><a href="./" data-base="./" hreflang="id" lang="id" aria-current="true">ID</a></div>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Buka menu">
+      <svg class="h" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="nav-progres" id="nav-progres"></div>
+</header>
+<div class="nav-menu" id="menu" aria-label="Menu" role="dialog" aria-modal="true" hidden>
+  <ul>
+    <li><a href="#model">Model</a></li><li><a href="#cara-kerja">Cara kerja</a></li><li><a href="#mesin">Mesin</a></li><li><a href="#keselamatan">Keselamatan</a></li><li><a href="#spesifikasi">Spesifikasi</a></li><li><a href="#status">Status</a></li><li><a href="#mitra">Investor &amp; mitra</a></li>
+  </ul>
+  <div class="lang lang-m" role="group" aria-label="Bahasa"><a href="../" data-base="../" hreflang="en" lang="en">EN</a><span aria-hidden="true">|</span><a href="./" data-base="./" hreflang="id" lang="id" aria-current="true">ID</a></div>
+  <a class="btn aksi" href="#pilot">Gabung daftar tunggu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<main id="isi">
+
+<!-- ============ 1 HERO ============ -->
+<section id="hero" data-tema="gelap" aria-labelledby="h-hero">
+  <div class="hero-panggung" id="hero-panggung">
+    <p class="hero-blok hero-tag-big" id="hero-tag-big" lang="en" data-d="Managed locally,|[for greater energy!]" data-m="Managed|locally, [for]|[greater]|[energy!]">Managed locally, <span class="acc">for greater energy!</span></p>
+    <h1 class="hero-blok" id="h-hero" data-d="Sampah adalah energi|[di tempat~yang salah.]" data-m="Sampah adalah|energi|[di tempat]|[yang salah.]">Sampah adalah energi <span class="acc">di tempat yang salah.</span></h1>
+    <div class="hero-mesin" id="hero-mesin">
+      <img id="hero-mesin-img" src="../assets/hero/mesin.webp" width="1600" height="900" fetchpriority="high" decoding="async" alt="Model visual Lokalola di studio gelap: modul gas berjaring, tangki digester putih, stasiun umpan basah, dan modul retort dengan cerobong stainless. Render konsep, bukan foto.">
+      <video id="hero-video" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" data-src="../assets/hero/hero-kemas.mp4" data-src-m="../assets/hero/hero-kemas-m.mp4"></video>
+    </div>
+  </div>
+  <div class="hero-tirai-lantai" id="hero-tirai-lantai" aria-hidden="true"></div>
+  <div class="hero-b">
+    <div class="hero-txt"><p class="lead" id="hero-lead">Lokalola dirancang untuk mengembalikannya ke tempat yang benar: fasilitas di pinggiran kota yang kami rencanakan untuk dikelola sendiri, tempat sisa makanan dari bisnis makanan dan minuman serta biomassa kering dari agribisnis diolah menjadi biogas dan arang. Target pilot pertama: 35&nbsp;kg sisa makanan per hari operasi dan rata-rata 15&nbsp;kg serpih kering per hari.</p></div>
+    <div class="hero-cta" id="hero-cta">
+      <div class="hero-btn-baris">
+        <a class="btn aksi" id="hero-aksi" href="#pilot">Gabung daftar tunggu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn sek" href="#cara-kerja">Lihat cara kerjanya</a>
+        <a class="hero-mitra" href="#mitra">Investor atau mitra?</a>
+      </div>
+    </div>
+    <p class="hero-catatan" id="hero-catatan">Gambar mesin adalah render rancangan. Foto dan video lain adalah ilustrasi stok.</p>
+  </div>
+  <div class="hero-pelat" id="hero-pelat">
+    <button class="btn ikon sek" id="hero-jeda" type="button" aria-label="Jeda video hero" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+  </div>
+  <p class="hero-hint" id="hero-hint" aria-hidden="true"><span>Gulir</span><i></i></p>
+  <div class="hero-tutup" id="hero-tutup" aria-hidden="true"></div>
+</section>
+
+<!-- ============ 2 MASALAH ============ -->
+<section id="masalah" data-tema="terang" class="bagian" aria-labelledby="h-masalah">
+  <div class="wrap">
+    <span class="bab">02 / 11 · Masalah</span>
+    <h2 id="h-masalah" class="m-h2"><span class="baris"><span>Hampir 40&nbsp;persen sampah yang dilaporkan</span></span><span class="baris"><span>di Indonesia adalah sisa makanan.</span></span></h2>
+    <div class="g m-baris1">
+      <figure class="media m-foto" id="m-foto">
+        <div class="media-in m-foto-in"><img src="../assets/stok/sisa-makanan-semangka-busuk.webp" width="1600" height="1373" loading="lazy" decoding="async" alt="Semangka busuk, wortel, dan sisa sayur dalam peti kayu dan kantong plastik di luar ruang. Foto stok, bukan foto Lokalola."><span class="tirai"></span></div>
+        </figure>
+      <div class="m-angka">
+        <div class="angka-blok rv">
+          <p class="angka" aria-label="39,87 persen"><span class="cnt" aria-hidden="true"><span class="cnt-w">39,87%</span><span class="cnt-a" data-ke="39.87" data-dec="2" data-suf="%">39,87%</span></span></p>
+          <p class="ket">sisa makanan dalam timbulan sampah nasional, SIPSN 2024</p>
+        </div>
+      </div>
+    </div>
+    <div class="g m-baris2">
+      <p class="m-p1 rv">Sistem Informasi Pengelolaan Sampah Nasional (SIPSN) Kementerian Lingkungan Hidup mencatat sisa makanan sebagai jenis sampah terbesar pada 2024: 39,87&nbsp;persen dari timbulan, berdasarkan laporan 303 kabupaten dan kota.</p>
+      <p class="m-p2 rv">Lokalola memulai dari bisnis makanan dan minuman, yang menghasilkan sampah ini di satu tempat setiap hari, serta agribisnis, yang memegang sampah organik kering.</p>
+      <figure class="media m-dapur rv">
+        <div class="media-in"><img src="../assets/stok/dapur-komersial-panci-stainless.webp" width="1600" height="897" loading="lazy" decoding="async" alt="Dapur komersial gelap: panci stainless di atas api kompor, saringan dan sendok sayur tergantung. Foto stok."></div>
+        </figure>
+    </div>
+  </div>
+  <div class="m-video-band" id="m-video-band">
+    <div class="media m-video">
+      <div class="media-in m-video-in">
+        <video id="stok-video" muted loop playsinline preload="none" poster="../assets/stok/video-sisa-dapur-poster.webp" data-src="../assets/stok/video-sisa-dapur.mp4" aria-label="Video stok gerak lambat: sisa kue dengan beri dikikis dari alas batu hitam ke tempat sampah berkantong. Bukan video Lokalola."></video>
+      </div>
+      <div class="m-video-scrim"></div>
+      <div class="m-video-teks wrap"><p class="m-v1 rv">Tiap bisnis makanan menghasilkan sisa di tempat yang sama, setiap hari.</p><p class="m-v2 rv">Lokalola berencana mengolahnya bagi mereka, di satu fasilitas yang kami kelola sendiri.</p></div>
+      <div class="m-video-ctl"><button class="btn ikon sek" id="video-jeda" type="button" aria-label="Jeda video" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button></div>
+    </div>
+  </div>
+  <div class="wrap m-akhir">
+    <div class="m-sumber rv">
+      <p>Persentase sisa makanan: SIPSN Kementerian Lingkungan Hidup, data 2024, disampaikan Menteri Lingkungan Hidup pada 15 Maret 2025. Angka antar-rilis bergeser karena jumlah daerah yang melapor berubah. <a class="tautan" href="https://megapolitan.antaranews.com/berita/373321/menteri-lh-sebut-sisa-makanan-masih-jadi-jenis-timbulan-sampah-terbesar" rel="noopener" target="_blank">Sumber: Antara</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 MODEL ============ -->
+<section id="model" data-tema="gelap" class="bagian" aria-labelledby="h-model">
+  <div class="wrap">
+    <span class="bab">03 / 11 · Model</span>
+    <h2 id="h-model"><span class="baris"><span>Dua jenis sampah,</span></span><span class="baris"><span>satu fasilitas</span></span></h2>
+    <p class="lead mo-lead rv">Lokalola berencana mengelola sendiri fasilitasnya di pinggiran kota, di antara bisnis makanan dan agribisnis. Tim kami yang mengoperasikan peralatan. Pemasok menyerahkan sampahnya.</p>
+    <div class="mo-g">
+      <article class="mo-k rv"><span class="pelat">Bisnis makanan dan minuman</span><h3>Jasa pengolahan berbayar</h3><p>Anda menyerahkan sampah organik basah, dan Lokalola mengolahnya. Inilah pendapatan utama. Tarifnya belum ditetapkan.</p></article>
+      <article class="mo-k rv"><span class="pelat">Agribisnis</span><h3>Sepertiga biochar</h3><p>Anda menyerahkan sampah organik kering. Sepertiga dari total biochar yang dihasilkan dikembalikan kepada pemasok agribisnis. Cara membaginya antarpemasok, dan ada atau tidaknya biaya layanan, belum ditetapkan.</p></article>
+      <article class="mo-k rv"><span class="pelat">Lokalola</span><h3>Dua pertiga untuk dijual</h3><p>Dua pertiga sisanya kami simpan untuk dijual. Mutunya belum diuji, dan pembelinya belum ditetapkan.</p></article>
+    </div>
+    <p class="mo-cat rv">Biochar adalah arang hasil retort. Fasilitas ini belum ada. Kota, tapak, dan pihak yang mengangkut tiap bahan belum ditentukan.</p>
+  </div>
+</section>
+
+<!-- ============ 3 CARA KERJA ============ -->
+<section id="cara-kerja" data-tema="gelap" aria-labelledby="h-cara">
+  <div class="wrap legenda" id="legenda">
+    <span class="bab">04 / 11 · Cara kerja</span>
+    <h2 id="h-cara"><span class="baris"><span>Dari sisa makanan sampai arang,</span></span><span class="baris"><span>dalam satu sistem</span></span></h2>
+    <p class="fl-lead rv">Sisa makanan masuk di satu ujung, arang keluar di ujung lain. Warna butiran di pipa menunjukkan apa yang sedang mengalir.</p>
+    <div class="fl-tools"><button class="btn sek kecil" id="fl-ulang" type="button" hidden></button></div>
+    <p class="sr-only">Ringkasan alur: sisa makanan 35 kilogram per&nbsp;hari (target) disortir, dicampur air, lalu diangkat ke digester 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikannya jadi biogas, dan sisa cairannya (digestat) mengalir ke wadah IBC. Biogas disaring lalu disimpan di kantong gas 2,5 meter kubik. Dari kantong, biogas menyalakan dan memanaskan awal tungku retort saat start, lalu hanya menjaga api pilot kecil. Serpih kering (biomassa kering berukuran 20&nbsp;mm atau&nbsp;lebih kecil) 15 kilogram per&nbsp;hari (target), dari agribisnis, masuk lewat hopper, dan setelah panas uap serpih dirancang menjaga panasnya (belum diuji). Arang keluar ke bin tertutup. Gas sisa bisa dialirkan ke pembakar atau suar di fasilitas (opsional; menunggu kajian keselamatan).</p>
+    <div class="flow" id="flow">
+      <aside class="ringkas" aria-label="Ringkasan masuk dan keluar">
+        <h3>Sekali pandang</h3>
+        <div class="rk"><b class="in">Masuk</b><span>Sisa makanan dan serpih kering</span></div>
+        <div class="rk"><b class="out">Keluar</b><span>Arang, digestat (cairan sisa), dan gas sisa (perkiraan hitung 0,65–1,0&nbsp;m³ per&nbsp;hari)</span></div>
+        <ul class="fl-leg" aria-label="Arti warna butiran di pipa">
+          <li style="--c:var(--alur-basah)"><i></i>Sisa basah</li><li style="--c:var(--alur-biogas)"><i></i>Biogas</li><li style="--c:var(--alur-kering)"><i></i>Serpih kering</li><li style="--c:var(--alur-arang)"><i></i>Arang</li><li style="--c:var(--alur-digestat)"><i></i>Digestat</li><li style="--c:var(--alur-panas)"><i></i>Nyala api</li>
+        </ul>
+      </aside>
+
+      
+  <article class="stage s1 sisa" data-st="1" aria-labelledby="tsisa">
+    <div class="art"><svg viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+<ellipse cx="120" cy="184" rx="95" ry="9" fill="#000" opacity=".3"/>
+<!-- meja sortir -->
+<polygon class="f3" points="14,128 58,118 98,128 54,138"/><polygon class="f1" points="14,128 54,138 54,172 14,162"/><polygon class="f2" points="54,138 98,128 98,162 54,172"/>
+<circle cx="34" cy="127" r="5" fill="var(--alur-basah)"/><circle cx="50" cy="130" r="4.5" fill="#53B111"/><circle cx="66" cy="126" r="4" fill="#E3CFA0"/><circle cx="78" cy="129" r="3.5" fill="var(--alur-basah)"/>
+<!-- tangki campur -->
+<path class="f1" d="M110 100v60a40 10 0 0 0 80 0v-60z"/><path class="f2" d="M172 108 190 100v60a40 10 0 0 1-18 8.5z"/>
+<ellipse class="f2" cx="150" cy="100" rx="40" ry="10"/><ellipse cx="150" cy="100" rx="34" ry="7.5" fill="var(--alur-basah)"/><ellipse cx="143" cy="98.5" rx="14" ry="2.6" fill="#D2A678" opacity=".7"/>
+<!-- keran air + serpihan jatuh -->
+<path d="M118 36h24v10" fill="none" stroke="#CBD8C9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="drop wtr" d="M142 54c3 4 4 6 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8z" fill="#BFEBD0"/>
+<circle class="drop b1" cx="156" cy="60" r="4.5" fill="var(--alur-basah)"/><circle class="drop b2" cx="168" cy="60" r="3.8" fill="#53B111"/><circle class="drop b3" cx="177" cy="60" r="3.4" fill="#E3CFA0"/>
+<!-- pompa -->
+<rect class="f2" x="192" y="136" width="24" height="30" rx="5"/><rect x="196" y="143" width="16" height="6" rx="2" fill="#0A0F0C"/><circle cx="204" cy="157" r="3" fill="#98E61F"/>
+<path d="M190 156h-2" stroke="#CBD8C9" stroke-width="6"/>
+<g class="pp k-basah"><path class="w" d="M204 136V110H240"/><path class="i" d="M204 136V110H240"/><path class="b" d="M204 136V110H240"/></g>
+</svg><span class="tag in">Masuk</span><div class="pipe h basah pout" data-seq="2"></div></div>
+    <div class="cap"><span class="no" aria-hidden="true">01</span><h3 id="tsisa">Sisa makanan</h3><p>Disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester.</p><span class="chip c-sisa">35&nbsp;kg per&nbsp;hari (target)</span></div>
+  </article>
+      <div class="mp basah mp1" data-seq="2" aria-hidden="true"></div>
+      
+  <article class="stage s2 digester" data-st="2" aria-labelledby="tdigester">
+    <div class="art"><svg viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+<ellipse cx="120" cy="184" rx="100" ry="9" fill="#000" opacity=".3"/>
+<path class="f1" d="M62 68v92a68 14 0 0 0 136 0V68z"/><path class="f2" d="M174 80 198 68v92a68 14 0 0 1-24 11z"/>
+<ellipse class="f3" cx="130" cy="68" rx="68" ry="14"/><ellipse cx="130" cy="68" rx="68" ry="14" fill="none" stroke="#CBD8C9" stroke-width="1.5"/>
+<polygon class="f2" points="88,42 112,42 106,60 94,60"/><ellipse class="f3" cx="100" cy="42" rx="12" ry="3"/>
+<!-- jendela potong: bubur dan gelembung -->
+<clipPath id="wd2"><rect x="86" y="98" width="68" height="52" rx="9"/></clipPath>
+<rect x="86" y="98" width="68" height="52" rx="9" fill="#0A0F0C"/>
+<g clip-path="url(#wd2)"><rect x="86" y="120" width="68" height="30" fill="var(--alur-basah)"/><rect x="86" y="120" width="68" height="3" fill="#D2A678"/>
+<circle class="bub bu1" cx="100" cy="144" r="3.2" fill="#2EC4D3"/><circle class="bub bu2" cx="114" cy="146" r="2.4" fill="#2EC4D3"/><circle class="bub bu3" cx="128" cy="144" r="3.6" fill="#2EC4D3"/><circle class="bub bu4" cx="142" cy="146" r="2.6" fill="#2EC4D3"/><circle class="bub bu5" cx="108" cy="140" r="2" fill="#2EC4D3"/></g>
+<rect x="86" y="98" width="68" height="52" rx="9" fill="none" stroke="#CBD8C9" stroke-width="2"/>
+<g class="pp k-basah"><path class="w" d="M0 110H30V26H100V42"/><path class="i" d="M0 110H30V26H100V42"/><path class="b" d="M0 110H30V26H100V42"/></g>
+<g class="pp k-biogas"><path class="w" d="M170 64V34H214V110H240"/><path class="i" d="M170 64V34H214V110H240"/><path class="b" d="M170 64V34H214V110H240"/></g>
+<g class="pp k-digestat"><path class="w" d="M150 170V188H240"/><path class="i" d="M150 170V188H240"/><path class="b" d="M150 170V188H240"/></g>
+</svg><div class="pipe h biogas pout" data-seq="5"></div></div>
+    <div class="cap"><span class="no" aria-hidden="true">02</span><h3 id="tdigester">Digester</h3><p>Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Dihitung untuk suhu udara 27–28&nbsp;°C; lokasi lebih dingin menghasilkan lebih sedikit.</p><span class="chip c-digester">5.000&nbsp;liter, tanpa pemanas</span></div><div class="pipe h digestat dr-h1" data-seq="5"></div><div class="pipe v digestat dr-v" data-seq="5"></div><div class="pipe h digestat dr-h2" data-seq="5"></div>
+  </article>
+      <article class="mini digestat" data-st="d" aria-labelledby="tdig">
+        <div class="art"><svg viewBox="0 0 120 100" aria-hidden="true" focusable="false">
+<ellipse cx="60" cy="94" rx="52" ry="6" fill="#000" opacity=".3"/>
+<polygon class="f3" points="14,26 34,14 106,14 86,26"/><rect class="f1" x="14" y="26" width="72" height="62"/><polygon class="f2" points="86,26 106,14 106,76 86,88"/>
+<rect x="20" y="48" width="60" height="34" fill="#7C9BC8"/><rect x="20" y="48" width="60" height="3" fill="#B5CAE6"/>
+<path d="M14 26h72v62H14zM14 46h72M14 66h72M38 26v62M62 26v62" fill="none" stroke="#0A0F0C" stroke-width="1.2" opacity=".45"/>
+<rect x="76" y="80" width="14" height="8" rx="2" fill="#0A0F0C"/>
+<path d="M106 50H120" stroke="#E9F0E6" stroke-width="12" stroke-linecap="round"/><path d="M104 50H120" stroke="#050A07" stroke-width="8"/>
+</svg><span class="tag ko">Keluar</span></div>
+        <div class="cap"><h3 id="tdig">Digestat</h3><p>Cairan sisa digester mengalir ke wadah IBC. Mutunya sebagai pupuk belum diuji.</p><span class="chip c-digestat">sekitar&nbsp;65–70&nbsp;L per&nbsp;hari (perkiraan hitung)</span></div>
+      </article>
+      <div class="mp biogas mp2" data-seq="5" aria-hidden="true"></div>
+      
+  <article class="stage s3 gas" data-st="3" aria-labelledby="tgas">
+    <div class="art"><svg viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+<ellipse cx="120" cy="184" rx="95" ry="9" fill="#000" opacity=".3"/>
+<polygon class="f3" points="120,128 224,152 120,176 16,152"/><polygon class="f1" points="16,152 120,176 120,186 16,162"/><polygon class="f2" points="120,176 224,152 224,162 120,186"/>
+<g class="bag"><path d="M52 146C46 100 80 74 120 74c48 0 78 22 76 58-1 20-30 26-76 26-44 0-66-4-68-12z" fill="#2EC4D3"/><path d="M62 130c8-30 30-42 58-42" fill="none" stroke="#BFEBD0" stroke-width="3.5" stroke-linecap="round" opacity=".75"/><path d="M96 80c-6 24-6 52 0 76M146 80c6 24 6 52 0 76" fill="none" stroke="#0A0F0C" stroke-width="2" opacity=".3"/>
+<polygon class="f2" points="84,72 120,62 156,72 120,84"/><polygon class="f1" points="84,72 120,84 120,90 84,78"/><polygon points="120,84 156,72 156,78 120,90" fill="#B3C3B0"/></g>
+<!-- kondensat + kanister -->
+<rect x="22" y="118" width="20" height="30" rx="5" fill="#F3F1E7"/><rect x="22" y="132" width="20" height="16" rx="5" fill="#2EC4D3" opacity=".7"/><rect x="26" y="112" width="12" height="7" rx="2" class="f2"/>
+<rect x="46" y="94" width="20" height="54" rx="8" class="f2"/><rect x="50" y="88" width="12" height="9" rx="2" class="f1"/><rect x="46" y="112" width="20" height="5" fill="#53B111"/>
+<g class="pp k-biogas"><path class="w" d="M0 110H32V118"/><path class="i" d="M0 110H32V118"/><path class="b" d="M0 110H32V118"/></g>
+<g class="pp k-biogas"><path class="w" d="M56 90V80H82V94"/><path class="i" d="M56 90V80H82V94"/><path class="b" d="M56 90V80H82V94"/></g>
+<g class="pp k-biogas"><path class="w" d="M194 110H240"/><path class="i" d="M194 110H240"/><path class="b" d="M194 110H240"/></g>
+<g class="pp k-biogas opt"><path class="w" d="M160 158V188H240"/><path class="i" d="M160 158V188H240"/><path class="b" d="M160 158V188H240"/></g>
+</svg><div class="pipe h biogas pout" data-seq="8"></div></div>
+    <div class="cap"><span class="no" aria-hidden="true">03</span><h3 id="tgas">Saring dan&nbsp;simpan</h3><p>Kondensat air dan hidrogen sulfida (H₂S, gas korosif yang berbau) disaring dari biogas, lalu biogas ditampung di kantong gas.</p><span class="chip c-gas">kantong gas 2,5&nbsp;m³</span></div><div class="pipe h biogas opt dr-h1" data-seq="8"></div><div class="pipe v biogas opt dr-v" data-seq="8"></div><div class="pipe h biogas opt dr-h2" data-seq="8"></div>
+  </article>
+      <article class="mini gassisa" data-st="g" aria-labelledby="tgs">
+        <div class="art"><svg viewBox="0 0 120 100" aria-hidden="true" focusable="false">
+<ellipse cx="60" cy="94" rx="50" ry="6" fill="#000" opacity=".3"/>
+<polygon class="f3" points="14,52 34,40 106,40 86,52"/><rect class="f1" x="14" y="52" width="72" height="36" rx="2"/><polygon class="f2" points="86,52 106,40 106,76 86,88"/>
+<ellipse cx="54" cy="47" rx="16" ry="4.2" fill="#0A0F0C"/><path class="flame" d="M54 46c-5-2-6-7-3-11 1 3 2 3 3 3 0-4 1-7 3-9 1 5 4 6 4 10 0 4-3 6-7 7z" fill="var(--alur-panas)" style="transform-box:fill-box;transform-origin:50% 100%"/>
+<circle cx="30" cy="70" r="4" fill="#0A0F0C" opacity=".55"/><circle cx="50" cy="70" r="4" fill="#0A0F0C" opacity=".55"/>
+<path d="M106 50H120" stroke="#E9F0E6" stroke-width="12" stroke-linecap="round"/><path d="M104 50H120" stroke="#050A07" stroke-width="8"/>
+</svg><span class="tag ko">Opsional</span></div>
+        <div class="cap"><h3 id="tgs">Gas sisa</h3><p>Sisa biogas bisa dialirkan ke pembakar atau suar di fasilitas (opsional; menunggu kajian keselamatan).</p><span class="chip c-opsi">opsional</span></div>
+      </article>
+      <div class="mp biogas mp3" data-seq="8" aria-hidden="true"></div>
+      <h3 class="extra-h">Masukan dan keluaran lain</h3>
+      <article class="mini dry" data-st="k" aria-labelledby="tdry">
+        <div class="art"><svg viewBox="0 0 150 110" aria-hidden="true" focusable="false">
+<ellipse cx="75" cy="100" rx="44" ry="6" fill="#000" opacity=".3"/>
+<path class="f1" d="M30 14h90l8 54c1 8-3 14-12 14H34c-9 0-13-6-12-14z"/><path class="f2" d="M96 14h24l8 54c1 8-3 14-12 14H98z" opacity=".9"/>
+<rect class="f2" x="30" y="8" width="90" height="10" rx="3"/>
+<circle cx="52" cy="44" r="4.5" fill="#E3CFA0"/><circle cx="66" cy="54" r="3.6" fill="#E3CFA0"/><circle cx="48" cy="62" r="3.2" fill="#E3CFA0"/><circle cx="78" cy="38" r="3" fill="#E3CFA0"/>
+<path d="M62 82h26v10H62z" class="f2"/><rect x="66" y="90" width="18" height="12" fill="#CBD8C9"/>
+</svg><span class="tag in">Masuk</span></div>
+        <div class="cap"><h3 id="tdry">Serpih kering</h3><p>Biomassa kering dari agribisnis, berukuran 20&nbsp;mm atau&nbsp;lebih kecil (asumsi rancangan). Pihak yang menyiapkannya belum ditentukan. Masuk lewat hopper.</p><span class="chip c-dry">15&nbsp;kg per&nbsp;hari (target)</span></div>
+        <div class="pipe v kering dr-v" data-seq="9"></div>
+      </article>
+      
+  <article class="stage s4 retort" data-st="4" aria-labelledby="tretort">
+    <div class="art"><svg viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+<ellipse cx="120" cy="184" rx="100" ry="9" fill="#000" opacity=".3"/>
+<polygon class="f3" points="24,78 66,60 218,60 176,78"/><rect class="f1" x="24" y="78" width="152" height="92" rx="3"/><polygon class="f2" points="176,78 218,60 218,152 176,170"/>
+<!-- cerobong + uap -->
+<rect class="f2" x="148" y="10" width="14" height="54"/><ellipse class="f3" cx="155" cy="10" rx="7" ry="2.5"/>
+<circle class="steam s1" cx="155" cy="2" r="5" fill="#F3F1E7"/><circle class="steam s2" cx="155" cy="2" r="4" fill="#F3F1E7"/><circle class="steam s3" cx="155" cy="2" r="5" fill="#F3F1E7"/>
+<!-- hopper -->
+<polygon class="f2" points="44,28 102,28 86,64 60,64"/><ellipse cx="73" cy="28" rx="29" ry="5" fill="#E3CFA0"/><ellipse class="f3" cx="73" cy="28" rx="29" ry="5" opacity=".0"/>
+<ellipse cx="73" cy="28" rx="29" ry="5" fill="none" stroke="#CBD8C9" stroke-width="2"/>
+<!-- tungku -->
+<rect x="38" y="104" width="64" height="52" rx="7" fill="#0A0F0C"/>
+<g class="fire"><rect class="glow" x="40" y="106" width="60" height="48" rx="6" fill="var(--alur-panas)" opacity=".28"/>
+<path class="flame" d="M70 152c-12-4-16-14-10-24 2 6 6 8 8 8-2-10 2-18 8-24 0 10 10 14 10 26 0 8-6 12-16 14z" fill="var(--alur-panas)"/><path class="flame2" d="M70 152c-6-2-8-8-4-14 2 4 4 4 5 4 0-5 2-8 4-10 1 6 5 8 5 14 0 4-4 6-10 6z" fill="#FFF3C4"/></g>
+<rect x="38" y="104" width="64" height="52" rx="7" fill="none" stroke="#CBD8C9" stroke-width="2"/>
+<!-- tabung auger -->
+<rect x="112" y="116" width="58" height="26" rx="13" fill="#8A8D94"/><path d="M122 118l8 22M134 118l8 22M146 118l8 22M158 118l6 22" stroke="#0A0F0C" stroke-width="2" opacity=".45"/><rect x="112" y="116" width="58" height="26" rx="13" fill="none" stroke="#CBD8C9" stroke-width="2"/>
+<g class="pp k-kering"><path class="w" d="M73 0V30"/><path class="i" d="M73 0V30"/><path class="b" d="M73 0V30"/></g>
+<g class="pp k-biogas"><path class="w" d="M0 110H14V150H40"/><path class="i" d="M0 110H14V150H40"/><path class="b" d="M0 110H14V150H40"/></g>
+<g class="pp k-arang"><path class="w" d="M196 110H240"/><path class="i" d="M196 110H240"/><path class="b" d="M196 110H240"/></g>
+</svg><div class="pipe h arang pout" data-seq="11"></div></div>
+    <div class="cap"><span class="no" aria-hidden="true">04</span><h3 id="tretort">Retort</h3><p>Biogas menyalakan dan memanaskan awal tungku saat start, lalu hanya menjaga api pilot kecil. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji).</p><span class="chip c-retort">serpih kering 15&nbsp;kg per&nbsp;hari (target)</span></div>
+  </article>
+      <div class="mp arang mp4" data-seq="11" aria-hidden="true"></div>
+      
+  <article class="stage s5 arang" data-st="5" aria-labelledby="tarang">
+    <div class="art"><svg viewBox="0 0 240 200" aria-hidden="true" focusable="false">
+<ellipse cx="120" cy="184" rx="95" ry="9" fill="#000" opacity=".3"/>
+<polygon class="f2" points="170,106 204,90 204,156 170,170"/><rect class="f1" x="62" y="106" width="108" height="64" rx="3"/>
+<polygon class="f3" points="60,98 92,82 206,82 172,98"/><rect class="f2" x="60" y="98" width="112" height="9"/><polygon points="172,98 206,82 206,92 172,107" fill="#B3C3B0"/>
+<rect x="76" y="118" width="72" height="42" rx="4" fill="none" stroke="#0A0F0C" stroke-width="1.6" opacity=".6"/><rect x="154" y="130" width="6" height="18" rx="3" fill="#0A0F0C" opacity=".6"/>
+<!-- kaca intip: tinggi arang -->
+<clipPath id="kc5"><rect x="88" y="128" width="46" height="24" rx="3"/></clipPath>
+<rect x="88" y="128" width="46" height="24" rx="3" fill="#0A0F0C"/><g clip-path="url(#kc5)"><rect class="lvl" x="88" y="128" width="46" height="24" fill="#8A8D94"/></g><rect x="88" y="128" width="46" height="24" rx="3" fill="none" stroke="#CBD8C9" stroke-width="1.6"/>
+<g class="pp k-arang"><path class="w" d="M0 110H34V58H124V84"/><path class="i" d="M0 110H34V58H124V84"/><path class="b" d="M0 110H34V58H124V84"/></g>
+</svg><span class="tag ko">Keluar</span></div>
+    <div class="cap"><span class="no" aria-hidden="true">05</span><h3 id="tarang">Arang</h3><p>Arang jatuh ke bin tertutup. Mutu arang belum diuji.</p><span class="chip c-arang">bin tertutup</span></div>
+  </article>
+    </div>
+    <p class="fl-ket rv">Tampilan penjelasan. Bentuk, warna alur, dan susunan adalah ilustrasi untuk menjelaskan, bukan gambar teknik atau hasil pengukuran. Angka berlabel target adalah sasaran rancangan, belum tercapai.</p>
+    <div class="istilah rv" id="istilah" aria-label="Istilah">
+      <span class="pelat">Istilah</span>
+      <button class="ist-btn" type="button" data-ist="digester" aria-describedby="kartu-ist">Digester</button>
+      <button class="ist-btn" type="button" data-ist="biogas" aria-describedby="kartu-ist">Biogas</button>
+      <button class="ist-btn" type="button" data-ist="retort" aria-describedby="kartu-ist">Retort</button>
+      <button class="ist-btn" type="button" data-ist="digestat" aria-describedby="kartu-ist">Digestat</button>
+      <button class="ist-btn" type="button" data-ist="arang" aria-describedby="kartu-ist">Arang</button>
+      <button class="ist-btn" type="button" data-ist="serpih" aria-describedby="kartu-ist">Serpih kering</button>
+      <div class="kartu-ist" id="kartu-ist" role="tooltip" hidden></div>
+      <ul class="ist-daftar sr-only"><li>Digester: tangki tertutup tempat bakteri mengurai sisa makanan jadi biogas.</li><li>Biogas: gas mudah terbakar (terutama metana) dari pembusukan tanpa udara.</li><li>Retort: tungku berupa tabung tertutup yang memanaskan serpih tanpa udara sampai jadi arang.</li><li>Digestat: sisa cairan dan padatan dari digester. Mutunya sebagai pupuk belum diuji.</li><li>Arang: hasil pemanasan serpih tanpa udara, sering disebut biochar. Mutunya belum diuji.</li><li>Serpih kering: biomassa kering berukuran 20&nbsp;mm atau&nbsp;lebih kecil (asumsi rancangan), dari agribisnis.</li></ul>
+    </div>
+  </div>
+
+  <div class="tur" id="tur">
+    <div class="tv" id="tv" role="region" aria-label="Video cara kerja Lokalola, lima bab">
+      <div class="tv-bingkai">
+        <div class="tv-media">
+          <video id="tv-video" muted playsinline preload="none" width="1280" height="720" poster="../assets/tur/cara-kerja-poster.webp" data-src="../assets/tur/cara-kerja.mp4" data-src-m="../assets/tur/cara-kerja-m.mp4" aria-label="Video cara kerja Lokalola" aria-describedby="tur-sr"></video>
+          <button class="btn aksi kecil tv-ulang" id="tv-ulang" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Putar ulang</button>
+        </div>
+        <div class="tv-ctl">
+          <button class="btn ikon sek tv-putar" id="tv-putar" type="button" aria-label="Jeda video cara kerja" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+          <span class="tur-hitung" id="tv-hitung" aria-hidden="true">01 / 05</span>
+          <div class="tur-rel" id="tur-rel" role="group" aria-label="Bab video">
+            <button type="button" data-bab="0" aria-label="Ke bab 1 dari 5: Satu sistem, satu lahan"><i><b></b></i></button>
+            <button type="button" data-bab="1" aria-label="Ke bab 2 dari 5: Umpan basah"><i><b></b></i></button>
+            <button type="button" data-bab="2" aria-label="Ke bab 3 dari 5: Digester"><i><b></b></i></button>
+            <button type="button" data-bab="3" aria-label="Ke bab 4 dari 5: Biogas ke retort"><i><b></b></i></button>
+            <button type="button" data-bab="4" aria-label="Ke bab 5 dari 5: Tiga keluaran"><i><b></b></i></button>
+          </div>
+        </div>
+        <div class="tv-ket" id="tv-ket" aria-hidden="true">
+          <div class="tur-teks tt-kiri" data-mulai="0"><span class="pelat">01 · Sistem utuh</span><h3>Satu sistem, satu lahan</h3><p>Digester, modul gas, stasiun umpan, dan retort berdiri berdekatan. Sisa makanan masuk di satu ujung, arang keluar di ujung lain.</p></div>
+          <div class="tur-teks tt-kanan" data-mulai="4.54"><span class="pelat">02 · Umpan basah</span><h3>Umpan basah</h3><p>Sisa makanan disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester. Target: 35&nbsp;kg per&nbsp;hari.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="7.71"><span class="pelat">03 · Digester</span><h3>Digester</h3><p>Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Target: 1,8–2,0&nbsp;m³ per&nbsp;hari.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="14.04"><span class="pelat">04 · Biogas ke retort</span><h3>Biogas ke retort</h3><p>Biogas disaring, ditampung di kantong 2,5&nbsp;m³, lalu menyalakan dan memanaskan awal retort. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji). Uji B1 menjawab ini.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="26.26"><span class="pelat">05 · Keluaran</span><h3>Tiga keluaran</h3><p>Arang di bin tertutup, digestat (sisa cairan digester) ke wadah 1.000&nbsp;liter, dan gas sisa. Mutu arang dan digestat belum diuji.</p><small class="tur-kecil">Selang, nampan, dan warna cairan adalah ilustrasi.</small></div>
+        </div>
+      </div>
+      <p class="sr-only" id="tv-umum" aria-live="polite"></p>
+      <ol class="sr-only tur-sr" id="tur-sr">
+        <li><strong>Satu sistem, satu lahan.</strong> Digester, modul gas, stasiun umpan, dan retort berdiri berdekatan. Sisa makanan masuk di satu ujung, arang keluar di ujung lain. Tampak depan seluruh sistem Lokalola: modul gas, digester, stasiun umpan basah, dan retort bercerobong, tersusun berurutan di lantai polos.</li>
+        <li><strong>Umpan basah.</strong> Sisa makanan disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester. Target: 35&nbsp;kg per&nbsp;hari. Stasiun umpan basah berbentuk kotak putih dengan meja sortir dan tutup miring, di depan tangki digester. Render konsep.</li>
+        <li><strong>Digester.</strong> Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Target: 1,8–2,0&nbsp;m³ per&nbsp;hari. Tangki digester putih berbentuk silinder dengan corong di atasnya dan wadah penampung cairan di sisinya. Render konsep.</li>
+        <li><strong>Biogas ke retort.</strong> Biogas disaring, ditampung di kantong 2,5&nbsp;m³, lalu menyalakan dan memanaskan awal retort. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji). Uji B1 menjawab ini. Potongan penjelasan alur proses dengan kode warna: sampah basah cokelat, biogas biru kehijauan, panas ungu, arang abu-abu. Pipa biogas melintang dari digester ke retort.</li>
+        <li><strong>Tiga keluaran.</strong> Arang di bin tertutup, digestat (sisa cairan digester) ke wadah 1.000&nbsp;liter, dan gas sisa. Mutu arang dan digestat belum diuji. Selang, nampan, dan warna cairan adalah ilustrasi. Bin arang di bawah modul retort dengan pintu ARANG terbuka. Render konsep.</li>
+      </ol>
+    </div>
+    <!-- mode statis: dipakai tanpa JS, atau bila video gagal dimuat -->
+    <div class="tur-statis wrap" id="tur-statis">
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/hero_terang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Tampak depan seluruh sistem Lokalola: modul gas, digester, stasiun umpan basah, dan retort bercerobong, tersusun berurutan di lantai polos."></div></figure>
+      <div class="ts-teks"><span class="pelat">01 · Sistem utuh</span><h3>Satu sistem, satu lahan</h3><p>Digester, modul gas, stasiun umpan, dan retort berdiri berdekatan. Sisa makanan masuk di satu ujung, arang keluar di ujung lain.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/c1_umpan.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Stasiun umpan basah berbentuk kotak putih dengan meja sortir dan tutup miring, di depan tangki digester. Render konsep."></div></figure>
+      <div class="ts-teks"><span class="pelat">02 · Umpan basah</span><h3>Umpan basah</h3><p>Sisa makanan disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester. Target: 35&nbsp;kg per&nbsp;hari.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/c5_digester.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Tangki digester putih berbentuk silinder dengan corong di atasnya dan wadah penampung cairan di sisinya. Render konsep."></div></figure>
+      <div class="ts-teks"><span class="pelat">03 · Digester</span><h3>Digester</h3><p>Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Target: 1,8–2,0&nbsp;m³ per&nbsp;hari.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/cutaway.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Potongan penjelasan alur proses dengan kode warna: sampah basah cokelat, biogas biru kehijauan, panas ungu, arang abu-abu. Pipa biogas melintang dari digester ke retort."></div></figure>
+      <div class="ts-teks"><span class="pelat">04 · Biogas ke retort</span><h3>Biogas ke retort</h3><p>Biogas disaring, ditampung di kantong 2,5&nbsp;m³, lalu menyalakan dan memanaskan awal retort. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji). Uji B1 menjawab ini.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/s3_arang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Bin arang di bawah modul retort dengan pintu ARANG terbuka. Render konsep."></div></figure>
+      <div class="ts-teks"><span class="pelat">05 · Keluaran</span><h3>Tiga keluaran</h3><p>Arang di bin tertutup, digestat (sisa cairan digester) ke wadah 1.000&nbsp;liter, dan gas sisa. Mutu arang dan digestat belum diuji.</p><small class="tur-kecil">Selang, nampan, dan warna cairan adalah ilustrasi.</small></div>
+    </div>
+  </div>
+  <div class="wrap tur-ket" id="tur-akhir">
+    <p class="rv">Tampilan penjelasan. Potongan dan warna alur adalah ilustrasi untuk menjelaskan, bukan hasil pengukuran.</p>
+    <a class="tautan rv" href="#mesin">Lanjut ke mesin 3D</a>
+  </div>
+</section>
+
+<!-- ============ 4 MESIN ============ -->
+<section id="mesin" data-tema="ruang" class="bagian" aria-labelledby="h-mesin">
+  <div class="wrap">
+    <span class="bab">05 / 11 · Mesin</span>
+    <h2 id="h-mesin"><span class="baris"><span>Mesinnya, bagian per bagian</span></span></h2>
+    <p class="lead mv-pengantar rv">Putar model ini dan sentuh tujuh titiknya. Bentuk dan jarak mengikuti model rancangan Lokalola.</p>
+    <div class="mv-box rv" id="mv-box">
+      <div class="mv-viewer" id="mv-viewer">
+        <img class="mv-poster" id="mv-poster" src="../assets/render/sistem-transparan.webp" width="1600" height="799" loading="lazy" decoding="async" alt="Model visual Lokalola: empat modul dari kiri ke kanan, yaitu modul gas berjaring, tangki digester putih, stasiun umpan basah, dan retort bercerobong. Render konsep, bukan foto.">
+        <model-viewer id="mv" alt="Model 3D visual Lokalola: empat modul dari kiri ke kanan, yaitu modul gas berjaring, tangki digester putih, stasiun umpan basah, dan retort bercerobong. Model visual, bukan foto dan bukan CAD." camera-controls disable-zoom exposure="1.1" shadow-intensity="1.1" shadow-softness=".9" interaction-prompt="none" camera-target="0m 1.4m 0m" camera-orbit="-28deg 78deg 11m" min-camera-orbit="auto 20deg 2m" max-camera-orbit="auto 100deg 26m" field-of-view="45deg" min-field-of-view="45deg" max-field-of-view="45deg" interpolation-decay="100" ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" environment-image="neutral">
+          <button slot="ar-button" class="ar-slot" hidden aria-hidden="true" tabindex="-1"></button>
+          <button class="hs" slot="hotspot-digester" data-modul="digester" data-position="-2.439 1.175 0.655" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Digester: buka keterangan"><i></i><span class="hs-n">Digester</span></button>
+          <button class="hs" slot="hotspot-modulgas" data-modul="modulgas" data-position="-3.239 1.07 -2.045" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Modul gas: buka keterangan"><i></i><span class="hs-n">Modul gas</span></button>
+          <button class="hs" slot="hotspot-umpan" data-modul="umpan" data-position="-0.236 0.645 1.308" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Stasiun umpan: buka keterangan"><i></i><span class="hs-n">Stasiun umpan</span></button>
+          <button class="hs" slot="hotspot-retort" data-modul="retort" data-position="4.357 1.12 0.155" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Retort: buka keterangan"><i></i><span class="hs-n">Retort</span></button>
+          <button class="hs" slot="hotspot-cerobong" data-modul="cerobong" data-position="4.907 3.095 -1.035" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Cerobong: buka keterangan"><i></i><span class="hs-n">Cerobong</span></button>
+          <button class="hs" slot="hotspot-bin" data-modul="bin" data-position="4.567 0.301 1.395" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Bin arang: buka keterangan"><i></i><span class="hs-n">Bin arang</span></button>
+          <button class="hs" slot="hotspot-panel" data-modul="panel" data-position="3.786 1.245 3.042" data-normal="0 0 1" data-visibility-attribute="visible" type="button" aria-label="Panel operator: buka keterangan"><i></i><span class="hs-n">Panel operator</span></button>
+        </model-viewer>
+        <div class="mv-muat" id="mv-muat" aria-hidden="true"><i></i><span class="pelat" id="mv-muat-t">Memuat model 3D</span></div>
+        <div class="mv-galat" id="mv-galat" hidden><p>Model 3D tidak bisa dimuat di perangkat ini. Pakai daftar modul di bawah.</p><button class="btn sek kecil" id="mv-ulang" type="button">Coba lagi</button></div>
+        <div class="mv-atas">
+          <button class="btn sek kecil mv-pisah" id="mv-pisah" type="button" aria-pressed="false" hidden>Pisahkan modul</button>
+          <button class="btn sek kecil mv-jelajah" id="mv-jelajah" type="button" hidden>Mode jelajah</button>
+        </div>
+        <div class="mv-keluar" id="mv-keluar" hidden><button type="button" id="mv-keluar-btn">Keluar dari mode jelajah</button></div>
+        <div class="mv-plat"><span class="mv-cat">Tidak untuk fabrikasi atau perhitungan teknik.</span></div>
+        <div class="mv-zoom" id="mv-zoom" hidden>
+          <button class="btn ikon sek" id="mv-plus" type="button" aria-label="Perbesar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          <button class="btn ikon sek" id="mv-min" type="button" aria-label="Perkecil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+          <button class="btn sek kecil" id="mv-reset" type="button">Reset</button>
+        </div>
+        <div class="mv-panel" id="mv-panel" role="region" aria-labelledby="mv-p-judul" hidden>
+          <button class="btn ikon sek mv-p-tutup" id="mv-p-tutup" type="button" aria-label="Tutup keterangan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          <span class="pelat" id="mv-p-no">1 / 7</span>
+          <h3 id="mv-p-judul" tabindex="-1">Digester</h3>
+          <p id="mv-p-teks"></p>
+        </div>
+        <div class="sr-only" aria-live="polite" id="mv-live"></div>
+      </div>
+      <ul class="mv-chips" id="mv-chips" aria-label="Daftar modul">
+        <li><button class="chip-mod" type="button" data-modul="digester">1 · Digester</button></li>
+        <li><button class="chip-mod" type="button" data-modul="modulgas">2 · Modul gas</button></li>
+        <li><button class="chip-mod" type="button" data-modul="umpan">3 · Stasiun umpan</button></li>
+        <li><button class="chip-mod" type="button" data-modul="retort">4 · Retort</button></li>
+        <li><button class="chip-mod" type="button" data-modul="cerobong">5 · Cerobong</button></li>
+        <li><button class="chip-mod" type="button" data-modul="bin">6 · Bin arang</button></li>
+        <li><button class="chip-mod" type="button" data-modul="panel">7 · Panel operator</button></li>
+      </ul>
+      <div class="mv-ar">
+        <button class="btn sek" id="mv-ar" type="button" hidden>Lihat mesin dengan AR, ukuran asli</button>
+        <p class="mv-ar-bantu">Gambaran kasar ukuran lewat kamera ponsel, bukan alat ukur. Jejak alat 10,1&nbsp;×&nbsp;6,5&nbsp;m (rancangan).</p>
+        <p class="mv-ar-tidak" id="mv-ar-tidak" hidden>Buka halaman ini di ponsel untuk mencoba AR.</p>
+        <p class="mv-ar-tautan"><a class="tautan" href="#denah">Lihat denah lahan</a></p>
+      </div>
+    </div>
+    <ul class="sr-only" id="mv-teks-sr">
+      <li><strong>Digester.</strong> Tangki HDPE 5.000&nbsp;liter di luar ruangan. Di sini sisa makanan berubah jadi biogas.</li>
+      <li><strong>Modul gas.</strong> Kantong 2,5&nbsp;m³, penyaring belerang, dan pelepas tekanan di bawah peneduh berjaring, untuk ventilasi alami; bukaan jaringnya belum diuji.</li>
+      <li><strong>Stasiun umpan.</strong> Meja sortir, tangki campur, dan pompa. Sisa makanan masuk dari sini setiap hari.</li>
+      <li><strong>Retort.</strong> Tabung baja tahan karat berulir pengantar. Serpih kering berjalan pelan, dipanaskan tanpa udara, keluar sebagai arang.</li>
+      <li><strong>Cerobong.</strong> Setinggi 4,34&nbsp;m (rancangan). Gas buang pembakaran keluar lewat sini, di atas kepala operator.</li>
+      <li><strong>Bin arang.</strong> Bin tertutup dengan segel air. Arang diambil setelah dingin, di bawah 80&nbsp;°C.</li>
+      <li><strong>Panel operator.</strong> Tombol start dan stop, lampu status hijau, oranye, merah, serta tombol henti darurat. Pengaman tidak bergantung pada layar.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 5 OPERATOR ============ -->
+<section id="operator" data-tema="kertas" class="bagian" aria-labelledby="h-operator">
+  <div class="wrap">
+    <span class="bab">06 / 11 · Operator</span>
+    <h2 id="h-operator"><span class="baris"><span>Tiga tindakan operator</span></span></h2>
+    <p class="op-sub rv">Perkiraan hitung: sekitar&nbsp;100&nbsp;menit kerja per&nbsp;hari. Belum termasuk kuras endapan, perawatan, dan pekerjaan yang harus dilakukan berdua.</p>
+    <div class="g op-g">
+      <div class="op-list" role="tablist" aria-label="Tiga tindakan operator">
+        <button class="op-baris rv" role="tab" id="op-tab-0" aria-selected="true" aria-controls="op-panel" data-i="0" type="button">
+          <span class="op-no">01</span><span class="op-t">Umpan basah</span><span class="pelat">Harian</span>
+          <span class="op-p">Sortir sisa makanan di meja. Singkirkan plastik, tulang besar, dan logam. Tuang ke tangki campur bersama air, lalu nyalakan pompa.</span><i class="op-bar"></i>
+        </button>
+        <button class="op-baris rv" role="tab" id="op-tab-1" aria-selected="false" aria-controls="op-panel" data-i="1" type="button" tabindex="-1">
+          <span class="op-no">02</span><span class="op-t">Serpih kering</span><span class="pelat">Rancangan: tiap dua hari</span>
+          <span class="op-p">Isi hopper dengan serpih kering 20&nbsp;mm atau&nbsp;lebih kecil, lalu tekan start. Satu sesi sekitar enam jam. Hopper diisi ulang sekali di tengah sesi.</span><i class="op-bar"></i>
+        </button>
+        <button class="op-baris rv" role="tab" id="op-tab-2" aria-selected="false" aria-controls="op-panel" data-i="2" type="button" tabindex="-1">
+          <span class="op-no">03</span><span class="op-t">Ambil arang</span>
+          <span class="op-p">Arang turun ke bin tertutup. Pagi berikutnya, setelah suhunya di bawah 80&nbsp;°C, buka pintu ARANG dan ambil.</span><i class="op-bar"></i>
+        </button>
+      </div>
+      <div class="op-stage" id="op-stage">
+        <div class="media op-media">
+          <div class="media-in op-in" id="op-panel" role="tabpanel" aria-labelledby="op-tab-0">
+            <img class="op-img on" src="../assets/render/c1_umpan.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Stasiun umpan basah berbentuk kotak putih dengan meja sortir dan tutup miring, di depan tangki digester. Render konsep.">
+            <img class="op-img" src="../assets/render/c2_hopper.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Kabin retort tampak depan dengan panel umpan kering dan hopper untuk serpih kering. Render konsep." aria-hidden="true">
+            <img class="op-img" src="../assets/render/s3_arang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Bin arang di bawah modul retort dengan pintu ARANG terbuka. Render konsep." aria-hidden="true">
+            <span class="tirai"></span>
+          </div>
+          <button class="btn ikon sek op-jeda" id="op-jeda" type="button" aria-label="Jeda pergantian otomatis" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <p class="op-cat rv">Pihak yang mengeringkan dan mencacah biomassa kering belum ditentukan.</p>
+    <div class="op-stok">
+      <figure class="media op-stok-f rv">
+        <div class="media-in"><video id="stok-serpih" muted loop playsinline preload="none" data-src="../assets/stok/video-serpih-kayu-dalam-drum-kompos.mp4" aria-label="Mulsa kayu cokelat dalam wadah bundar gelap. Video stok, bukan serpih Lokalola."></video><button class="btn ikon sek op-jeda" id="serpih-jeda" type="button" aria-label="Jeda video" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button></div>
+        <p class="op-stok-ket">Video ilustrasi: mulsa kayu, bukan serpih Lokalola.</p>
+      </figure>
+      <figure class="media op-stok-f rv">
+        <div class="media-in"><img src="../assets/stok/arang-potongan-close-up.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Potongan arang kayu hitam, close-up. Foto stok arang biasa, bukan arang dari Lokalola."></div>
+        <p class="op-stok-ket">Arang biasa, bukan hasil Lokalola.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 KESELAMATAN ============ -->
+<section id="keselamatan" data-tema="gelap" class="bagian" aria-labelledby="h-kes">
+  <div class="wrap">
+    <span class="bab">07 / 11 · Keselamatan</span>
+    <h2 id="h-kes"><span class="baris"><span>Keselamatan dirancang</span></span><span class="baris"><span>sejak awal</span></span></h2>
+    <p class="lead kes-peng rv">Biogas mudah terbakar. Karena itu rancangan Lokalola memasang pengaman berlapis. Semuanya masih di atas kertas dan di model.</p>
+    <p class="kes-label rv"><i aria-hidden="true"></i>Fitur rancangan, bukan sertifikasi.</p>
+    <div class="g kes-g">
+      <div class="kes-denah" id="denah-wrap">
+                <figure class="denah-fig" id="denah-fig">
+          <div class="denah-box">
+          <svg id="denah" viewBox="4 6 630 482" role="img" aria-labelledby="dn-t dn-d">
+            <title id="dn-t">Sketsa denah lahan Lokalola dari atas</title>
+            <desc id="dn-d">Sketsa denah dari atas, bukan gambar kerja: modul gas di kiri atas, digester bulat di kiri tengah, stasiun umpan di bawahnya, retort di kanan. Garis hijau kebiruan mengukur jarak api ke peralatan penyimpan dan pengolah gas, 5,62&nbsp;m. Zona radius 5&nbsp;m dari sumber nyala diarsir kuning dan dipotong di batas lahan. Jalur operator 1,2&nbsp;m membentang di sisi bawah. Penanda 1–5 terhubung ke daftar di sebelahnya.</desc>
+            <defs>
+              <clipPath id="cp-lahan"><rect x="34" y="44" width="577" height="411"/></clipPath>
+              <pattern id="pv" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="var(--aksen-teks)" stroke-opacity=".06" stroke-width="1"/></pattern>
+              <pattern id="htc" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="var(--kuning)" fill-opacity=".07"/><rect width="2.2" height="9" fill="var(--kuning)" fill-opacity=".22"/></pattern>
+              <pattern id="aug" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><rect width="4" height="10" fill="var(--ink)" fill-opacity=".35"/></pattern>
+              <marker id="pk" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="var(--aksen-teks)"/></marker>
+            </defs>
+            <g aria-hidden="true">
+              <rect x="4" y="6" width="630" height="482" fill="url(#pv)"/>
+              <text class="dn-mono t-area" x="34" y="24">Lahan sekitar&nbsp;87 m² (sekitar&nbsp;11,1&nbsp;×&nbsp;7,9&nbsp;m), rancangan</text>
+              <text class="dn-mono t-area" x="34" y="38" fill="#F7D463">Radius 5 m dari sumber nyala</text>
+
+              <g class="g-lahan">
+                <rect x="34" y="44" width="577" height="411" fill="var(--bg-3)" fill-opacity=".9"/>
+                <rect class="lahan-b" x="34" y="44" width="577" height="411" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="9 6"/>
+              </g>
+              <g clip-path="url(#cp-lahan)"><g class="g-zona">
+                <circle class="zona" cx="537" cy="300" r="260" fill="url(#htc)"/>
+                <circle class="zona-b" cx="537" cy="300" r="259" fill="none" stroke="var(--kuning)" stroke-width="2.5" stroke-dasharray="10 7"/>
+              </g></g>
+              <g class="g-jalur">
+                <rect x="60" y="356" width="525" height="62" rx="3" fill="var(--ink)" fill-opacity=".08"/>
+                <path d="M74 387H570" stroke="var(--aksen-teks)" stroke-opacity=".5" stroke-width="2" stroke-dasharray="12 10" marker-end="url(#pk)"/>
+                <text class="dn-mono t-area" x="72" y="412">Jalur operator 1,2 m</text>
+              </g>
+              <g class="g-jejak">
+                <rect x="60" y="80" width="525" height="338" fill="none" stroke="var(--aksen-teks)" stroke-opacity=".75" stroke-width="1.6"/>
+                <text class="dn-mono t-area" x="60" y="72">Jejak alat 10,1&nbsp;×&nbsp;6,5&nbsp;m</text>
+              </g>
+
+              <g class="mod tg" data-n="5 4">
+                <rect x="70" y="80" width="182" height="125" rx="6" fill="var(--aksen-teks)" fill-opacity=".14" stroke="var(--aksen-teks)" stroke-width="2"/>
+                <ellipse cx="150" cy="152" rx="64" ry="32" fill="var(--alur-biogas)" fill-opacity=".38" stroke="var(--alur-biogas)" stroke-width="2"/>
+                <path d="M104 152h92M150 122v60" stroke="var(--alur-biogas)" stroke-opacity=".5" stroke-width="1.5" fill="none"/>
+                <circle cx="96" cy="184" r="9" fill="var(--ink)" fill-opacity=".3" stroke="var(--ink)" stroke-width="1.5"/><circle cx="120" cy="188" r="6" fill="var(--ink)" fill-opacity=".3" stroke="var(--ink)" stroke-width="1.5"/>
+                <text class="dn-nama" x="82" y="104">Modul gas</text>
+              </g>
+              <g class="mod tg">
+                <circle cx="195" cy="283" r="49" fill="var(--ink)" fill-opacity=".14" stroke="var(--ink)" stroke-width="2"/>
+                <circle cx="195" cy="283" r="41" fill="none" stroke="var(--ink)" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <circle cx="195" cy="283" r="14" fill="var(--alur-basah)" fill-opacity=".55" stroke="var(--alur-basah)" stroke-width="1.5"/>
+                <text class="dn-nama" x="195" y="352" text-anchor="middle">Digester</text>
+              </g>
+              <g class="mod tg">
+                <rect x="264" y="294" width="92" height="45" rx="4" fill="var(--alur-basah)" fill-opacity=".32" stroke="#D2A678" stroke-width="2"/>
+                <path d="M270 332 350 300" stroke="#D2A678" stroke-width="1.5" stroke-opacity=".7"/><circle cx="342" cy="326" r="5" fill="#D2A678"/>
+                <text class="dn-nama" x="262" y="358">Stasiun umpan</text>
+              </g>
+              <g class="mod tg">
+                <rect x="514" y="168" width="69" height="177" rx="6" fill="var(--ink)" fill-opacity=".16" stroke="var(--ink)" stroke-width="2"/>
+                <rect x="526" y="196" width="45" height="106" rx="22" fill="url(#aug)" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.5"/>
+                <circle cx="560" cy="180" r="6" fill="var(--bg-2)" stroke="var(--ink)" stroke-width="2"/>
+                <text class="dn-nama" x="548" y="160" text-anchor="middle">Retort</text>
+              </g>
+              <g class="mod tg" data-n="2">
+                <rect x="509" y="400" width="20" height="14" rx="2" fill="var(--ink)" fill-opacity=".35" stroke="var(--ink)" stroke-width="1.5"/>
+                <circle cx="519" cy="407" r="3.2" fill="var(--merah-di-gelap)"/>
+                <text class="dn-hal" x="536" y="410">Panel</text>
+              </g>
+
+              <g class="tg gas-g" data-n="4">
+                <path class="alir" d="M252 170H470V262H514" fill="none" stroke="var(--alur-biogas)" stroke-width="3" stroke-dasharray="3 13" stroke-linecap="round"/>
+                <g class="arr" transform="translate(262 170)"><rect x="-6" y="-9" width="12" height="18" rx="3" fill="var(--bg-2)" stroke="var(--aksen-teks)" stroke-width="2"/><path d="M-6 0h12" stroke="var(--aksen-teks)" stroke-width="2"/></g>
+                <g class="arr" transform="translate(498 262)"><rect x="-9" y="-6" width="18" height="12" rx="3" fill="var(--bg-2)" stroke="var(--aksen-teks)" stroke-width="2"/><path d="M0 -6v12" stroke="var(--aksen-teks)" stroke-width="2"/></g>
+                <path class="sorot" d="M252 170H470V262H514"/>
+              </g>
+              <g class="tg" data-n="5">
+                <circle cx="232" cy="100" r="8" fill="var(--bg-2)" stroke="var(--ink)" stroke-width="2"/><path d="M232 96v8M228 100h8" stroke="var(--ink)" stroke-width="2"/>
+                <circle class="sorot" cx="232" cy="100" r="14"/>
+              </g>
+              <g class="tg" data-n="3">
+                <rect x="435" y="360" width="10" height="21" rx="3.5" fill="var(--merah-di-gelap)"/><rect x="437" y="355" width="6" height="6" rx="1" fill="var(--ink)"/>
+                <circle class="sorot" cx="440" cy="370" r="17"/>
+              </g>
+              <g class="tg api-wrap" data-n="1">
+                <g class="api-g"><circle cx="537" cy="300" r="14" fill="var(--kuning)" fill-opacity=".25" stroke="var(--kuning)" stroke-width="2"/><circle cx="537" cy="300" r="7" fill="var(--kuning)"/></g>
+              </g>
+
+              <g class="tg g-ukur" data-n="1">
+                <line class="ukur" x1="537" y1="300" x2="246" y2="285" stroke="var(--alur-biogas)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M246 273V297" stroke="var(--alur-biogas)" stroke-width="4" stroke-linecap="round"/>
+                <circle class="ukur-t" cx="246" cy="285" r="7" fill="var(--alur-biogas)"/>
+                <path class="sorot" d="M537 300 246 285"/>
+              </g>
+              <g class="tg g-pil" data-n="1">
+                <rect x="368" y="274" width="122" height="38" rx="19" fill="var(--alur-biogas)"/>
+                <text class="dn-ukur-t" x="398" y="301"><tspan id="dn-angka-n">5,62</tspan> m</text>
+              </g>
+
+              <g class="pen" data-n="1" transform="translate(370 293)" tabindex="0" role="button" aria-label="01, jarak api ke peralatan gas 5,62 m"><circle class="cin" r="16"/><g class="bub"><circle class="dsk" r="16" fill="var(--hijau-logo-muda)"/><text class="dn-no">01</text></g></g>
+              <g class="pen" data-n="2" transform="translate(519 438)" tabindex="0" role="button" aria-label="02, tombol henti darurat"><circle class="cin" r="16"/><g class="bub"><circle class="dsk" r="16" fill="var(--merah-di-gelap)"/><text class="dn-no">02</text></g></g>
+              <g class="pen" data-n="3" transform="translate(440 402)" tabindex="0" role="button" aria-label="03, APAR"><circle class="cin" r="16"/><g class="bub"><circle class="dsk" r="16" fill="var(--merah-di-gelap)"/><text class="dn-no">03</text></g></g>
+              <g class="pen" data-n="4" transform="translate(470 216)" tabindex="0" role="button" aria-label="04, arrestor, dua"><circle class="cin" r="16"/><g class="bub"><circle class="dsk" r="16" fill="var(--aksen-teks)"/><text class="dn-no">04</text></g></g>
+              <g class="pen" data-n="5" transform="translate(284 100)" tabindex="0" role="button" aria-label="05, vent"><circle class="cin" r="16"/><g class="bub"><circle class="dsk" r="16" fill="var(--ink)"/><text class="dn-no">05</text></g></g>
+              <path class="pen-l" d="M268 100H242" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <path class="pen-l" d="M440 386V382M519 422V414" stroke="var(--ink)" stroke-width="1.5"/>
+
+              <g class="g-dim t-area">
+                <path d="M34 470H611" stroke="var(--ink-3)" stroke-width="1.5" marker-start="url(#pk)" marker-end="url(#pk)"/>
+                <text class="dn-mono" x="322" y="484" text-anchor="middle">11,1 m</text>
+                <path d="M24 44V455" stroke="var(--ink-3)" stroke-width="1.5" marker-start="url(#pk)" marker-end="url(#pk)"/>
+                <text class="dn-mono" transform="translate(16 250) rotate(-90)" text-anchor="middle">7,9 m</text>
+              </g>
+            </g>
+          </svg>
+          </div>
+          <figcaption class="denah-ket">Sketsa denah, bukan gambar kerja. Lahan dan jarak 5&nbsp;m (rancangan). Semua angka diukur dari model, bukan dari uji. Posisi penanda skematis.</figcaption>
+          <ul class="denah-leg" aria-label="Legenda denah">
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><rect x="1" y="2" width="28" height="12" fill="var(--bg-3)" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 3"/></svg>Lahan sekitar&nbsp;87&nbsp;m² (sekitar&nbsp;11,1&nbsp;×&nbsp;7,9&nbsp;m), rancangan</li>
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><rect x="1" y="2" width="28" height="12" fill="none" stroke="var(--aksen-teks)" stroke-width="2"/></svg>Jejak alat 10,1&nbsp;×&nbsp;6,5&nbsp;m</li>
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><rect x="0" y="3" width="30" height="10" fill="var(--ink)" fill-opacity=".14"/><path d="M2 8H28" stroke="var(--aksen-teks)" stroke-width="2" stroke-dasharray="5 4"/></svg>Jalur operator 1,2&nbsp;m</li>
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><rect x="1" y="1" width="28" height="14" fill="url(#htc)" stroke="var(--kuning)" stroke-width="2" stroke-dasharray="5 3"/></svg>Radius 5&nbsp;m dari sumber nyala</li>
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><circle cx="15" cy="8" r="6" fill="var(--kuning)"/><circle cx="15" cy="8" r="7.6" fill="none" stroke="var(--kuning)" stroke-width="1.2"/></svg>Sumber nyala (ruang bakar, burner, cerobong)</li>
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><path d="M2 8H28" stroke="var(--alur-biogas)" stroke-width="4" stroke-linecap="round"/></svg>Jarak api ke peralatan gas</li>
+            <li><svg viewBox="0 0 30 16" aria-hidden="true"><path d="M2 8H28" stroke="var(--alur-biogas)" stroke-width="3" stroke-dasharray="3 6" stroke-linecap="round"/></svg>Jalur gas, posisi skematis</li>
+          </ul>
+        </figure>
+      </div>
+      <ol class="kes-daftar" id="kes-daftar">
+        <li tabindex="0" data-pen="1" style="--c:var(--alur-biogas)"><span class="kes-no">01</span><h3>Jarak api ke peralatan penyimpan dan pengolah gas: 5,62&nbsp;m.</h3><p>Diukur dari model, dari sumber nyala (ruang bakar, burner, cerobong) ke peralatan penyimpan dan pengolah gas terdekat. Syarat rancangan: 5&nbsp;m atau&nbsp;lebih. Panel listrik ke peralatan yang sama: 5,57&nbsp;m. Jalur gas dirancang berlas penuh, dengan katup di dekat burner. Zona area berbahaya baru ditetapkan setelah kajian bahaya oleh ahli.</p></li>
+        <li tabindex="0" data-pen="2" style="--c:var(--merah-di-gelap)"><span class="kes-no">02</span><h3>Tombol henti darurat (E-stop).</h3><p>Merah, selalu terlihat. Ditekan, semua katup gas menutup, motor dan pompa berhenti. Menyala lagi hanya lewat reset manual.</p></li>
+        <li tabindex="0" data-pen="3" style="--c:var(--merah-di-gelap)"><span class="kes-no">03</span><h3>APAR.</h3><p>Alat pemadam api ringan, terlihat dari jalur jalan operator.</p></li>
+        <li tabindex="0" data-pen="4" style="--c:var(--aksen-teks)"><span class="kes-no">04</span><h3>Arrestor.</h3><p>Alat yang menahan api agar tidak merambat balik di sepanjang pipa gas. Rancangan memasang dua.</p></li>
+        <li tabindex="0" data-pen="5" style="--c:var(--ink)"><span class="kes-no">05</span><h3>Vent.</h3><p>Tiang pelepas tekanan lebih dari 3&nbsp;m, tidak dibungkus. Bila tekanan gas naik terlalu tinggi, gas dilepas ke atas, jauh dari orang.</p></li>
+        <li tabindex="0" data-pen="0"><span class="kes-no">06</span><h3>Relay keras.</h3><p>Pengaman dirangkai dari relay listrik biasa, tanpa program. Layar dan perangkat lunak hanya menampilkan informasi dan tidak pernah melonggarkan pengaman.</p></li>
+        <li tabindex="0" data-pen="0"><span class="kes-no">07</span><h3>Detektor metana.</h3><p>Alarm di 20&nbsp;persen batas bawah mudah terbakar. Di 40&nbsp;persen, katup gas menutup otomatis.</p></li>
+        <li tabindex="0" data-pen="L"><span class="kes-no">08</span><h3>Dipasang di udara terbuka.</h3><p>Tidak ada bangunan di sekeliling peralatan gas. Tidak ada pipa gas di saluran tertutup, tempat gas bisa berkumpul.</p></li>
+      </ol>
+    </div>
+    <div class="g kes-bawah">
+      <figure class="media kes-panel rv">
+        <div class="media-in"><img src="../assets/render/c4_panel.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Panel operator berkolom putih di sisi retort, dengan tombol henti darurat merah terlihat. Render konsep."></div>
+        </figure>
+      <div class="kes-kotak" role="note" aria-labelledby="kes-kotak-j">
+        <svg class="kes-ikon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 22 20.5H2z" fill="var(--kuning)"/><path d="M12 9v5.5M12 16.8v1.7" stroke="#0A1405" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="pelat" id="kes-kotak-j">Belum ada kajian keselamatan</span>
+        <p>Belum ada kajian bahaya oleh ahli dan belum ada penetapan zona area berbahaya. Stasiun umpan dan pompanya berada di dalam garis 5&nbsp;m, dan zonasinya menunggu kajian itu. Keselamatan di halaman ini adalah niat rancangan, belum hasil pemeriksaan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 SPESIFIKASI ============ -->
+<section id="spesifikasi" data-tema="terang" class="bagian" aria-labelledby="h-spek">
+  <div class="wrap">
+    <span class="bab">08 / 11 · Spesifikasi</span>
+    <h2 id="h-spek"><span class="baris"><span>Spesifikasi Lokalola Pilot</span></span></h2>
+    <p class="spek-cat rv">Semua angka adalah target atau rancangan. Belum ada angka yang diukur dari mesin nyata. Kolom “Status” menyebut asal tiap angka.</p>
+    <table class="spek">
+      <thead class="sr-only"><tr><th scope="col">Besaran</th><th scope="col">Nilai</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr class="kepala"><th scope="row">Sisa makanan diolah</th><td><span class="nilai"><b class="num" data-ke="35">35</b>&nbsp;<span class="sat">kg per&nbsp;hari operasi</span></span><small class="spek-ket">Beroperasi 6 hari per minggu.</small></td><td><span class="pelat tegas">Target</span></td></tr>
+        <tr class="kepala"><th scope="row">Serpih kering diolah</th><td><span class="nilai"><b class="num" data-ke="15">15</b>&nbsp;<span class="sat">kg per&nbsp;hari rata-rata</span></span></td><td><span class="pelat tegas">Target</span></td></tr>
+        <tr class="kepala"><th scope="row">Biogas</th><td><span class="nilai"><b>1,8–2,0</b>&nbsp;<span class="sat">m³ per&nbsp;hari</span></span><small class="spek-ket">Dihitung untuk suhu udara 27–28&nbsp;°C; lokasi lebih dingin menghasilkan lebih sedikit.</small></td><td><span class="pelat tegas">Target · hitungan dan simulasi</span></td></tr>
+        <tr><th scope="row">Sesi retort</th><td><span class="nilai"><b>Dua hari sekali, 30&nbsp;kg per sesi</b></span></td><td><span class="pelat">Rancangan</span></td></tr>
+        <tr><th scope="row">Digester</th><td><span class="nilai"><b>5.000&nbsp;liter</b></span><small class="spek-ket">Tanpa pemanas.</small></td><td><span class="pelat">Rancangan</span></td></tr>
+        <tr><th scope="row">Kantong gas</th><td><span class="nilai"><b>2,5&nbsp;m³</b></span></td><td><span class="pelat">Rancangan</span></td></tr>
+        <tr><th scope="row">Arang</th><td><span class="nilai"><b>Sekitar&nbsp;3,8–4,5&nbsp;kg per&nbsp;hari</b></span></td><td><span class="pelat">Perkiraan hitung, belum diukur</span></td></tr>
+        <tr><th scope="row">Digestat</th><td><span class="nilai"><b>Sekitar&nbsp;65–70&nbsp;liter per&nbsp;hari</b></span></td><td><span class="pelat">Perkiraan hitung, belum diukur</span></td></tr>
+        <tr><th scope="row">Jejak alat</th><td><span class="nilai"><b>10,1&nbsp;×&nbsp;6,5&nbsp;m</b></span></td><td><span class="pelat">Rancangan, diukur dari model</span></td></tr>
+        <tr><th scope="row">Lahan dengan jalur servis</th><td><span class="nilai"><b>Sekitar&nbsp;87&nbsp;m²</b></span><small class="spek-ket">Sekitar&nbsp;11,1&nbsp;×&nbsp;7,9&nbsp;m.</small></td><td><span class="pelat">Rancangan, diukur dari model</span></td></tr>
+        <tr><th scope="row">Jarak api ke peralatan penyimpan dan pengolah gas</th><td><span class="nilai"><b>5,62&nbsp;m</b></span><small class="spek-ket">Syarat rancangan: 5&nbsp;m atau&nbsp;lebih.</small></td><td><span class="pelat">Diukur dari model</span></td></tr>
+        <tr><th scope="row">Tinggi cerobong</th><td><span class="nilai"><b>4,34&nbsp;m</b></span></td><td><span class="pelat">Rancangan</span></td></tr>
+      </tbody>
+    </table>
+    <ul class="spek-cats">
+      <li class="rv">Gas sisa (perkiraan hitung: sekitar&nbsp;0,65–1,0&nbsp;m³ per&nbsp;hari) belum terukur.</li>
+      <li class="rv">Rancangan mengasumsikan tapak siap pakai dengan lantai rata, drainase, marka lantai, listrik AC 220&nbsp;V, dan keran air biasa (100–200&nbsp;kPa). Tapaknya belum dipilih.</li>
+      <li class="rv">Lahan 87&nbsp;m² sudah termasuk jalur operator dan servis. Jarak 5&nbsp;m diukur antara api dan peralatan gas. Lingkaran 5&nbsp;m bisa melewati batas lahan; apa yang boleh ada di sana ditentukan kajian bahaya.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 8 STATUS ============ -->
+<section id="status" data-tema="gelap" class="bagian" aria-labelledby="h-status">
+  <div class="st-band" id="st-band">
+    <img class="st-band-img" id="st-band-img" src="../assets/hero/hero-poster.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Model visual Lokalola di studio gelap: modul gas berjaring, tangki digester putih, stasiun umpan, dan retort dengan cerobong. Render konsep, bukan foto.">
+    <div class="st-band-scrim"></div>
+    <div class="wrap st-band-teks">
+      <span class="bab">09 / 11 · Status</span>
+      <h2 id="h-status"><span class="baris"><span>Di mana kami sekarang</span></span></h2>
+    </div>
+    </div>
+  <div class="wrap">
+    <p class="st-ringkas" aria-label="Rancangan sudah rinci. Mesinnya belum ada. Prototipe B1 dibuat lebih dulu."><span class="baris"><span>Rancangan sudah rinci.</span></span><span class="baris"><span>Mesinnya belum ada.</span></span><span class="baris"><span>Prototipe B1 dibuat lebih dulu.</span></span></p>
+    <ul class="st-posisi">
+      <li class="rv">Konsep rancangan ditetapkan untuk uji B1; rancangan akhir retort ditetapkan hanya setelah B1. Model 3D sudah ditinjau internal untuk tata letak.</li>
+      <li class="rv">Angka berada di tingkat hitung dan simulasi, belum uji bench dan belum uji lapangan.</li>
+      <li class="rv">Paket permintaan penawaran (RFQ) untuk prototipe B1 siap dikirim; belum ada yang dibangun.</li>
+    </ul>
+    <p class="st-hub rv">Semua angka rancangan di halaman ini menggambarkan Lokalola Pilot. Kami juga mengkaji fasilitas yang lebih besar, Lokalola Hub, dengan target 500&nbsp;kg sampah basah dan 250&nbsp;kg biomassa kering per hari operasi. Target itu adalah arahan studi. Rancangan, biaya, dan kapasitasnya belum terbukti, dan hasil B1 sampai B5 tidak otomatis berlaku untuknya.</p>
+    <div class="g st-tangga-g">
+      <figure class="st-tangga" id="st-tangga">
+        <svg class="st-svg st-d" viewBox="0 0 336 440" role="img" aria-label="Tangga tahap: sekarang di tingkat hitung dan simulasi, B1 berikutnya, lalu B2 sampai B5.">
+          <g class="bar sekarang"><rect x="0" y="320" width="48" height="60" /></g>
+          <g class="bar b1"><rect x="56" y="260" width="48" height="120"/></g>
+          <g class="bar nanti"><rect x="112" y="200" width="48" height="180"/></g>
+          <g class="bar nanti"><rect x="168" y="140" width="48" height="240"/></g>
+          <g class="bar nanti"><rect x="224" y="80" width="48" height="300"/></g>
+          <g class="bar nanti"><rect x="280" y="20" width="48" height="360"/></g>
+          <g class="st-lab"><text x="24" y="402" text-anchor="middle">Kini</text><text x="80" y="402" text-anchor="middle">B1</text><text x="136" y="402" text-anchor="middle">B2</text><text x="192" y="402" text-anchor="middle">B3</text><text x="248" y="402" text-anchor="middle">B4</text><text x="304" y="402" text-anchor="middle">B5</text></g>
+          <g class="st-ini"><circle cx="8" cy="424" r="6" fill="var(--hijau-logo)"/><text x="20" y="428" class="st-t-m">KAMI DI SINI</text></g>
+          <text x="56" y="248" class="st-t-m st-next">BERIKUTNYA</text>
+        </svg>
+        <svg class="st-svg st-m" viewBox="0 0 335 176" role="img" aria-label="Tangga tahap: sekarang di tingkat hitung dan simulasi, B1 berikutnya, lalu B2 sampai B5.">
+          <g class="bar sekarang"><rect x="0" y="100" width="48" height="20"/></g>
+          <g class="bar b1"><rect x="57" y="80" width="48" height="40"/></g>
+          <g class="bar nanti"><rect x="114" y="60" width="48" height="60"/></g>
+          <g class="bar nanti"><rect x="171" y="40" width="48" height="80"/></g>
+          <g class="bar nanti"><rect x="228" y="20" width="48" height="100"/></g>
+          <g class="bar nanti"><rect x="285" y="0" width="48" height="120"/></g>
+          <g class="st-lab"><text x="24" y="142" text-anchor="middle">Kini</text><text x="81" y="142" text-anchor="middle">B1</text><text x="138" y="142" text-anchor="middle">B2</text><text x="195" y="142" text-anchor="middle">B3</text><text x="252" y="142" text-anchor="middle">B4</text><text x="309" y="142" text-anchor="middle">B5</text></g>
+          <g class="st-ini"><circle cx="6" cy="164" r="5" fill="var(--hijau-logo)"/><text x="16" y="168" class="st-t-m">KAMI DI SINI</text></g>
+          <text x="57" y="70" class="st-t-m st-next">BERIKUTNYA</text>
+        </svg>
+      </figure>
+      <ol class="st-tahap">
+        <li class="rv st-b1"><span class="pelat tegas">Berikutnya</span><h3><span class="kes-no">B1</span> Retort.</h3><p>Rencana: rig retort diuji di area terbuka, dengan gas pengganti biogas. Menjawab empat pertanyaan: apakah retort bisa berjalan dari panasnya sendiri, berapa gas untuk start dari dingin, apakah tar terkendali, dan apakah arangnya bermutu. Perkiraan waktu sejak pembuatan B1 dipesan: desain akhir 1&nbsp;minggu, fabrikasi 2&nbsp;minggu, uji 2–3&nbsp;minggu.</p></li>
+        <li class="rv"><h3><span class="kes-no">B2</span> Pompa umpan.</h3><p>Akan diuji dengan sisa makanan nyata dari bisnis makanan selama tiga minggu. Target: tanpa sumbat.</p></li>
+        <li class="rv"><h3><span class="kes-no">B3</span> Komponen keselamatan.</h3><p>Rencana: penawaran akan diminta dan sertifikat asli arrestor, detektor gas, dan katup solenoid akan diperiksa.</p></li>
+        <li class="rv"><h3><span class="kes-no">B4</span> Kantong gas.</h3><p>Rencana: kantong 2,5&nbsp;m³ dengan papan pemberat di bawah peneduh akan diuji. Target tekanan 5&nbsp;mbar&nbsp;±&nbsp;1&nbsp;mbar, termasuk uji angin.</p></li>
+        <li class="rv"><h3><span class="kes-no">B5</span> Digester pilot.</h3><p>Rencana: digester pilot pada suhu udara sekitar akan dijalankan. Target: biogas 1,8&nbsp;m³ per&nbsp;hari atau&nbsp;lebih, dan pulih setelah libur 14 hari.</p></li>
+      </ol>
+    </div>
+    <div class="st-belum">
+      <h3 class="rv">Yang belum kami ketahui</h3>
+      <p class="rv st-belum-peng">Kami menuliskannya di muka supaya Anda tidak perlu menebak.</p>
+      <div class="g st-belum-g">
+        <ol class="st-bl st-bl-a rv">
+          <li><span class="kes-no">01</span><h4>Apakah retort bisa berjalan dari panasnya sendiri.</h4><p>Belum pernah diuji, juga belum dengan biogas.</p></li>
+          <li><span class="kes-no">02</span><h4>Keselamatan.</h4><p>Kajian bahaya dan zona area berbahaya belum ada. Belum bersertifikat.</p></li>
+          <li><span class="kes-no">03</span><h4>Biaya.</h4><p>Bahan dan pembangunan belum dipastikan; menunggu penawaran pemasok.</p></li>
+          <li><span class="kes-no">04</span><h4>Hasil.</h4><p>Biogas dan arang riil belum terukur; menunggu B1 dan B5.</p></li>
+          <li><span class="kes-no">05</span><h4>Pengadukan digester.</h4><p>Tanpa pengaduk terpasang; pengaruhnya pada gumpalan dan endapan belum diuji.</p></li>
+          <li><span class="kes-no">06</span><h4>Perawatan dan biaya operasi.</h4><p>Suku cadang, servis, bahan habis, dan biaya operasi belum ditetapkan.</p></li>
+          <li><span class="kes-no">07</span><h4>Izin, bau, asap, dan gas sisa.</h4><p>Belum dikaji.</p></li>
+        </ol>
+        <ol class="st-bl st-bl-b rv">
+          <li><span class="kes-no">08</span><h4>Bahan baku kering.</h4><p>Rancangan mengasumsikan serpih 20&nbsp;mm atau&nbsp;lebih kecil. Pihak yang menyiapkan dan mengangkutnya belum ditentukan.</p></li>
+          <li><span class="kes-no">09</span><h4>Digestat.</h4><p>Mutu dan izin pemakaian sebagai pupuk belum diuji.</p></li>
+          <li><span class="kes-no">10</span><h4>Detail rancangan.</h4><p>Ventilasi jaring modul gas, kulit retort, dan suhu ruang katup menunggu data.</p></li>
+          <li><span class="kes-no">11</span><h4>Tarif dan permintaan.</h4><p>Tarif belum ditetapkan, dan permintaan belum diuji.</p></li>
+          <li><span class="kes-no">12</span><h4>Pasokan dan angkutan.</h4><p>Volume, mutu sampah, dan pihak yang menjemput atau mengantar belum pasti.</p></li>
+          <li><span class="kes-no">13</span><h4>Penjualan biochar.</h4><p>Spesifikasi mutu, pembeli, dan harga belum ditetapkan.</p></li>
+          <li><span class="kes-no">14</span><h4>Lokasi.</h4><p>Kota dan tapak belum dipilih.</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 PILOT ============ -->
+<section id="pilot" data-tema="terang" class="bagian" aria-labelledby="h-pilot">
+  <div class="wrap pilot-g">
+  <div class="pilot-wrap">
+    <span class="bab">10 / 11 · Daftar tunggu</span>
+    <h2 id="h-pilot"><span class="baris"><span>Gabung daftar tunggu</span></span><span class="baris"><span>pilot pertama</span></span></h2>
+    <p class="rv">Kami mencari bisnis makanan dan agribisnis yang bersedia bekerja sama sejak tahap paling awal. Uji B2 butuh sisa makanan nyata, dan kami juga butuh biomassa kering untuk pengujian. Ceritakan apa yang Anda buang, berapa banyak, dan di mana lokasi Anda.</p>
+    <p class="rv">Bergabung dengan daftar tunggu berarti kami menghubungi Anda untuk berbincang. Belum ada jadwal dan belum ada penawaran.</p>
+    <p class="rv">Belum ada layanan atau imbalan yang bisa kami janjikan. Yang kami tawarkan baru percakapan terbuka tentang kecocokan sampah Anda.</p>
+    <div class="pilot-panel" id="pilot-panel">
+      <form id="form-pilot" class="form" novalidate autocomplete="on">
+        <div class="f-ringkas" id="f-ringkas" role="alert" hidden></div>
+        <fieldset class="f-jenis" id="f-jenis">
+          <legend>Saya dari</legend>
+          <div class="f-jenis-o">
+            <label><input type="radio" name="jenis" value="fnb" checked> Bisnis makanan atau minuman</label>
+            <label><input type="radio" name="jenis" value="agri"> Agribisnis</label>
+          </div>
+        </fieldset>
+        <div class="f-baris">
+          <label for="f-nama">Nama</label>
+          <input id="f-nama" name="nama" type="text" autocomplete="name" placeholder="Nama lengkap Anda" aria-required="true" required>
+          <p class="f-err" id="e-nama" aria-live="off"></p>
+        </div>
+        <div class="f-baris">
+          <label for="f-dapur">Nama bisnis</label>
+          <input id="f-dapur" name="dapur" type="text" autocomplete="organization" placeholder="Misalnya Restoran Contoh" data-fnb="Misalnya Restoran Contoh" data-agri="Misalnya Kebun Contoh" aria-required="true" required>
+          <p class="f-err" id="e-dapur"></p>
+        </div>
+        <div class="f-baris">
+          <label for="f-kota">Kota</label>
+          <input id="f-kota" name="kota" type="text" autocomplete="address-level2" placeholder="Kota atau kabupaten" aria-required="true" required>
+          <p class="f-err" id="e-kota"></p>
+        </div>
+        <div class="f-baris">
+          <label for="f-porsi" id="l-porsi" data-fnb="Kg sisa makanan per&nbsp;hari" data-agri="Jenis sampah kering dan jumlahnya">Kg sisa makanan per&nbsp;hari</label>
+          <input id="f-porsi" name="porsi" type="text" autocomplete="off" maxlength="60" placeholder="Misalnya 40 kg" data-fnb="Misalnya 40 kg" data-agri="Misalnya sekam padi, 200 kg per minggu" aria-describedby="b-porsi e-porsi">
+          <p class="f-bantu" id="b-porsi">Kira-kira saja sudah cukup.</p>
+          <p class="f-err" id="e-porsi"></p>
+        </div>
+        <div class="f-baris">
+          <label for="f-kontak">Kontak</label>
+          <input id="f-kontak" name="kontak" type="text" autocomplete="tel" inputmode="text" placeholder="Nomor WhatsApp atau email" aria-required="true" required>
+          <p class="f-err" id="e-kontak"></p>
+        </div>
+        <div class="f-kirim">
+          <button class="btn aksi" id="kirim-wa" type="button" data-via="wa">Kirim lewat WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <button class="btn sek" id="kirim-email" type="button" data-via="email">Kirim lewat email</button>
+        </div>
+        <p class="f-privasi">Isian tidak disimpan di situs ini. Pesan dikirim dari aplikasi email atau WhatsApp Anda sendiri, dan hanya dipakai untuk menghubungi Anda.</p>
+      </form>
+      <div class="f-hasil" id="f-hasil" role="status" hidden>
+        <svg class="f-centang" viewBox="0 0 48 48" aria-hidden="true"><defs><mask id="mk-centang" maskUnits="userSpaceOnUse"><rect class="mk" x="0" y="0" width="48" height="48" fill="#fff"/></mask></defs><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><g mask="url(#mk-centang)"><path d="M14 25l7 7 13-15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+        <h3 id="f-hasil-j" tabindex="-1">Hampir selesai.</h3>
+        <p id="f-hasil-t">Aplikasi email Anda akan terbuka dengan pesan siap dikirim.</p>
+        <div class="f-belum" id="f-belum" hidden>
+          <p><strong>Kontak resmi belum disambungkan.</strong> Salin pesan di bawah dan kirim sendiri.</p>
+          <textarea id="f-pesan" readonly rows="7" aria-label="Pesan pendaftaran daftar tunggu"></textarea>
+        </div>
+        <div class="f-aksi2"><button class="btn sek kecil" id="f-salin" type="button">Salin pesan</button><button class="btn sek kecil" id="f-ubah" type="button">Ubah isian</button></div>
+        <p class="f-salin-st" id="f-salin-st" role="status"></p>
+      </div>
+    </div>
+  </div>
+  <figure class="pilot-fig" aria-label="Render model Lokalola">
+    <div class="pilot-fig-in"><img src="../assets/render/sistem-transparan.webp" width="1600" height="799" loading="lazy" decoding="async" alt="Model visual Lokalola: modul gas berjaring, tangki digester putih, stasiun umpan basah, dan retort bercerobong, tersusun berurutan. Render konsep, bukan foto."></div>
+  </figure>
+  </div>
+</section>
+
+<!-- ============ 10 MITRA ============ -->
+<section id="mitra" data-tema="gelap" class="bagian" aria-labelledby="h-mitra">
+  <div class="wrap">
+    <div class="g mt-g">
+      <nav class="mt-indeks" id="mt-indeks" aria-label="Isi bagian investor dan mitra">
+        <a href="#mt-model">Model bisnis</a><a href="#mt-taruhan">Taruhannya</a><a href="#mt-tangga">Tangga bukti</a><a href="#mt-b1">Tonggak B1</a><a href="#mt-cadangan">Bila hasilnya buruk</a><a href="#mt-cari">Yang kami cari</a><a href="#mt-ajak">Hubungi kami</a>
+      </nav>
+      <div class="mt-isi">
+        <span class="bab">11 / 11 · Investor dan mitra</span>
+        <h2 id="h-mitra"><span class="baris"><span>Investor dan mitra</span></span></h2>
+        <p class="lead mt-sub rv">Satu fasilitas, dua sumber pendapatan, satu taruhan teknis.</p>
+
+        <div class="mt-blok" id="mt-model">
+          <span class="pelat rv">Model bisnis</span>
+          <p class="rv">Lokalola berencana mengoperasikan fasilitasnya sendiri, bukan menjual unit. Pendapatan utamanya adalah jasa berbayar untuk mengolah sampah basah dari bisnis makanan. Penjualan bagian biochar milik Lokalola (dua pertiga dari total) adalah pendapatan tambahan, yang dihitung hanya saat terjual.</p>
+          <div class="mb-g">
+            <div class="mb-a rv"><p class="mb-n">13&nbsp;t</p><p>sampah basah per bulan, target studi Hub</p></div>
+            <div class="mb-a rv"><p class="mb-n">6,5&nbsp;t</p><p>biomassa kering per bulan, target studi Hub</p></div>
+            <div class="mb-a rv"><p class="mb-n">2/3</p><p>biochar menjadi bagian Lokalola untuk dijual; sepertiga lainnya kembali ke pemasok agribisnis</p></div>
+          </div>
+          <p class="mb-cat rv">Angka bulanan: 500&nbsp;kg dan 250&nbsp;kg per hari operasi selama sekitar 26 hari. Target, bukan hasil.</p>
+          <p class="rv">Angka ini adalah target studi Lokalola Hub, fasilitas lebih besar yang baru kami kaji. Angka rancangan lainnya di halaman ini menggambarkan Pilot. Hub belum dirancang, dan hasil B1 sampai B5 tidak otomatis berlaku untuknya.</p>
+          <p class="rv">Masih ada tiga hal komersial yang harus kami buktikan: bisnis makanan mau membayar jasa, agribisnis mau memasok sampah kering dengan imbalan bagian biochar, dan biochar terjual. Tarif, volume, dan imbal hasil belum ditetapkan, dan kami belum punya proyeksi keuangan untuk dibagikan. Biogas, digestat, dan kredit karbon belum ditetapkan sebagai sumber pendapatan.</p>
+        </div>
+
+        <div class="mt-blok" id="mt-taruhan">
+          <blockquote class="mt-kutip rv">Taruhan teknis kami: panas dari uap serpih cukup untuk menjaga retort tetap berjalan. B1 yang menentukannya.</blockquote>
+        </div>
+
+        <div class="mt-blok" id="mt-tangga">
+          <span class="pelat rv">Tangga bukti</span>
+          <ol class="mt-anak" id="mt-anak">
+            <li class="isi"><span class="mt-n">01</span><span class="mt-ket"><strong>Literatur:</strong> data dan rujukan.</span></li>
+            <li class="isi sekarang"><span class="mt-n">02</span><span class="mt-ket"><strong>Hitung dan simulasi: di sinilah kami berdiri.</strong> Hampir semua angka di halaman ini.</span><span class="mt-ini"><i></i>Kami di sini</span></li>
+            <li class="bingkai"><span class="mt-n">03</span><span class="mt-ket"><strong>Uji bench dan lab:</strong> B1 sampai B5.</span></li>
+            <li class="putus"><span class="mt-n">04</span><span class="mt-ket"><strong>Uji lapangan:</strong> sampah nyata dari bisnis makanan, di tapak pilot. Belum direncanakan jadwalnya.</span></li>
+          </ol>
+        </div>
+
+        <div class="mt-blok" id="mt-b1">
+          <span class="pelat rv">Tonggak B1</span>
+          <ol class="mt-q">
+            <li class="rv"><span class="mt-qn">Q1</span><div><h3>Bisakah retort berjalan dari panasnya sendiri?</h3><p>Pada 5&nbsp;kg serpih per jam, api utama diturunkan ke api kecil, dan dinding tabung tetap di atas 420&nbsp;°C selama minimal dua jam.</p></div></li>
+            <li class="rv"><span class="mt-qn">Q2</span><div><h3>Berapa gas untuk start dari dingin?</h3><p>Target: 30&nbsp;MJ atau kurang, setara sekitar&nbsp;1,5&nbsp;m³ biogas. Hitungan saat ini: 32–38&nbsp;MJ, jadi target ini menantang.</p></div></li>
+            <li class="rv"><span class="mt-qn">Q3</span><div><h3>Apakah tar terkendali?</h3><p>Setelah lima sesi, masing-masing 30&nbsp;kg, lubang uap masih terbuka minimal 80&nbsp;persen, motor tidak macet, dan tidak ada tar menggumpal di hopper.</p></div></li>
+            <li class="rv"><span class="mt-qn">Q4</span><div><h3>Apakah arangnya bermutu?</h3><p>Diuji di laboratorium. Target: zat mudah menguap 25&nbsp;persen atau kurang, dan karbon tetap 65&nbsp;persen atau&nbsp;lebih.</p></div></li>
+          </ol>
+          <p class="mt-q-cat rv">Ringkasan; kriteria lengkap ada di rencana uji B1.</p>
+        </div>
+
+        <div class="mt-blok" id="mt-cadangan">
+          <span class="pelat rv">Rencana cadangan, bukan janji</span>
+          <p class="rv"><strong>Bila hasilnya buruk:</strong> jika Q1 gagal tipis, kami menaikkan laju umpan atau menambah penahan panas. Jika gagal jauh, kami kembali ke desain drum, yang butuh sekitar&nbsp;45&nbsp;kg sisa makanan per&nbsp;hari, bukan 35. Artinya, pasokan yang harus kami amankan bertambah.</p>
+        </div>
+
+        <div class="mt-blok" id="mt-cari">
+          <span class="pelat rv">Yang kami cari</span>
+          <p class="mt-dana rv">Kami mencari pendanaan untuk pilot dan riset-pengembangan, dimulai dari uji B1 sampai B5. Pertanyaan pertama yang dijawab: apakah retort bisa berjalan dari panasnya sendiri.</p>
+          <ul class="mt-cari-l">
+            <li class="rv">pendana untuk tahap uji B1 sampai B5;</li>
+            <li class="rv">ahli keselamatan proses untuk kajian bahaya dan zonasi;</li>
+            <li class="rv">bengkel fabrikasi baja tahan karat;</li>
+            <li class="rv">tapak untuk pilot di pinggiran kota.</li>
+          </ul>
+          <p class="mt-dapur rv">Bisakah bisnis Anda memasok sisa makanan atau biomassa kering untuk pengujian? <a class="tautan" href="#pilot">Gabung daftar tunggu.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-band" id="mt-ajak">
+    <img class="mt-band-img" src="../assets/render/hero_gelap.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Sistem Lokalola utuh di latar gelap: modul gas, digester, stasiun umpan, dan retort bercerobong. Render konsep, bukan foto.">
+    <div class="mt-band-scrim"></div>
+    <div class="wrap mt-band-isi">
+      <a class="btn aksi rv" id="mitra-aksi" href="#mt-ajak">Hubungi kami <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="rv">Tim, rencana anggaran, dan rencana uji akan kami bagikan saat sudah final. Hasil uji belum ada.</p>
+      <p class="mt-belum" id="mitra-belum" role="status" hidden>Kontak resmi belum disambungkan. Tautan ini akan aktif setelah pemilik mengisi kontak.</p>
+    </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer" data-tema="ruang" class="ft">
+  <div class="wrap">
+    <div class="g ft-g">
+      <div class="ft-1">
+        <img class="ft-logo" src="../assets/brand/logo-latar-gelap.png" width="600" height="213" alt="Lokalola" loading="lazy">
+        <p class="ft-tag" lang="en">Managed locally, for greater energy!</p>
+        <p class="ft-status">Konsep rancangan. Belum diuji, belum dikaji keselamatannya, belum bersertifikat. Angka = target.</p>
+      </div>
+      <nav class="ft-2" aria-label="Tautan footer">
+        <a href="#model">Model</a><a href="#cara-kerja">Cara kerja</a><a href="#mesin">Mesin</a><a href="#keselamatan">Keselamatan</a><a href="#status">Status</a><a href="#pilot">Gabung daftar tunggu</a><a href="#mitra">Investor &amp; mitra</a><a href="kredit.html">Kredit</a>
+      </nav>
+      <div class="ft-3">
+        <p>Gambar mesin di situs ini adalah render model visual, bukan foto. Foto dan video lain adalah ilustrasi stok, bukan foto Lokalola. Angka di situs ini belum mencakup biaya tapak dan biaya operasi fasilitas. Finish dan kelim kulit belum ditetapkan.</p>
+        <p>Kredit gambar dan foto ada di halaman <a class="tautan" href="kredit.html">Kredit</a>.</p>
+      </div>
+      <div class="ft-4">
+        <p class="ft-kontak" id="ft-kontak" hidden></p>
+        <p class="ft-ig"><a class="tautan" href="https://instagram.com/lokalolaenergy" rel="noopener" target="_blank">Instagram @lokalolaenergy</a></p>
+        <p class="ft-c">© Lokalola</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="dev-plat" id="dev-plat" hidden>KONTAK BELUM DIISI</div>
+
+<script src="../vendor/gsap.min.js" defer></script>
+<script src="../vendor/ScrollTrigger.min.js" defer></script>
+<script src="../main.js" defer></script>
+</body>
+</html>
