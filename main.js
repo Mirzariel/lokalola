@@ -367,32 +367,26 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
         ponsel = !!ctx.conditions.ph;
         isi(tagBig); isi(h1);   // baris dibangun ulang saat melewati 768
         tata();
-        var tb = bar(tagBig), hb = bar(h1), bw = [].slice.call(heroB.children);
+        // hero tanpa gulir: tata letak akhir langsung tampil, dua kalimat bergantian terus
+        var tb = bar(tagBig), hb = bar(h1);
         var naik = function () { return G.naik; };
-        gsap.set(panggung, { y: G.geserAwal });
-        gsap.set(hb, dgn({ opacity: 0, y: naik }, "blur(10px)"));
-        gsap.set(bw, { opacity: 0, y: 14 });
-        gsap.set(heroB, { pointerEvents: "none" });   // tombol babak 3 belum terlihat: jangan bisa diklik tak sengaja
+        var terap = function () { gsap.set(panggung, { scale: G.skala, y: G.y }); };
+        terap();
+        ScrollTrigger.addEventListener("refresh", terap);
+        if (hint) gsap.set(hint, { display: "none" });
+        if (lantai) gsap.set(lantai, { opacity: 1 });
+        gsap.set(heroB.children, { opacity: 1, y: 0 });
+        gsap.set(heroB, { pointerEvents: "auto" });
+        gsap.set(hb, { opacity: 0, y: naik });
         if (!masukSudah) gsap.set(dalam(tagBig), { opacity: 0, y: naik });
-        var tl = gsap.timeline({
-          defaults: { ease: "none" },
-          scrollTrigger: { id: "hero-cerita", trigger: hero, start: "top top", end: function () { return "+=" + jarak(); }, pin: true, scrub: .8, anticipatePin: 1, invalidateOnRefresh: true, refreshPriority: 10 }
-        });
-        if (hint) tl.to(hint, { opacity: 0, duration: .4 }, 0);
-        // tagline: titik awal tetap (terlihat penuh), supaya tidak bergantung pada animasi masuk yang mungkin belum selesai saat refresh
-        tl.fromTo(tb, dgn({ opacity: 1, y: 0 }, "blur(0px)"), dgn({ opacity: 0, y: naik, duration: 1.1, stagger: .1, ease: "power2.in", immediateRender: false }, "blur(12px)"), .3)
-          .fromTo(hb.slice().reverse(), { opacity: 0, y: naik }, { opacity: 1, y: 0, duration: 1.3, stagger: .14, ease: "power3.out", immediateRender: false }, 1.4)
-          .fromTo(panggung, { scale: 1, y: function () { return G.geserAwal; } }, { scale: function () { return G.skala; }, y: function () { return G.y; }, duration: 1.2, ease: "power2.inOut" }, 3.2);
-        if (lantai) tl.to(lantai, { opacity: 1, duration: .9 }, 3.4);
-        tl.fromTo(bw, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .8, stagger: .14, ease: "power2.out", immediateRender: false }, 3.8)
-          .set(heroB, { pointerEvents: "auto" }, 3.9)
-          .to({}, { duration: 1 }, 5);
-        var st = tl.scrollTrigger;
-        heroProg = function () { return st.progress; };
-        // fokus keyboard masuk ke babak 3: gulir ke sana supaya teks dan tombol terlihat
-        var fokus = function () { if (st.progress < .8) window.scrollTo(0, st.start + (st.end - st.start) * .86); };
-        heroB.addEventListener("focusin", fokus);
-        return function () { heroB.removeEventListener("focusin", fokus); heroProg = function () { return 1; }; };
+        var tl = gsap.timeline({ repeat: -1, delay: masukSudah ? 2 : 4.2 });
+        tl.to(tb, { opacity: 0, y: naik, duration: .9, stagger: .08, ease: "power2.in" }, 0)
+          .to(hb.slice().reverse(), { opacity: 1, y: 0, duration: 1.1, stagger: .12, ease: "power3.out" }, .8)
+          .to(hb, { opacity: 0, y: naik, duration: .9, stagger: .08, ease: "power2.in" }, 5)
+          .to(tb.slice().reverse(), { opacity: 1, y: 0, duration: 1.1, stagger: .12, ease: "power3.out" }, 5.8)
+          .to({}, { duration: 3 }, 6.9);
+        var pantau = io(hero, function (e) { if (e[0].isIntersecting) tl.play(); else tl.pause(); });
+        return function () { tl.kill(); if (pantau && pantau.disconnect) pantau.disconnect(); ScrollTrigger.removeEventListener("refresh", terap); };
       });
       // ukuran baris dihitung ulang sebelum setiap refresh dan saat lebar layar berubah
       ScrollTrigger.addEventListener("refreshInit", tata);
