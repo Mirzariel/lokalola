@@ -28,7 +28,7 @@
 if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)d.classList.add("reduce");
 setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gagal")},15000)})();
 </script>
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=63">
 </head>
 <body>
 <a class="skip" href="#isi">Lewati ke isi utama</a>
@@ -198,53 +198,54 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
     <div class="tv" id="tv" role="region" aria-label="Video cara kerja Lokalola, lima bab">
       <div class="tv-bingkai">
         <div class="tv-media">
-          <video id="tv-video" muted playsinline preload="none" width="1280" height="720" poster="../assets/tur/cara-kerja-poster.webp" data-src="../assets/tur/cara-kerja.mp4?v=60" data-src-m="../assets/tur/cara-kerja-m.mp4?v=60" aria-label="Video cara kerja Lokalola" aria-describedby="tur-sr"></video>
+          <video id="tv-video" data-label="../assets/tur/label.json?v=63" muted playsinline preload="none" width="1280" height="720" poster="../assets/tur/cara-kerja-poster.webp?v=62" data-src="../assets/tur/cara-kerja.mp4?v=62" data-src-m="../assets/tur/cara-kerja-m.mp4?v=62" aria-label="Video cara kerja Lokalola" aria-describedby="tur-sr"></video>
+          <div class="tv-label" id="tv-label" aria-hidden="true"></div>
           <button class="btn aksi kecil tv-ulang" id="tv-ulang" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Putar ulang</button>
         </div>
         <div class="tv-ctl">
           <button class="btn ikon sek tv-putar" id="tv-putar" type="button" aria-label="Jeda video cara kerja" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
           <span class="tur-hitung" id="tv-hitung" aria-hidden="true">01 / 05</span>
           <div class="tur-rel" id="tur-rel" role="group" aria-label="Bab video">
-            <button type="button" data-bab="0" aria-label="Ke bab 1 dari 5: Satu sistem, satu lahan"><i><b></b></i></button>
-            <button type="button" data-bab="1" aria-label="Ke bab 2 dari 5: Umpan basah"><i><b></b></i></button>
-            <button type="button" data-bab="2" aria-label="Ke bab 3 dari 5: Digester"><i><b></b></i></button>
-            <button type="button" data-bab="3" aria-label="Ke bab 4 dari 5: Biogas ke retort"><i><b></b></i></button>
-            <button type="button" data-bab="4" aria-label="Ke bab 5 dari 5: Tiga keluaran"><i><b></b></i></button>
+            <button type="button" data-bab="0" aria-label="Ke bab 1 dari 5: Dipilah, lalu menuju digester"><i><b></b></i></button>
+            <button type="button" data-bab="1" aria-label="Ke bab 2 dari 5: Terurai tanpa udara"><i><b></b></i></button>
+            <button type="button" data-bab="2" aria-label="Ke bab 3 dari 5: Ditampung di kantong gas"><i><b></b></i></button>
+            <button type="button" data-bab="3" aria-label="Ke bab 4 dari 5: Serpih kering menjadi arang"><i><b></b></i></button>
+            <button type="button" data-bab="4" aria-label="Ke bab 5 dari 5: Biochar, pupuk cair, kompos"><i><b></b></i></button>
           </div>
         </div>
         <div class="tv-ket" id="tv-ket" aria-hidden="true">
-          <div class="tur-teks tt-kiri" data-mulai="0"><span class="pelat">01 · Sistem utuh</span><h3>Satu sistem, satu lahan</h3><p>Digester, modul gas, stasiun umpan, dan retort berdiri berdekatan. Sisa makanan masuk di satu ujung, arang keluar di ujung lain.</p></div>
-          <div class="tur-teks tt-kanan" data-mulai="4.54"><span class="pelat">02 · Umpan basah</span><h3>Umpan basah</h3><p>Sisa makanan disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester. Target: 35&nbsp;kg per&nbsp;hari.</p></div>
-          <div class="tur-teks tt-kiri" data-mulai="7.71"><span class="pelat">03 · Digester</span><h3>Digester</h3><p>Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Target: 1,8–2,0&nbsp;m³ per&nbsp;hari.</p></div>
-          <div class="tur-teks tt-kiri" data-mulai="14.04"><span class="pelat">04 · Biogas ke retort</span><h3>Biogas ke retort</h3><p>Biogas disaring, ditampung di kantong 2,5&nbsp;m³, lalu menyalakan dan memanaskan awal retort. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji). Uji B1 menjawab ini.</p></div>
-          <div class="tur-teks tt-kiri" data-mulai="26.26"><span class="pelat">05 · Keluaran</span><h3>Tiga keluaran</h3><p>Arang di bin tertutup, digestat (sisa cairan digester) ke wadah 1.000&nbsp;liter, dan gas sisa. Mutu arang dan digestat belum diuji.</p><small class="tur-kecil">Selang, nampan, dan warna cairan adalah ilustrasi.</small></div>
+          <div class="tur-teks tt-kiri" data-mulai="0"><span class="pelat">01 · Sisa makanan</span><h3>Dipilah, lalu menuju digester</h3><p>Sisa makanan dipilah dan dicampur di stasiun umpan, lalu naik ke corong digester.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="7.9"><span class="pelat">02 · Digester</span><h3>Terurai tanpa udara</h3><p>Di dalam digester, bakteri menguraikan sampah dan melepas biogas.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="18.8"><span class="pelat">03 · Biogas</span><h3>Ditampung di kantong gas</h3><p>Biogas keluar dari digester, ditampung di modul gas, lalu berjalan ke burner retort.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="31.7"><span class="pelat">04 · Pirolisis</span><h3>Serpih kering menjadi arang</h3><p>Api biogas memanaskan retort. Serpih kering masuk lewat hopper dan menjadi arang tanpa udara.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="44.6"><span class="pelat">05 · Hasil</span><h3>Biochar, pupuk cair, kompos</h3><p>Biochar jatuh ke bin tertutup. Digestat yang tersisa di digester menjadi pupuk cair dan kompos.</p></div>
         </div>
       </div>
       <p class="sr-only" id="tv-umum" aria-live="polite"></p>
       <ol class="sr-only tur-sr" id="tur-sr">
-        <li><strong>Satu sistem, satu lahan.</strong> Digester, modul gas, stasiun umpan, dan retort berdiri berdekatan. Sisa makanan masuk di satu ujung, arang keluar di ujung lain. Tampak depan seluruh sistem Lokalola: modul gas, digester, stasiun umpan basah, dan retort bercerobong, tersusun berurutan di lantai polos.</li>
-        <li><strong>Umpan basah.</strong> Sisa makanan disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester. Target: 35&nbsp;kg per&nbsp;hari. Stasiun umpan basah berbentuk kotak putih dengan meja sortir dan tutup miring, di depan tangki digester. Render konsep.</li>
-        <li><strong>Digester.</strong> Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Target: 1,8–2,0&nbsp;m³ per&nbsp;hari. Tangki digester putih berbentuk silinder dengan corong di atasnya dan wadah penampung cairan di sisinya. Render konsep.</li>
-        <li><strong>Biogas ke retort.</strong> Biogas disaring, ditampung di kantong 2,5&nbsp;m³, lalu menyalakan dan memanaskan awal retort. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji). Uji B1 menjawab ini. Potongan penjelasan alur proses dengan kode warna: sampah basah cokelat, biogas biru kehijauan, panas ungu, arang abu-abu. Pipa biogas melintang dari digester ke retort.</li>
-        <li><strong>Tiga keluaran.</strong> Arang di bin tertutup, digestat (sisa cairan digester) ke wadah 1.000&nbsp;liter, dan gas sisa. Mutu arang dan digestat belum diuji. Selang, nampan, dan warna cairan adalah ilustrasi. Bin arang di bawah modul retort dengan pintu ARANG terbuka. Render konsep.</li>
+        <li><strong>Dipilah, lalu menuju digester.</strong> Sisa makanan dipilah dan dicampur di stasiun umpan, lalu naik ke corong digester.</li>
+        <li><strong>Terurai tanpa udara.</strong> Di dalam digester, bakteri menguraikan sampah dan melepas biogas.</li>
+        <li><strong>Ditampung di kantong gas.</strong> Biogas keluar dari digester, ditampung di modul gas, lalu berjalan ke burner retort.</li>
+        <li><strong>Serpih kering menjadi arang.</strong> Api biogas memanaskan retort. Serpih kering masuk lewat hopper dan menjadi arang tanpa udara.</li>
+        <li><strong>Biochar, pupuk cair, kompos.</strong> Biochar jatuh ke bin tertutup. Digestat yang tersisa di digester menjadi pupuk cair dan kompos.</li>
       </ol>
     </div>
     <!-- mode statis: dipakai tanpa JS, atau bila video gagal dimuat -->
     <div class="tur-statis wrap" id="tur-statis">
-      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/hero_terang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Tampak depan seluruh sistem Lokalola: modul gas, digester, stasiun umpan basah, dan retort bercerobong, tersusun berurutan di lantai polos."></div></figure>
-      <div class="ts-teks"><span class="pelat">01 · Sistem utuh</span><h3>Satu sistem, satu lahan</h3><p>Digester, modul gas, stasiun umpan, dan retort berdiri berdekatan. Sisa makanan masuk di satu ujung, arang keluar di ujung lain.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/c1_umpan.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Stasiun umpan basah berbentuk kotak putih dengan meja sortir dan tutup miring, di depan tangki digester. Render konsep."></div></figure>
-      <div class="ts-teks"><span class="pelat">02 · Umpan basah</span><h3>Umpan basah</h3><p>Sisa makanan disortir di meja, dicampur air, lalu diangkat pompa ke corong di atas digester. Target: 35&nbsp;kg per&nbsp;hari.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/c5_digester.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Tangki digester putih berbentuk silinder dengan corong di atasnya dan wadah penampung cairan di sisinya. Render konsep."></div></figure>
-      <div class="ts-teks"><span class="pelat">03 · Digester</span><h3>Digester</h3><p>Tangki 5.000&nbsp;liter tanpa pemanas. Bakteri menguraikan sisa makanan tanpa udara dan melepas biogas. Target: 1,8–2,0&nbsp;m³ per&nbsp;hari.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/cutaway.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Potongan penjelasan alur proses dengan kode warna: sampah basah cokelat, biogas biru kehijauan, panas ungu, arang abu-abu. Pipa biogas melintang dari digester ke retort."></div></figure>
-      <div class="ts-teks"><span class="pelat">04 · Biogas ke retort</span><h3>Biogas ke retort</h3><p>Biogas disaring, ditampung di kantong 2,5&nbsp;m³, lalu menyalakan dan memanaskan awal retort. Setelah panas, uap serpih dirancang menjaga panasnya (belum diuji). Uji B1 menjawab ini.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/s3_arang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Bin arang di bawah modul retort dengan pintu ARANG terbuka. Render konsep."></div></figure>
-      <div class="ts-teks"><span class="pelat">05 · Keluaran</span><h3>Tiga keluaran</h3><p>Arang di bin tertutup, digestat (sisa cairan digester) ke wadah 1.000&nbsp;liter, dan gas sisa. Mutu arang dan digestat belum diuji.</p><small class="tur-kecil">Selang, nampan, dan warna cairan adalah ilustrasi.</small></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/hero_terang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Dipilah, lalu menuju digester. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">01 · Sisa makanan</span><h3>Dipilah, lalu menuju digester</h3><p>Sisa makanan dipilah dan dicampur di stasiun umpan, lalu naik ke corong digester.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/c5_digester.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Terurai tanpa udara. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">02 · Digester</span><h3>Terurai tanpa udara</h3><p>Di dalam digester, bakteri menguraikan sampah dan melepas biogas.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/sistem-transparan.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Ditampung di kantong gas. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">03 · Biogas</span><h3>Ditampung di kantong gas</h3><p>Biogas keluar dari digester, ditampung di modul gas, lalu berjalan ke burner retort.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/c3_retort.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Serpih kering menjadi arang. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">04 · Pirolisis</span><h3>Serpih kering menjadi arang</h3><p>Api biogas memanaskan retort. Serpih kering masuk lewat hopper dan menjadi arang tanpa udara.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="../assets/render/s3_arang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Biochar, pupuk cair, kompos. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">05 · Hasil</span><h3>Biochar, pupuk cair, kompos</h3><p>Biochar jatuh ke bin tertutup. Digestat yang tersisa di digester menjadi pupuk cair dan kompos.</p></div>
     </div>
   </div>
   <div class="wrap tur-ket" id="tur-akhir">
-    <p class="rv">Tampilan penjelasan. Potongan dan warna alur adalah ilustrasi untuk menjelaskan, bukan hasil pengukuran.</p>
+    <p class="rv">Tampilan penjelasan. Bagian dalam mesin, api, dan panah adalah ilustrasi untuk menunjukkan alur, bukan hasil pengukuran.</p>
     <a class="tautan rv" href="#mesin">Lanjut ke mesin 3D</a>
   </div>
 </section>
@@ -691,6 +692,6 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
 
 <script src="../vendor/gsap.min.js" defer></script>
 <script src="../vendor/ScrollTrigger.min.js" defer></script>
-<script src="../main.js?v=hero2" defer></script>
+<script src="../main.js?v=63" defer></script>
 </body>
 </html>

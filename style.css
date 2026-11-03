@@ -1288,3 +1288,19 @@ main section:not(#hero) .lead{font-size:var(--fs-lead);line-height:1.45}
 .pj-kini>div{display:grid;gap:var(--s-2);max-width:62ch}
 @media (min-width:900px){.pj-p-atas{grid-template-columns:1fr auto}}
 @media (max-width:520px){.pj-p-big{gap:var(--s-5)}}
+
+/* ============ PUTARAN VIDEO: label yang mengikuti objek ============ */
+.tv-label{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.tv-l{--c:#fff;position:absolute;display:inline-flex;align-items:center;gap:9px;width:max-content;max-width:min(52%,380px);padding:8px 16px 8px 13px;border-radius:999px;background:rgba(1,1,1,.84);color:#fff;font:600 clamp(.8125rem,.62rem + .72vw,1.25rem)/1.2 var(--f-teks);letter-spacing:-.005em;opacity:0;transform:translate(-50%,calc(-100% - 8px)) scale(.82);transform-origin:50% 100%;transition:opacity .2s linear,transform .5s cubic-bezier(.34,1.56,.64,1)}
+.tv-l::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--c)}
+.tv-l::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:16px;margin-left:-1px;background:var(--c)}
+.tv-l.on{opacity:1;transform:translate(-50%,calc(-100% - 16px)) scale(1)}
+.tl-sisa,.tl-stasiun,.tl-corong,.tl-urai{--c:#F25C0D}
+.tl-biogas,.tl-biogas_b,.tl-kantong,.tl-burner,.tl-api{--c:#00B8FF}
+.tl-serpih,.tl-hopper,.tl-pirolisis{--c:#F2D180}
+.tl-bin,.tl-biochar,.tl-arang{--c:#98E61F}
+.tl-digestat,.tl-wadah,.tl-pupuk,.tl-kompos{--c:#FFB80F}
+.tur-teks{transform:translateY(10px);transition:opacity .4s linear,transform .6s cubic-bezier(.22,1,.36,1)}
+.tur-teks.aktif{transform:none}
+@media (max-width:767px){.tv-l{gap:6px;padding:5px 10px 5px 8px;line-height:1.15}.tv-l::before{width:7px;height:7px}.tv-l::after{height:10px}.tv-l.on{transform:translate(-50%,calc(-100% - 10px)) scale(1)}}
+@media (prefers-reduced-motion:reduce){.tv-l,.tur-teks{transition:opacity .2s linear}.tur-teks{transform:none}}

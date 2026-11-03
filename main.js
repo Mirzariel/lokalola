@@ -18,7 +18,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
       galat: { nama: "Tulis nama Anda.", dapur: "Tulis nama bisnis.", kota: "Tulis kota atau kabupaten.", porsi: "Terlalu panjang. Maksimal 60 karakter.", kontak0: "Tulis nomor WhatsApp atau email Anda.", kontak1: "Format belum benar. Contoh: 0812 3456 7890, +44 20 7946 0958, atau nama@contoh.id." },
       ringkas: function (n, daftar) { return "Ada " + n + " isian yang perlu diperbaiki: " + daftar + "."; },
       subjekPilot: "Dukung Lokalola", subjekMitra: "Investor dan mitra Lokalola",
-      barisJenis: "Jenis: ", baris: ["Nama: ", "Nama bisnis: ", "Kota: ", "Volume: ", "Kontak: "],
+      label: {"stasiun": "Sampah dipilah di sini", "sisa": "Sisa makanan", "corong": "Masuk ke digester", "urai": "Bakteri mengurai sampah", "biogas_b": "Biogas naik", "biogas": "Biogas", "digester": "Digester", "kantong": "Biogas ditampung di sini", "retort": "Retort pirolisis", "burner": "Biogas dibakar di sini", "api": "Api biogas memanaskan retort", "serpih": "Serpih kering", "hopper": "Serpih masuk lewat hopper", "pirolisis": "Panas tanpa udara", "arang": "Jadi arang", "bin": "Turun ke bin biochar", "biochar": "Biochar", "digestat": "Digestat, cairan sisa digester", "wadah": "Ditampung di wadah", "pupuk": "Pupuk cair dari digestat", "kompos": "Kompos dari digestat"}, barisJenis: "Jenis: ", baris: ["Nama: ", "Nama bisnis: ", "Kota: ", "Volume: ", "Kontak: "],
       menyiapkan: "Menyiapkan…", hasilOk: "Aplikasi email Anda akan terbuka dengan pesan siap dikirim.", hasilOkWA: "WhatsApp akan terbuka dengan pesan siap dikirim.", terima: "Hampir selesai.", belum: "Kontak resmi belum disambungkan.",
       disalin: "Pesan disalin.", gagalSalin: "Tidak bisa menyalin otomatis. Pilih teks lalu salin sendiri.",
       mod: {
@@ -49,7 +49,7 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
       galat: { nama: "Enter your name.", dapur: "Enter the business name.", kota: "Enter your city or regency.", porsi: "Too long. 60 characters at most.", kontak0: "Enter your WhatsApp number or email.", kontak1: "Not a valid phone number or email. Example: +44 20 7946 0958 or name@example.com." },
       ringkas: function (n, daftar) { return n + (n === 1 ? " field needs" : " fields need") + " fixing: " + daftar + "."; },
       subjekPilot: "Support Lokalola", subjekMitra: "Lokalola investors and partners",
-      barisJenis: "Type: ", baris: ["Name: ", "Business name: ", "City: ", "Volume: ", "Contact: "],
+      label: {"stasiun": "Waste is sorted here", "sisa": "Food waste", "corong": "Into the digester", "urai": "Bacteria break the waste down", "biogas_b": "Biogas rises", "biogas": "Biogas", "digester": "Digester", "kantong": "Biogas is stored here", "retort": "Pyrolysis retort", "burner": "Biogas burns here", "api": "Biogas flame heats the retort", "serpih": "Dry chips", "hopper": "Chips enter through the hopper", "pirolisis": "Heat without air", "arang": "Turning into char", "bin": "Down into the biochar bin", "biochar": "Biochar", "digestat": "Digestate, the liquid left from the digester", "wadah": "Held in this container", "pupuk": "Liquid fertilizer from digestate", "kompos": "Compost from digestate"}, barisJenis: "Type: ", baris: ["Name: ", "Business name: ", "City: ", "Volume: ", "Contact: "],
       menyiapkan: "Preparing…", hasilOk: "Your email app should open with the message ready to send.", hasilOkWA: "WhatsApp should open with the message ready to send.", terima: "Almost done.", belum: "No official contact is connected yet.",
       disalin: "Message copied.", gagalSalin: "Could not copy automatically. Select the text and copy it yourself.",
       mod: {
@@ -660,8 +660,31 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
       setTimeout(function () { ScrollTrigger.refresh(); }, 50);
       console.warn("[lokalola] tur: video gagal, beralih ke mode statis");
     }
+    // label mengikuti objek di video: posisi layar diekspor dari Blender tiap 0,25 dtk, teks HTML agar tajam dan dwibahasa
+    var lapis = $("#tv-label"), label = [];
+    function siapLabel() {
+      if (!lapis || !v.dataset.label || !window.fetch) return;
+      fetch(v.dataset.label).then(function (r) { return r.json(); }).then(function (d) {
+        label = d.map(function (l) { var e = document.createElement("span"); e.className = "tv-l tl-" + l.k; e.textContent = TX.label[l.k] || l.k; lapis.appendChild(e); return { t: l.t, e: e, on: false }; });
+      }).catch(function () {});
+    }
+    function lengkung(a, b, c, d, f) { return b + .5 * f * (c - a + f * (2 * a - 5 * b + 4 * c - d + f * (3 * (b - c) + d - a))); }
+    function gambarLabel(t) {
+      label.forEach(function (l) {
+        var a = l.t[0][0], z = l.t[l.t.length - 1][0], on = !selesai && t >= a && t <= z;
+        if (on !== l.on) { l.on = on; l.e.classList.toggle("on", on); if (on) { l.w = l.e.offsetWidth; l.h = l.e.offsetHeight; } }
+        if (!on) return;
+        var u = (t - a) / .25, i = Math.min(l.t.length - 2, Math.floor(u)); if (i < 0) i = 0;
+        var f = u - i, p = l.t[i], q = l.t[i + 1] || p, o = l.t[i - 1] || p, r = l.t[i + 2] || q;
+        // kurva halus antar sampel, dan batas dihitung dari ukuran label agar tidak terpotong tepi video
+        var W = lapis.clientWidth || 1, H = lapis.clientHeight || 1, mx = (l.w / 2 + 8) / W, my = (l.h + 24) / H;
+        l.e.style.left = clamp(lengkung(o[1], p[1], q[1], r[1], f), mx, 1 - mx) * 100 + "%";
+        l.e.style.top = clamp(lengkung(o[2], p[2], q[2], r[2], f), my, .96) * 100 + "%";
+      });
+    }
     function pasang() {
       if (dipasang) return; dipasang = true;
+      siapLabel();
       v.preload = "metadata";
       v.src = kecil ? v.dataset.srcM : v.dataset.src;
     }
@@ -688,7 +711,8 @@ const KONTAK = { email: "lokalolaenergy@gmail.com", wa: "" }; // WA belum ada: k
       hitung.textContent = "0" + (i + 1) + " / 05";
     }
     function perbarui() {
-      var t = v.currentTime || 0, d = v.duration || 34.21, i = selesai ? 4 : bab(t);
+      var t = v.currentTime || 0, d = v.duration || 62, i = selesai ? 4 : bab(t);
+      gambarLabel(t);
       if (i !== aktif) ganti(i);
       var fr = relBtn.map(function (b, k) {
         var akhir = k < 4 ? mulai[k + 1] : d;

@@ -28,7 +28,7 @@
 if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)d.classList.add("reduce");
 setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gagal")},15000)})();
 </script>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=63">
 </head>
 <body>
 <a class="skip" href="#isi">Skip to main content</a>
@@ -198,53 +198,54 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
     <div class="tv" id="tv" role="region" aria-label="Lokalola how-it-works video, five chapters">
       <div class="tv-bingkai">
         <div class="tv-media">
-          <video id="tv-video" muted playsinline preload="none" width="1280" height="720" poster="assets/tur/cara-kerja-poster.webp" data-src="assets/tur/cara-kerja.mp4?v=60" data-src-m="assets/tur/cara-kerja-m.mp4?v=60" aria-label="Lokalola how-it-works video" aria-describedby="tur-sr"></video>
+          <video id="tv-video" data-label="assets/tur/label.json?v=63" muted playsinline preload="none" width="1280" height="720" poster="assets/tur/cara-kerja-poster.webp?v=62" data-src="assets/tur/cara-kerja.mp4?v=62" data-src-m="assets/tur/cara-kerja-m.mp4?v=62" aria-label="Lokalola how-it-works video" aria-describedby="tur-sr"></video>
+          <div class="tv-label" id="tv-label" aria-hidden="true"></div>
           <button class="btn aksi kecil tv-ulang" id="tv-ulang" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Replay</button>
         </div>
         <div class="tv-ctl">
           <button class="btn ikon sek tv-putar" id="tv-putar" type="button" aria-label="Pause the how-it-works video" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
           <span class="tur-hitung" id="tv-hitung" aria-hidden="true">01 / 05</span>
           <div class="tur-rel" id="tur-rel" role="group" aria-label="Video chapters">
-            <button type="button" data-bab="0" aria-label="Go to chapter 1 of 5: One system, one site"><i><b></b></i></button>
-            <button type="button" data-bab="1" aria-label="Go to chapter 2 of 5: Wet feed"><i><b></b></i></button>
-            <button type="button" data-bab="2" aria-label="Go to chapter 3 of 5: Digester"><i><b></b></i></button>
-            <button type="button" data-bab="3" aria-label="Go to chapter 4 of 5: Biogas to the retort"><i><b></b></i></button>
-            <button type="button" data-bab="4" aria-label="Go to chapter 5 of 5: Three outputs"><i><b></b></i></button>
+            <button type="button" data-bab="0" aria-label="Go to chapter 1 of 5: Sorted, then sent to the digester"><i><b></b></i></button>
+            <button type="button" data-bab="1" aria-label="Go to chapter 2 of 5: Broken down without air"><i><b></b></i></button>
+            <button type="button" data-bab="2" aria-label="Go to chapter 3 of 5: Stored in the gas bag"><i><b></b></i></button>
+            <button type="button" data-bab="3" aria-label="Go to chapter 4 of 5: Dry chips become char"><i><b></b></i></button>
+            <button type="button" data-bab="4" aria-label="Go to chapter 5 of 5: Biochar, liquid fertilizer, compost"><i><b></b></i></button>
           </div>
         </div>
         <div class="tv-ket" id="tv-ket" aria-hidden="true">
-          <div class="tur-teks tt-kiri" data-mulai="0"><span class="pelat">01 · Whole system</span><h3>One system, one site</h3><p>The digester, gas module, feed station, and retort stand close together. Food waste goes in at one end, char comes out at the other.</p></div>
-          <div class="tur-teks tt-kanan" data-mulai="4.54"><span class="pelat">02 · Wet feed</span><h3>Wet feed</h3><p>Food waste is sorted at a table, mixed with water, then lifted by a pump to the feed funnel above the digester. Target: 35&nbsp;kg per&nbsp;day.</p></div>
-          <div class="tur-teks tt-kiri" data-mulai="7.71"><span class="pelat">03 · Digester</span><h3>Digester</h3><p>An unheated 5,000&nbsp;L tank. Bacteria break food waste down without air and release biogas. Target: 1.8–2.0&nbsp;m³ per&nbsp;day.</p></div>
-          <div class="tur-teks tt-kiri" data-mulai="14.04"><span class="pelat">04 · Biogas to the retort</span><h3>Biogas to the retort</h3><p>Biogas is filtered, held in a 2.5&nbsp;m³ bag, then lights and preheats the retort. Once hot, vapor from the chips is designed to keep it hot (not yet tested). The B1 test answers this.</p></div>
-          <div class="tur-teks tt-kiri" data-mulai="26.26"><span class="pelat">05 · Outputs</span><h3>Three outputs</h3><p>Char in a closed bin, digestate (the liquid left over from the digester) into a 1,000&nbsp;L container, and leftover gas. The quality of the char and digestate has not been tested.</p><small class="tur-kecil">The hoses, trays, and liquid colors are illustrations.</small></div>
+          <div class="tur-teks tt-kiri" data-mulai="0"><span class="pelat">01 · Food waste</span><h3>Sorted, then sent to the digester</h3><p>Food waste is sorted and mixed at the feed station, then goes up to the digester funnel.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="7.9"><span class="pelat">02 · Digester</span><h3>Broken down without air</h3><p>Inside the digester, bacteria break the waste down and release biogas.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="18.8"><span class="pelat">03 · Biogas</span><h3>Stored in the gas bag</h3><p>Biogas leaves the digester and is held in the gas module, then travels to the retort burner.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="31.7"><span class="pelat">04 · Pyrolysis</span><h3>Dry chips become char</h3><p>The biogas flame heats the retort. Dry chips enter through the hopper and turn into char without air.</p></div>
+          <div class="tur-teks tt-kiri" data-mulai="44.6"><span class="pelat">05 · Outputs</span><h3>Biochar, liquid fertilizer, compost</h3><p>Biochar drops into a closed bin. The digestate left in the digester becomes liquid fertilizer and compost.</p></div>
         </div>
       </div>
       <p class="sr-only" id="tv-umum" aria-live="polite"></p>
       <ol class="sr-only tur-sr" id="tur-sr">
-        <li><strong>One system, one site.</strong> The digester, gas module, feed station, and retort stand close together. Food waste goes in at one end, char comes out at the other. Front view of the whole Lokalola system: gas module, digester, wet feed station, and chimneyed retort, lined up in order on a plain floor.</li>
-        <li><strong>Wet feed.</strong> Food waste is sorted at a table, mixed with water, then lifted by a pump to the feed funnel above the digester. Target: 35&nbsp;kg per&nbsp;day. The wet feed station is a white box with a sorting table and a sloped lid, in front of the digester tank. Concept render.</li>
-        <li><strong>Digester.</strong> An unheated 5,000&nbsp;L tank. Bacteria break food waste down without air and release biogas. Target: 1.8–2.0&nbsp;m³ per&nbsp;day. A white cylindrical digester tank with a hopper on top and a liquid collection container beside it. Concept render.</li>
-        <li><strong>Biogas to the retort.</strong> Biogas is filtered, held in a 2.5&nbsp;m³ bag, then lights and preheats the retort. Once hot, vapor from the chips is designed to keep it hot (not yet tested). The B1 test answers this. An explanatory cutaway of the process flow with color codes: wet waste brown, biogas teal, heat purple, char gray. A biogas pipe runs across from the digester to the retort.</li>
-        <li><strong>Three outputs.</strong> Char in a closed bin, digestate (the liquid left over from the digester) into a 1,000&nbsp;L container, and leftover gas. The quality of the char and digestate has not been tested. The hoses, trays, and liquid colors are illustrations. A char bin under the retort module with the ARANG (char) door open. Concept render.</li>
+        <li><strong>Sorted, then sent to the digester.</strong> Food waste is sorted and mixed at the feed station, then goes up to the digester funnel.</li>
+        <li><strong>Broken down without air.</strong> Inside the digester, bacteria break the waste down and release biogas.</li>
+        <li><strong>Stored in the gas bag.</strong> Biogas leaves the digester and is held in the gas module, then travels to the retort burner.</li>
+        <li><strong>Dry chips become char.</strong> The biogas flame heats the retort. Dry chips enter through the hopper and turn into char without air.</li>
+        <li><strong>Biochar, liquid fertilizer, compost.</strong> Biochar drops into a closed bin. The digestate left in the digester becomes liquid fertilizer and compost.</li>
       </ol>
     </div>
     <!-- static mode: used without JS, or when the video fails to load -->
     <div class="tur-statis wrap" id="tur-statis">
-      <figure class="ts-fig"><div class="media-in"><img src="assets/render/hero_terang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Front view of the whole Lokalola system: gas module, digester, wet feed station, and chimneyed retort, lined up in order on a plain floor."></div></figure>
-      <div class="ts-teks"><span class="pelat">01 · Whole system</span><h3>One system, one site</h3><p>The digester, gas module, feed station, and retort stand close together. Food waste goes in at one end, char comes out at the other.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="assets/render/c1_umpan.webp" width="1600" height="900" loading="lazy" decoding="async" alt="The wet feed station: a white box with a sorting table and a sloped lid, in front of the digester tank. Concept render."></div></figure>
-      <div class="ts-teks"><span class="pelat">02 · Wet feed</span><h3>Wet feed</h3><p>Food waste is sorted at a table, mixed with water, then lifted by a pump to the feed funnel above the digester. Target: 35&nbsp;kg per&nbsp;day.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="assets/render/c5_digester.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A white cylindrical digester tank with a hopper on top and a liquid collection container beside it. Concept render."></div></figure>
-      <div class="ts-teks"><span class="pelat">03 · Digester</span><h3>Digester</h3><p>An unheated 5,000&nbsp;L tank. Bacteria break food waste down without air and release biogas. Target: 1.8–2.0&nbsp;m³ per&nbsp;day.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="assets/render/cutaway.webp" width="1600" height="900" loading="lazy" decoding="async" alt="An explanatory cutaway of the process flow with color codes: wet waste brown, biogas teal, heat purple, char gray. A biogas pipe runs across from the digester to the retort."></div></figure>
-      <div class="ts-teks"><span class="pelat">04 · Biogas to the retort</span><h3>Biogas to the retort</h3><p>Biogas is filtered, held in a 2.5&nbsp;m³ bag, then lights and preheats the retort. Once hot, vapor from the chips is designed to keep it hot (not yet tested). The B1 test answers this.</p></div>
-      <figure class="ts-fig"><div class="media-in"><img src="assets/render/s3_arang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A char bin under the retort module with the ARANG (char) door open. Concept render."></div></figure>
-      <div class="ts-teks"><span class="pelat">05 · Outputs</span><h3>Three outputs</h3><p>Char in a closed bin, digestate (the liquid left over from the digester) into a 1,000&nbsp;L container, and leftover gas. The quality of the char and digestate has not been tested.</p><small class="tur-kecil">The hoses, trays, and liquid colors are illustrations.</small></div>
+      <figure class="ts-fig"><div class="media-in"><img src="assets/render/hero_terang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Sorted, then sent to the digester. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">01 · Food waste</span><h3>Sorted, then sent to the digester</h3><p>Food waste is sorted and mixed at the feed station, then goes up to the digester funnel.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="assets/render/c5_digester.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Broken down without air. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">02 · Digester</span><h3>Broken down without air</h3><p>Inside the digester, bacteria break the waste down and release biogas.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="assets/render/sistem-transparan.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Stored in the gas bag. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">03 · Biogas</span><h3>Stored in the gas bag</h3><p>Biogas leaves the digester and is held in the gas module, then travels to the retort burner.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="assets/render/c3_retort.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Dry chips become char. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">04 · Pyrolysis</span><h3>Dry chips become char</h3><p>The biogas flame heats the retort. Dry chips enter through the hopper and turn into char without air.</p></div>
+      <figure class="ts-fig"><div class="media-in"><img src="assets/render/s3_arang.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Biochar, liquid fertilizer, compost. Render."></div></figure>
+      <div class="ts-teks"><span class="pelat">05 · Outputs</span><h3>Biochar, liquid fertilizer, compost</h3><p>Biochar drops into a closed bin. The digestate left in the digester becomes liquid fertilizer and compost.</p></div>
     </div>
   </div>
   <div class="wrap tur-ket" id="tur-akhir">
-    <p class="rv">Explanatory view. The cutaways and flow colors are illustrations to explain, not measurements.</p>
+    <p class="rv">Explanatory view. The machine interior, flames, and arrows are illustrations to show the flow, not measurements.</p>
     <a class="tautan rv" href="#mesin">On to the 3D machine</a>
   </div>
 </section>
@@ -691,6 +692,6 @@ setTimeout(function(){if(!d.classList.contains("js-ok"))d.classList.add("js-gaga
 
 <script src="vendor/gsap.min.js" defer></script>
 <script src="vendor/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=hero2" defer></script>
+<script src="main.js?v=63" defer></script>
 </body>
 </html>
